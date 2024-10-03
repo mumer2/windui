@@ -31,6 +31,16 @@ import { Paginations } from './Components/Navigations/Paginations';
 import { SideNavigation } from './Components/Navigations/SideNavigation';
 import { NavbarC } from './Components/Navigations/NavbarC';
 import { Alerts } from './Components/Feedback/Alerts';
+import { ChipNotification } from './Components/Feedback/ChipNotification';
+import { Modals } from './Components/Feedback/Modals';
+import { Notifications } from './Components/Feedback/Notifications';
+import ProgressBars from './Components/Feedback/ProgressBars';
+import  Spinners  from './Components/Feedback/Spinners';
+import { Toltips } from './Components/Feedback/Toltips';
+import { Checkboxes } from './Components/FormElements/Checkboxes';
+import { Datepickers } from './Components/FormElements/Datepickers';
+import { FileInputs } from './Components/FormElements/FileInputs';
+import { InputGroups } from './Components/FormElements/InputGroups';
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -92,6 +102,20 @@ function App() {
                 {/* Feedback */}
 
                 <Route path="/alerts" element={<Alerts />} />
+                <Route path="/chipnotifications" element={<ChipNotification />} />
+                <Route path="/modals" element={<Modals />} />
+                <Route path="/notifications" element={<Notifications/>} />
+                <Route path="/progressbars" element={<ProgressBars/>} />
+                <Route path="/spinners" element={<Spinners/>} />
+                <Route path="/toltips" element={<Toltips/>} />
+
+                {/* Form Elements */}
+
+                <Route path="/checkboxes" element={<Checkboxes/>} />
+                <Route path="/datepickers" element={<Datepickers/>} />
+                <Route path="/fileinputs" element={<FileInputs/>} />
+                <Route path="/inputgroups" element={<InputGroups/>} />
+
 
 
 

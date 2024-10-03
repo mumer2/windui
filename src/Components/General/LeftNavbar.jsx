@@ -66,6 +66,19 @@ const LeftNavbar = () => {
           <Link to="/spinners" className="sidebar-item">Spinners</Link>
           <Link to="/toltips" className="sidebar-item">Toltips</Link>
 
+          {/* Form Elements */}
+          <p className="t">Form Elements</p>
+          <Link to="/checkboxes" className="sidebar-item">Checkboxes</Link>
+          <Link to="/datepickers" className="sidebar-item">Datepickers</Link>
+          <Link to="/fileinputs" className="sidebar-item">File Inputs</Link>
+          <Link to="/inputgroups" className="sidebar-item">Input Groups</Link>
+          <Link to="/radiogroups" className="sidebar-item">Radio Groups</Link>
+          <Link to="/searchinputs" className="sidebar-item">Search Inputs</Link>
+          <Link to="/selectmenus" className="sidebar-item">Select Menus</Link>
+          <Link to="/textareas" className="sidebar-item">Textareas</Link>
+          <Link to="/toggles" className="sidebar-item">Toggles</Link>
+
+
 
 
 
