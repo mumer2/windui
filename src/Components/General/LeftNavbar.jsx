@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-
+import { NavLink } from 'react-router-dom';
 
 const LeftNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,81 +10,71 @@ const LeftNavbar = () => {
 
   return (
     <>
-    <div className='tgle'>
+      <div className='tgle'>
         {/* Toggle Button for small screens */}
         <button className="toggle-btn" onClick={toggleSidebar}>
-        <i className="fa-solid fa-bars"></i>
-      </button>
-    </div>
-    
+          <i className="fa-solid fa-bars"></i>
+        </button>
+      </div>
 
       {/* Sidebar */}
       <aside className={`sidebar ${isOpen ? 'open' : ''}`}>
         <nav className="sidebar-nav">
           <p className="t">General</p>
-          <Link to="/" className="sidebar-item">Accordions</Link>
-          <Link to="/avatars" className="sidebar-item">Avatars</Link>
-          <Link to="/badges" className="sidebar-item">Badges</Link>
-          <Link to="/cards" className="sidebar-item">Cards</Link>
-          <Link to="/carousels" className="sidebar-item">Carousel</Link>
-          <Link to="/features" className="sidebar-item">Features</Link>
-          <Link to="/feed" className="sidebar-item">Feeds</Link>
-          <Link to="/layouts" className="sidebar-item">Layouts</Link>
-          <Link to="/list" className="sidebar-item">Lists</Link>
-          <Link to="/pricingtables" className="sidebar-item">Pricing Tables</Link>
-          <Link to="/ratings" className="sidebar-item">Ratings</Link>
-          <Link to="/slidern" className="sidebar-item">Sliders</Link>
-          <Link to="/tables" className="sidebar-item">Tables</Link>
-          <Link to="/tabs" className="sidebar-item">Tabs</Link>
-          <Link to="/testimonials" className="sidebar-item">Testimonials</Link>
+          <NavLink to="/" className="sidebar-item" activeClassName="active">Accordions</NavLink>
+          <NavLink to="/avatars" className="sidebar-item" activeClassName="active">Avatars</NavLink>
+          <NavLink to="/badges" className="sidebar-item" activeClassName="active">Badges</NavLink>
+          <NavLink to="/cards" className="sidebar-item" activeClassName="active">Cards</NavLink>
+          <NavLink to="/carousels" className="sidebar-item" activeClassName="active">Carousel</NavLink>
+          <NavLink to="/features" className="sidebar-item" activeClassName="active">Features</NavLink>
+          <NavLink to="/feed" className="sidebar-item" activeClassName="active">Feeds</NavLink>
+          <NavLink to="/layouts" className="sidebar-item" activeClassName="active">Layouts</NavLink>
+          <NavLink to="/list" className="sidebar-item" activeClassName="active">Lists</NavLink>
+          <NavLink to="/pricingtables" className="sidebar-item" activeClassName="active">Pricing Tables</NavLink>
+          <NavLink to="/ratings" className="sidebar-item" activeClassName="active">Ratings</NavLink>
+          <NavLink to="/slidern" className="sidebar-item" activeClassName="active">Sliders</NavLink>
+          <NavLink to="/tables" className="sidebar-item" activeClassName="active">Tables</NavLink>
+          <NavLink to="/tabs" className="sidebar-item" activeClassName="active">Tabs</NavLink>
+          <NavLink to="/testimonials" className="sidebar-item" activeClassName="active">Testimonials</NavLink>
 
           {/* Buttons */}
           <p className="t">Buttons</p>
-          <Link to="/appbuttons" className="sidebar-item">App Buttons</Link>
-          <Link to="/buttons" className="sidebar-item">Buttons</Link>
-          <Link to="/buttonsgroup" className="sidebar-item">Button Groups</Link>
-          <Link to="/buttonswitch" className="sidebar-item">Button Switchers</Link>
-          <Link to="/dropdowns" className="sidebar-item">Dropdowns</Link>
-          <Link to="/fabs" className="sidebar-item">FABs</Link>
+          <NavLink to="/appbuttons" className="sidebar-item" activeClassName="active">App Buttons</NavLink>
+          <NavLink to="/buttons" className="sidebar-item" activeClassName="active">Buttons</NavLink>
+          <NavLink to="/buttonsgroup" className="sidebar-item" activeClassName="active">Button Groups</NavLink>
+          <NavLink to="/buttonswitch" className="sidebar-item" activeClassName="active">Button Switchers</NavLink>
+          <NavLink to="/dropdowns" className="sidebar-item" activeClassName="active">Dropdowns</NavLink>
+          <NavLink to="/fabs" className="sidebar-item" activeClassName="active">FABs</NavLink>
 
           {/* Navigations */}
           <p className="t">Navigations</p>
-          <Link to="/breadcrumbs" className="sidebar-item">Breadcrumbs</Link>
-          <Link to="/footers" className="sidebar-item">Footers</Link>
-          <Link to="/paginations" className="sidebar-item">Paginations</Link>
-          <Link to="/sidenavigations" className="sidebar-item">Side Navigations</Link>
-          <Link to="/navbar" className="sidebar-item">Navbar</Link>
+          <NavLink to="/breadcrumbs" className="sidebar-item" activeClassName="active">Breadcrumbs</NavLink>
+          <NavLink to="/footers" className="sidebar-item" activeClassName="active">Footers</NavLink>
+          <NavLink to="/paginations" className="sidebar-item" activeClassName="active">Paginations</NavLink>
+          <NavLink to="/sidenavigations" className="sidebar-item" activeClassName="active">Side Navigations</NavLink>
+          <NavLink to="/navbar" className="sidebar-item" activeClassName="active">Navbar</NavLink>
 
           {/* Feedback */}
           <p className="t">Feedback</p>
-          <Link to="/alerts" className="sidebar-item">Alerts</Link>
-          <Link to="/chipnotifications" className="sidebar-item">Chip Notifications</Link>
-          <Link to="/modals" className="sidebar-item">Modals</Link>
-          <Link to="/notifications" className="sidebar-item">Notifications</Link>
-          <Link to="/progressbars" className="sidebar-item">Progress Bars</Link>
-          <Link to="/spinners" className="sidebar-item">Spinners</Link>
-          <Link to="/toltips" className="sidebar-item">Toltips</Link>
+          <NavLink to="/alerts" className="sidebar-item" activeClassName="active">Alerts</NavLink>
+          <NavLink to="/chipnotifications" className="sidebar-item" activeClassName="active">Chip Notifications</NavLink>
+          <NavLink to="/modals" className="sidebar-item" activeClassName="active">Modals</NavLink>
+          <NavLink to="/notifications" className="sidebar-item" activeClassName="active">Notifications</NavLink>
+          <NavLink to="/progressbars" className="sidebar-item" activeClassName="active">Progress Bars</NavLink>
+          <NavLink to="/spinners" className="sidebar-item" activeClassName="active">Spinners</NavLink>
+          <NavLink to="/toltips" className="sidebar-item" activeClassName="active">Toltips</NavLink>
 
           {/* Form Elements */}
           <p className="t">Form Elements</p>
-          <Link to="/checkboxes" className="sidebar-item">Checkboxes</Link>
-          <Link to="/datepickers" className="sidebar-item">Datepickers</Link>
-          <Link to="/fileinputs" className="sidebar-item">File Inputs</Link>
-          <Link to="/inputgroups" className="sidebar-item">Input Groups</Link>
-          <Link to="/radiogroups" className="sidebar-item">Radio Groups</Link>
-          <Link to="/searchinputs" className="sidebar-item">Search Inputs</Link>
-          <Link to="/selectmenus" className="sidebar-item">Select Menus</Link>
-          <Link to="/textareas" className="sidebar-item">Textareas</Link>
-          <Link to="/toggles" className="sidebar-item">Toggles</Link>
-
-
-
-
-
-
-
-
-
+          <NavLink to="/checkboxes" className="sidebar-item" activeClassName="active">Checkboxes</NavLink>
+          <NavLink to="/datepickers" className="sidebar-item" activeClassName="active">Datepickers</NavLink>
+          <NavLink to="/fileinputs" className="sidebar-item" activeClassName="active">File Inputs</NavLink>
+          <NavLink to="/inputgroups" className="sidebar-item" activeClassName="active">Input Groups</NavLink>
+          <NavLink to="/radiogroups" className="sidebar-item" activeClassName="active">Radio Groups</NavLink>
+          <NavLink to="/searchinputs" className="sidebar-item" activeClassName="active">Search Inputs</NavLink>
+          <NavLink to="/selectmenus" className="sidebar-item" activeClassName="active">Select Menus</NavLink>
+          <NavLink to="/textareas" className="sidebar-item" activeClassName="active">Textareas</NavLink>
+          <NavLink to="/toggles" className="sidebar-item" activeClassName="active">Toggles</NavLink>
         </nav>
       </aside>
     </>

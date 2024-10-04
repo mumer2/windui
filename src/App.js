@@ -41,6 +41,11 @@ import { Checkboxes } from './Components/FormElements/Checkboxes';
 import { Datepickers } from './Components/FormElements/Datepickers';
 import { FileInputs } from './Components/FormElements/FileInputs';
 import { InputGroups } from './Components/FormElements/InputGroups';
+import { RadioGroups } from './Components/FormElements/RadioGroups';
+import { SearchInputs } from './Components/FormElements/SearchInputs';
+import { SelectMenus } from './Components/FormElements/SelectMenus';
+import { Textareas } from './Components/FormElements/Textareas';
+import { Toggles } from './Components/FormElements/Toggles';
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -115,6 +120,11 @@ function App() {
                 <Route path="/datepickers" element={<Datepickers/>} />
                 <Route path="/fileinputs" element={<FileInputs/>} />
                 <Route path="/inputgroups" element={<InputGroups/>} />
+                <Route path="/radiogroups" element={<RadioGroups/>} />
+                <Route path="/searchinputs" element={<SearchInputs/>} />
+                <Route path="/selectmenus" element={<SelectMenus/>} />
+                <Route path="/textareas" element={<Textareas/>} />
+                <Route path="/toggles" element={<Toggles/>} />
 
 
 

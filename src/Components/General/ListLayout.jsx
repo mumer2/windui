@@ -52,7 +52,11 @@ const ListLayout = () => {
             <span>Push Notifications</span>
             <small>Get instant updates</small>
           </div>
-          <input type="checkbox" checked />
+          {/* <input type="checkbox" checked /> */}
+          <label class="toggle-label">
+        <input type="checkbox" class="toggle-input"/>
+        <span class="toggle-slider"></span>
+         </label>
         </div>
         <div className="setting-item">
         <i class="fa-solid fa-location-dot icon"></i>
@@ -60,7 +64,11 @@ const ListLayout = () => {
             <span>Location Services</span>
             <small>Find you and others</small>
           </div>
-          <input type="checkbox" />
+          {/* <input type="checkbox" /> */}
+          <label class="toggle-label">
+        <input type="checkbox" class="toggle-input"/>
+        <span class="toggle-slider"></span>
+         </label>
         </div>
         <div className="setting-item">
         <i class="fa-solid fa-volume-high icon"></i>
@@ -68,7 +76,11 @@ const ListLayout = () => {
             <span>In-App Sound</span>
             <small>Turn on/off sound</small>
           </div>
-          <input type="checkbox" checked />
+          {/* <input type="checkbox" checked /> */}
+          <label class="toggle-label">
+        <input type="checkbox" class="toggle-input"/>
+        <span class="toggle-slider"></span>
+         </label>
         </div>
         <div className="setting-item">
         <i class="fa-solid fa-moon icon"></i>
@@ -76,7 +88,11 @@ const ListLayout = () => {
             <span>In-App Sound</span>
             <small>Turn on/off sound</small>
           </div>
-          <input type="checkbox" checked />
+          {/* <input type="checkbox" checked /> */}
+          <label class="toggle-label">
+        <input type="checkbox" class="toggle-input"/>
+        <span class="toggle-slider"></span>
+         </label>
         </div>
         <div className="setting-item">
         <i class="fa-solid fa-chart-simple icon"></i>
@@ -84,7 +100,11 @@ const ListLayout = () => {
             <span>In-App Sound</span>
             <small>Turn on/off sound</small>
           </div>
-          <input type="checkbox" checked />
+          {/* <input type="checkbox" checked /> */}
+          <label class="toggle-label">
+        <input type="checkbox" class="toggle-input"/>
+        <span class="toggle-slider"></span>
+         </label>
         </div>
       </div>
 

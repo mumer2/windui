@@ -1,4 +1,14 @@
 /* General navbar styling */
+
+.sidebar-item {
+  color: #000; /* Default color */
+}
+
+.sidebar-item.active {
+  color: #049867; /* Active color */
+  font-weight: 600;
+}
+
 .navbar {
   border-bottom: 1px solid #e5e7eb;
   padding: 10px 20px;
@@ -440,10 +450,6 @@
   }
 }
 
-
-
-
-
 /* Remove extra scroll on body */
 html, body {
   /* margin: 0;
@@ -835,7 +841,7 @@ gap: 30px;
 
 
 /* *************************** */
-           /* Badges */
+           /* Cards */
 /* *************************** */
 
 
@@ -986,7 +992,7 @@ gap: 30px;
 
 
 /* ******************* */
-/* Carousels */
+    /* Carousels */
 /* ******************* */
 
 
@@ -1109,9 +1115,6 @@ gap: 30px;
   color: gray;
 }
 
-
-
-
 /* Card */
 
 /* Styling for the card section */
@@ -1168,7 +1171,7 @@ gap: 30px;
   }
 }
 /* ******************* */
-    /* Feed */
+       /* Feed */
 /* ******************* */
 
 .feeds{
@@ -1176,15 +1179,11 @@ gap: 30px;
   margin-left: 2%;
   color: gray;
 }
-
-
-
 .feed-container {
   padding: 20px;
   max-width: 600px;
   margin: auto;
 }
-
 .feed-item {
   display: flex;
   align-items: flex-start;
@@ -1528,34 +1527,38 @@ gap: 30px;
     /* Ratings */
 /* ******************* */
 
-.ratings{
-  margin-top: 15%;
+/* General Ratings Section */
+.ratings {
+  margin-top: 10%;
   margin-left: 2%;
   color: rgb(97, 94, 94);
 }
 
-
+/* Rating Section Container */
 .rating-section {
-  max-width: 400px;
+  max-width: 90%;
+  width: 100%;
   padding: 20px;
   background-color: #f9fafc;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   font-family: Arial, sans-serif;
-  margin-left: 30%;
+  margin: 5% auto;
 }
 
+/* Rating Summary Section */
 .rating-summary {
   text-align: center;
   margin-bottom: 20px;
-  margin-left: -35%;
 }
 
+/* Stars */
 .stars {
-  font-size: 24px;
+  font-size: 6vw; /* Use relative units for font size */
   color: #ffb400;
 }
 
+/* Star Colors */
 .filled-star {
   color: #ffb400;
 }
@@ -1564,42 +1567,72 @@ gap: 30px;
   color: #d4c9c9;
 }
 
+/* Rating Score */
 .rating-score {
-  font-size: 18px;
+  font-size: 5vw; /* Use relative units for font size */
   color: #444;
   margin-left: 10px;
 }
 
+/* Rating Breakdown Section */
 .rating-breakdown .rating-bar {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
 }
 
+/* Rating Label */
 .rating-bar span:first-child {
-  width: 50px;
+  width: 20%;
   font-weight: 500;
+  font-size: 4vw; /* Use relative units for font size */
 }
 
+/* Progress Bar */
 .bar {
+  flex-grow: 1;
   height: 8px;
-  width: 150px;
+  width: auto;
   background-color: #eaeaea;
   border-radius: 4px;
   margin: 0 10px;
   position: relative;
 }
 
+/* Filled Portion of Bar */
 .filled {
   height: 100%;
   background-color: #ffb400;
   border-radius: 4px;
 }
 
+/* Percentage */
 .rating-bar span:last-child {
-  width: 30px;
+  width: 20%;
   text-align: right;
+  font-size: 4vw; /* Use relative units for font size */
 }
+
+/* Media Queries for Larger Devices */
+@media (min-width: 768px) {
+  .rating-section {
+    max-width: 600px;
+  }
+
+  .stars {
+    font-size: 24px;
+  }
+
+  .rating-score {
+    font-size: 18px;
+  }
+
+  .rating-bar span:first-child,
+  .rating-bar span:last-child {
+    font-size: 16px;
+  }
+}
+
 
 /* ******************* */
     /* Sliders */
@@ -3824,9 +3857,6 @@ color: #02b583;
   justify-content: space-around;
   line-height: 80px;
 }
-
-
-
 
 .toggle-input:disabled + .toggle-slider {
   background-color: #e5e7eb; /* Light gray for disabled state */

@@ -22,6 +22,12 @@ export const Badges = () => {
         <p>With rounded corners in 3 different sizes.</p>
         <CodePreview/>
         </div>
+
+        <div className="boxicon">
+            <div className="box1">7</div>
+            <div className="box2">7</div>
+            <div className="box3"></div>
+        </div>
     </div>
   )
 }
