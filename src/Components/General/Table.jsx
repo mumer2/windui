@@ -1,4 +1,5 @@
 import React from 'react';
+import CodePreview from './CodePreview';
 
 const Table = () => {
   const data = [
@@ -15,6 +16,40 @@ const Table = () => {
             <h1>Tables</h1>
             <p>The table element represents tabular data — that is, the information presented in a two-dimensional table comprised of rows and columns of cells containing data.</p>
         </div>
+        <div className="table-container">
+      <div className="table-responsive">
+        <table className="styled-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Title</th>
+              <th>Company</th>
+              <th>Role</th>
+              <th>Username</th>
+            </tr>
+          </thead>
+          <tbody>
+            {data.map((row, index) => (
+              <tr key={index}>
+                <td>{row.name}</td>
+                <td>{row.title}</td>
+                <td>{row.company}</td>
+                <td>{row.role}</td>
+                <td>{row.username}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div className="tables">
+            <h2>Variations</h2>
+            <h4>Simple Table</h4>
+        </div>
+
+        <CodePreview/>
+
         <div className="table-container">
       <div className="table-responsive">
         <table className="styled-table">

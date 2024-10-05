@@ -1,7 +1,7 @@
 import React from 'react';
 
-const StarRating = () => {
-  const ratings = [112, 17, 12, 2, 4];
+const Stars = () => {
+  const ratings = [15, 19, 5, 2, 1];
   const totalRatings = ratings.reduce((acc, val) => acc + val, 0);
   const averageRating = (ratings.reduce((acc, val, idx) => acc + val * (5 - idx), 0) / totalRatings).toFixed(1);
 
@@ -20,19 +20,9 @@ const StarRating = () => {
         </div>
         <p>based on {totalRatings} user ratings</p>
       </div>
-      <div className="rating-breakdown">
-        {ratings.map((count, index) => (
-          <div className="rating-bar" key={index}>
-            <span>{5 - index} star</span>
-            <div className="bar">
-              <div className="filled" style={{ width: `${(count / totalRatings) * 100}%` }}></div>
-            </div>
-            <span>{count}</span>
-          </div>
-        ))}
-      </div>
+      
     </div>
   );
 };
 
-export default StarRating;
+export default Stars;

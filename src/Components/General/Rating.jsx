@@ -1,5 +1,6 @@
 import React from 'react'
 import StarRating from './StarRating'
+import Stars from './Stars'
 
 export const Rating = () => {
   return (
@@ -12,6 +13,18 @@ export const Rating = () => {
         <StarRating/>
         </div>
         </div>
+
+        <div className="ratings">
+            <h2> Validations
+            </h2>
+            <h4>Basic</h4>
+        <div className="container-rate">
+        <Stars/>
+        <Stars/>
+
+        </div>
+        </div>
+        
     </div>
   )
 }

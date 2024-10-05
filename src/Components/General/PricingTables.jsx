@@ -1,5 +1,7 @@
 import React from 'react'
 import Pricing from './Pricing'
+import CodePreview from './CodePreview'
+import Price from './Price2'
 
 export const PricingTables = () => {
   return (
@@ -10,6 +12,15 @@ export const PricingTables = () => {
         </div>
 
         <Pricing/>
+
+        <div className="pricingtables">
+            <h2>Variations</h2>
+            <h4>Basic</h4>
+        </div>
+
+        <CodePreview/>
+
+        <Price/>
     </div>
   )
 }

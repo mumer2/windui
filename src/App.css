@@ -594,12 +594,15 @@ html, body {
   background-color: #3d3636;
   color: white;
   border-radius: 5px;
+  overflow-x: auto; /* Handle text overflow with horizontal scroll */
 }
 
 /* Code section styling (left-aligned) */
 .code-section {
   flex-grow: 1;
   white-space: pre-wrap; /* Make the code wrap nicely */
+  word-wrap: break-word; /* Break long words */
+  overflow-wrap: break-word; /* Ensure text doesn't overflow container */
   margin-right: 20px;
 }
 
@@ -659,7 +662,6 @@ input:checked + .slider:before {
   transform: translateX(100%);
 }
 
-
 /* Media Queries for Responsiveness */
 
 /* For screens smaller than 768px (tablets and phones) */
@@ -707,10 +709,28 @@ input:checked + .slider:before {
   .code-section {
     font-size: 0.85rem;
   }
+
+  /* Display visible and code icons with toggle menu changer */
+  .code-preview-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .toggle-menu {
+    display: flex;
+    align-items: center;
+  }
+
+  /* Show icons in toggle menu */
+  .preview-btn,
+  .code-btn {
+    width: auto;
+    padding: 8px 12px;
+    margin-bottom: 0;
+  }
 }
-
-
-
 
 /* ************************** */
        /* Avatars */

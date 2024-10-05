@@ -1,5 +1,6 @@
 import React from 'react'
 import TabsContent from './TabsContent'
+import CodePreview from './CodePreview'
 
 export const Tabs = () => {
   return (
@@ -10,6 +11,14 @@ export const Tabs = () => {
         </div>
 
         <TabsContent/>
+        <div className="tabs">
+            <h2>Variations</h2>
+            <h4>Basic Tabs</h4>
+        </div>
+        <CodePreview/>
+
+        <TabsContent/>
+
     </div>
   )
 }

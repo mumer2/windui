@@ -1,5 +1,7 @@
 import React from 'react'
 import Quotes from './Quotes'
+import CodePreview from './CodePreview'
+import Quotes2 from './Quotes2'
 
 export const Testimonials = () => {
   return (
@@ -12,6 +14,15 @@ export const Testimonials = () => {
 
 
         <Quotes/>
+
+        <div className="testimonials">
+            <h2>Variations</h2>
+            <h4>Simple Basic</h4>
+        </div>
+
+        <CodePreview/>
+
+        <Quotes2/>
     </div>
   )
 }
