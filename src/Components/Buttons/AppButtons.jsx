@@ -11,22 +11,65 @@ export const AppButtons = () => {
 </p>
         </div>
 
+        <div class="appbtn">
+  <div class="btns">
+    <button class="applebtn">
+      <i class="fa-brands fa-apple"></i>
+      <div class="applebtn-text">
+        <p>Get it on</p>
+        <h3>App Store</h3>
+      </div>
+    </button>
+    <button class="applebtn">
+      <i class="fa-brands fa-google-play"></i>
+      <div class="applebtn-text">
+        <p>Get it on</p>
+        <h3>Google Play</h3>
+      </div>
+    </button>
+    {/* <!-- Additional buttons can be added here --> */}
+  </div>
+</div>
+
+
+{/* 
         <div className="btns">
             <div className='applebtn'><i class="fa-brands fa-apple"></i><p>Get it on</p><h3>App Store</h3></div>
             <div className='applebtn'><i class="fa-brands fa-google-play"></i><p>Get it on</p><h3>Google Play</h3></div>
         
-        </div>
+        </div> */}
 
         <div className="appbtn">
             <h2>Variations</h2>
             <h4>Primary App Buttons</h4>
             <CodePreview/>
-            <div className="btns">
+            {/* <div className="btns">
             <div className='applebtn'><i class="fa-brands fa-apple"></i><p>Get it on</p><h3>App Store</h3></div>
             <div className='applebtn'><i class="fa-brands fa-google-play"></i><p>Get it on</p><h3>Google Play</h3></div>
         
+        </div> */}
         </div>
-        </div>
+
+
+        <div class="appbtn">
+  <div class="btns">
+    <button class="applebtn">
+      <i class="fa-brands fa-apple"></i>
+      <div class="applebtn-text">
+        <p>Get it on</p>
+        <h3>Google Play</h3>
+      </div>
+    </button>
+    <button class="applebtn">
+      <i class="fa-brands fa-google-play"></i>
+      <div class="applebtn-text">
+        <p>Get it on</p>
+        <h3>Google Play</h3>
+      </div>
+    </button>
+    {/* <!-- Additional buttons can be added here --> */}
+  </div>
+</div>
     </div>
   )
 }

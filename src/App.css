@@ -1245,6 +1245,7 @@ gap: 30px;
   margin-left: 2%;
   color: gray;
   font-size: 18px;
+  overflow: hidden;
 }
 
 .container {
@@ -1252,7 +1253,7 @@ gap: 30px;
   justify-content: space-between;
   margin: 20px auto;
   padding: 50px;
-  max-width: 1200px;
+  max-width: 1000px;
 }
 
 .column {
@@ -1272,12 +1273,14 @@ gap: 30px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
   color: gray;
+  overflow: hidden;
 }
 .column p {
   text-align: center;
   font-size: 0.8rem;
   color: #555;
 }
+
 
 /* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
@@ -1287,8 +1290,12 @@ gap: 30px;
   }
 
   .column {
-    width: 100%;
+    width: 70%;
     margin-bottom: 20px;
+    overflow: hidden;
+  }
+  .column1{
+    width: 70%;
   }
 }
 /* ******************* */
@@ -1951,46 +1958,121 @@ gap: 30px;
     /* App Buttons*/
 /* ******************* */
 
-.appbtn{
+/* General App Button Section */
+.appbtn {
   margin-top: 15%;
   margin-left: 2%;
   color: rgb(110, 103, 103);
 }
-.btns{
+
+/* Container for Buttons */
+.btns {
   display: flex;
   flex-wrap: wrap;
-  gap: 50px;
+  gap: 20px;
   justify-content: center;
-  margin-top: 10%;
+  margin: 5% auto;
+  max-width: 1200px;
 }
-.applebtn{
+
+/* Individual Button Styling */
+.applebtn {
   background-color: #02b583;
   color: white;
   border: none;
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
   text-align: center;
-  width: 20%;
-  border-radius: 6px;
+  width: 180px;
+  border-radius: 8px;
   height: 60px;
   cursor: pointer;
+  padding: 10px;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-.applebtn:hover{
+
+.applebtn:hover {
   background-color: #1f9874;
+  transform: translateY(-2px);
 }
-.applebtn i{
-  font-size: 45px;
-  margin-left: -22%;
-  margin-top: 3%;
+
+.applebtn:active {
+  transform: translateY(1px);
 }
-.applebtn p{
-  margin-left: 10%;
-  margin-top: 5%;
+
+/* Icon Styling */
+.applebtn i {
+  font-size: 28px;
+  margin-right: 15px;
 }
-.applebtn h3{
-  margin-left: 18%;
-  margin-top: -12%;
+
+/* Button Text Container */
+.applebtn-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.applebtn h3 {
+  font-size: 16px;
+  margin: 0;
+}
+
+.applebtn p {
+  font-size: 12px;
+  margin: 0;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablet Devices */
+@media (max-width: 768px) {
+  .btns {
+    gap: 15px;
+  }
+
+  .applebtn {
+    width: 200px;
+    height: 50px;
+    padding: 8px;
+  }
+
+  .applebtn i {
+    font-size: 24px;
+  }
+
+  .applebtn h3 {
+    font-size: 14px;
+  }
+
+  .applebtn p {
+    font-size: 11px;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 480px) {
+  .btns {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .applebtn {
+    width: 90%;
+    height: 45px;
+    padding: 6px;
+  }
+
+  .applebtn i {
+    font-size: 20px;
+  }
+
+  .applebtn h3,
+  .applebtn p {
+    font-size: 13px;
+  }
 }
 
 /* ******************* */
@@ -2074,6 +2156,77 @@ gap: 30px;
   margin-top: 10%;
 }
 
+
+/* Media Queries for Specific Screen Sizes */
+
+/* Large devices (desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .app-button,
+  .medium,
+  .small {
+    padding: 15px 10px;
+    font-size: 14px;
+  }
+
+  .medium {
+    width: 13%;
+    height: 50px;
+    font-size: 16px;
+  }
+
+  .small {
+    width: 12%;
+    height: 40px;
+    font-size: 12px;
+  }
+
+  .button-container,
+  .button-container2 {
+    gap: 20px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .app-button {
+    padding: 12px 20px;
+    font-size: 12px;
+    width: 25%;
+    height: 50px;
+  }
+
+  .medium {
+    width: 20%;
+    height: 45px;
+    font-size: 14px;
+  }
+
+  .small {
+    width: 18%;
+    height: 35px;
+    font-size: 12px;
+  }
+}
+
+/* Small devices (phones, less than 768px) */
+@media (max-width: 767px) {
+  .app-button {
+    padding: 8px 16px;
+    font-size: 10px;
+  }
+
+  .medium {
+    width: 40%;
+    height: 40px;
+    font-size: 12px;
+  }
+
+  .small {
+    width: 35%;
+    height: 30px;
+    font-size: 10px;
+  }
+}
 /* ******************* */
     /* Buttons Group*/
 /* ******************* */
@@ -2221,54 +2374,51 @@ margin-top: 5%;
     /*Dropdowns*/
 /* ******************* */
 
-.dropdowns{
+.dropdowns {
   margin-top: 15%;
-  margin-left: 2%;
+  margin-left: 2vw;
   color: rgb(138, 120, 120);
 }
 
-.dropdown-menu{
+.dropdown-menu {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.dropbtn{
+.dropbtn {
   background-color: #02b583;
   color: white;
-  padding: 16px;
-  border-radius: 8px;
+  padding: 3vw;
+  border-radius: 0.5em;
   width: 100%;
-  height: 22px;
+  height: auto;
   text-align: center;
-  font-size: 18px;
+  font-size: 4vw;
   font-weight: 400;
   cursor: pointer;
 }
 
-
-
-
 .dropdown-container {
   display: flex;
   flex-wrap: wrap;
-  width: 310px; /* Adjust width as needed */
+  width: 80vw; /* Adjust width for responsiveness */
+  max-width: 400px; /* Set a max width */
   border: 1px solid #e5e7eb;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: white;
   justify-content: center;
-  margin-left: 35%;
-  margin-top: 5%;
+  margin: 5vw auto; /* Centering the dropdown container */
 }
 
 .dropdown-toggle {
   width: 100%;
-  padding: 12px 16px;
-  background-color: #3b82f6; /* Button background color */
-  color: white; /* Button text color */
-  font-size: 16px;
+  padding: 3vw;
+  background-color: #3b82f6;
+  color: white;
+  font-size: 4vw;
   border: none;
   text-align: left;
   font-weight: 600;
@@ -2281,19 +2431,149 @@ margin-top: 5%;
   border-top: 1px solid #e5e7eb;
   color: gray;
 }
-.actv{
+
+.actv {
   color: #02b583;
 }
 
 .dropdown-item {
-  padding: 12px 16px;
+  padding: 3vw;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .dropdown-item:hover {
-  background-color: #f3f4f6; /* Light background on hover */
+  background-color: #f3f4f6;
 }
+
+/* Media Queries for Specific Screen Sizes */
+
+/* Large devices (desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .dropdown-container {
+    width: 310px;
+  }
+
+  .dropbtn,
+  .dropdown-toggle {
+    padding: 16px;
+    font-size: 18px;
+  }
+
+  .dropdown-item {
+    padding: 12px 16px;
+  }
+}
+
+/* Medium devices (tablets, 768px to 1199px) */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .dropdown-container {
+    width: 60vw;
+  }
+
+  .dropbtn,
+  .dropdown-toggle {
+    padding: 14px;
+    font-size: 16px;
+  }
+
+  .dropdown-item {
+    padding: 10px 14px;
+  }
+}
+
+/* Small devices (phones, less than 768px) */
+@media (max-width: 767px) {
+  .dropdown-container {
+    width: 90vw;
+  }
+
+  .dropbtn,
+  .dropdown-toggle {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .dropdown-item {
+    padding: 8px 10px;
+  }
+}
+
+
+/* Dropbutton */
+
+.dropbtnuniq{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Dropdown container */
+.unique-dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown button */
+.unique-dropbtn {
+  background-color: #018156; /* Blue color */
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Change background color on hover */
+.unique-dropbtn:hover {
+  background-color: #02b583; /* Darker blue */
+}
+
+/* Dropdown content (hidden by default) */
+.unique-dropdown-content {
+  position: absolute;
+  background-color: white;
+  min-width: 300px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Dropdown links */
+.unique-dropdown-content a {
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+/* Change background color on link hover */
+.unique-dropdown-content a:hover {
+  color: #018156;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .unique-dropbtn {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .unique-dropdown-content {
+    min-width: 120px;
+  }
+
+  .unique-dropdown-content a {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+}
+
 
 
 /* ******************* */
@@ -2354,6 +2634,70 @@ margin-top: 5%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
+
+
+/* Media Queries for Specific Screen Sizes */
+
+/* Large devices (desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .fab, .fab-item {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
+
+  .fab-container {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .fab-menu {
+    bottom: 80px;
+    gap: 10px;
+  }
+}
+
+/* Medium devices (tablets, 768px to 1199px) */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .fab, .fab-item {
+    width: 10vw;
+    height: 10vw;
+    max-width: 50px;
+    max-height: 50px;
+    font-size: 20px;
+  }
+
+  .fab-container {
+    bottom: 4vw;
+    right: 4vw;
+  }
+
+  .fab-menu {
+    bottom: 14vw;
+    gap: 3vw;
+  }
+}
+
+/* Small devices (phones, less than 768px) */
+@media (max-width: 767px) {
+  .fab, .fab-item {
+    width: 12vw;
+    height: 12vw;
+    max-width: 45px;
+    max-height: 45px;
+    font-size: 18px;
+  }
+
+  .fab-container {
+    bottom: 6vw;
+    right: 15vw;
+  }
+
+  .fab-menu {
+    bottom: 18vw;
+    gap: 4vw;
+  }
+}
     /* Navigations */
 /* ******************* */
     /*Breadcrumbs*/
@@ -3741,6 +4085,82 @@ color: #02b583;
   font-size: 12px;
   color: #6b7280; /* Light gray color for helper text */
   margin-top: 8px;
+}
+
+
+/* Media Queries for Specific Screen Sizes */
+
+/* Large devices (desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .textareas {
+    font-size: 18px;
+  }
+
+  .textarea-container,
+  .textarea-container2 {
+    width: 520px;
+    font-size: 10px;
+  }
+
+  .textarea-label,
+  .helper-text {
+    font-size: 12px;
+  }
+
+  .textarea,
+  .textarea2 {
+    font-size: 14px;
+    padding: 15px;
+  }
+}
+
+/* Medium devices (tablets, 768px to 1199px) */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .textareas {
+    font-size: 16px;
+  }
+
+  .textarea-container,
+  .textarea-container2 {
+    width: 60vw;
+    max-width: 450px;
+  }
+
+  .textarea-label,
+  .helper-text {
+    font-size: 14px;
+  }
+
+  .textarea,
+  .textarea2 {
+    font-size: 16px;
+    padding: 12px;
+  }
+}
+
+/* Small devices (phones, less than 768px) */
+@media (max-width: 767px) {
+  .textareas {
+    font-size: 14px;
+  }
+
+  .textarea-container,
+  .textarea-container2 {
+    width: 90vw;
+    justify-content: space-around;
+    margin-right: 6%;
+  }
+
+  .textarea-label,
+  .helper-text {
+    font-size: 12px;
+  }
+
+  .textarea,
+  .textarea2 {
+    font-size: 14px;
+    padding: 10px;
+  }
 }
 /* ******************* */
       /* Toggles */

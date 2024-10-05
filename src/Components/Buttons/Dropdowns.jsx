@@ -1,5 +1,6 @@
 import React from 'react'
 import CodePreview from '../General/CodePreview'
+import Dropbutton from './Dropbutton'
 
 export const Dropdowns = () => {
   return (
@@ -38,7 +39,10 @@ export const Dropdowns = () => {
             <h4>Basic Dropdown</h4>
         </div>
             <CodePreview/>     
+        <div className="dropbtnuniq">
+            <Dropbutton/>
 
+        </div>
     </div>
   )
 }
