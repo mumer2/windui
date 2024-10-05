@@ -27,12 +27,12 @@ export const Textareas = () => {
 
         <div className="textfields">
         <div class="textarea-container2">
-    <label for="textarea" class="textarea-label">Write your message <span class="required">*</span></label>
-    <textarea id="textarea" class="textarea2" rows="4" placeholder="Type your message here..."></textarea>
+    <h2>Basic Text Area Base Size: </h2>
+    <textarea id="textarea" class="textarea2" rows="4" placeholder="Write your message"></textarea>
         </div>
         <div class="textarea-container2">
-    <label for="textarea" class="textarea-label">Write your message <span class="required">*</span></label>
-    <textarea id="textarea" class="textarea2" rows="4" placeholder="Type your message here..."></textarea>
+    <h2>Basic Text Area Large Size:</h2>
+    <textarea id="textarea" class="textarea2" rows="4" placeholder="Write your message"></textarea>
         </div>
         </div>
     </div>

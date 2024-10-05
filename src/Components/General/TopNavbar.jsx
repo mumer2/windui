@@ -15,9 +15,9 @@ const TopNavbar = () => {
         {/* Links */}
         <div className="nav-links">
           <a href="/" className="nav-item"><i className="fa-solid fa-border-all"></i><span className="link-text">Components</span></a>
-          <a href="/about" className="nav-item"><i className="fa-regular fa-paste"></i><span className="link-text">Theme</span></a>
-          <a href="/services" className="nav-item"><i className="fa-brands fa-figma"></i></a>
-          <a href="/services" className="nav-item"><i className="fa-brands fa-discord dis"></i></a>
+          <a href="/" className="nav-item"><i className="fa-regular fa-paste"></i><span className="link-text">Theme</span></a>
+          <a href="/" className="nav-item"><i className="fa-brands fa-figma"></i></a>
+          <a href="/" className="nav-item"><i className="fa-brands fa-discord dis"></i></a>
           
           {/* Support Button, visible only on large screens */}
           <button className="nav-item btn1 support-btn">Support us</button>

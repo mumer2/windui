@@ -126,18 +126,6 @@ function App() {
                 <Route path="/textareas" element={<Textareas/>} />
                 <Route path="/toggles" element={<Toggles/>} />
 
-
-
-
-
-
-
-
-
-
-
-
-              {/* Add more routes here */}
             </Routes>
           </div>
         </div>

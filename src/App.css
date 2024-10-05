@@ -4052,6 +4052,7 @@ color: #02b583;
   position: relative;
   width: 40%;
   font-size: 10px;
+  color: gray;
 }
 
 .textarea-label {
@@ -4116,9 +4117,12 @@ color: #02b583;
     font-size: 18px;
   }
 
-  .textarea-container,
-  .textarea-container2 {
+  .textarea-container {
     width: 520px;
+    font-size: 10px;
+  }
+  .textarea-container2 {
+    width: 40%;
     font-size: 10px;
   }
 
