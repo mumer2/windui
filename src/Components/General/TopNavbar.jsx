@@ -11,7 +11,6 @@ const TopNavbar = () => {
         <a href="/" className="logo">
           Wind <sup className="ui">ui</sup>
         </a>
-
         {/* Links */}
         <div className="nav-links">
           <a href="/" className="nav-item"><i className="fa-solid fa-border-all"></i><span className="link-text">Components</span></a>

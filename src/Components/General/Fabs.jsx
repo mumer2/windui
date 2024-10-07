@@ -24,7 +24,7 @@ export const Fabs = () => {
 
         <div className="fabs">
             <h2>Variations</h2>
-            <h4>A Floating Action Button (FAB) is a high-emphasis button that lets the user perform a primary action.</h4>
+            <h4>Basic floating action buttons, left and right sided</h4>
         </div>
 
         <CodePreview/>

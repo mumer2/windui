@@ -15,8 +15,8 @@ export const NavbarC = () => {
         <Navbar1/>
 
         <div className="navbarc">
-            <h1>Variations</h1>
-            <p>Basic Navigation</p>
+            <h2>Variations</h2>
+            <h4>Basic Navigation</h4>
         </div>
 
         <CodePreview/>

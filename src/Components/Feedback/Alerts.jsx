@@ -20,7 +20,7 @@ export const Alerts = () => {
 
         <div className="alerts">
             <h2>Variations</h2>
-            <p>Simple alerts</p>
+            <h4>Simple alerts</h4>
         </div>
 
         <CodePreview/>
