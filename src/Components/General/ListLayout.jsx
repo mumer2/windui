@@ -30,16 +30,16 @@ const ListLayout = () => {
         <div className="product-item">
           <img src="Images/l4.jpeg" alt="Product 3" />
           <div className="product-info">
-            <span className="product-name">S4 Turbo Sneakers</span>
-            <span className="product-price">$98</span>
+            <span className="product-name">Flex Fit</span>
+            <span className="product-price">$89</span>
           </div>
         </div>
 
         <div className="product-item">
           <img src="Images/l5.jpeg" alt="Product 3" />
           <div className="product-info">
-            <span className="product-name">S4 Turbo Sneakers</span>
-            <span className="product-price">$98</span>
+            <span className="product-name">Endurance Pro</span>
+            <span className="product-price">$78</span>
           </div>
         </div>
       </div>
@@ -55,7 +55,7 @@ const ListLayout = () => {
           {/* <input type="checkbox" checked /> */}
           <label class="toggle-label">
         <input type="checkbox" class="toggle-input"/>
-        <span class="toggle-slider"></span>
+        <span class="toggle-slider3"></span>
          </label>
         </div>
         <div className="setting-item">
@@ -67,7 +67,7 @@ const ListLayout = () => {
           {/* <input type="checkbox" /> */}
           <label class="toggle-label">
         <input type="checkbox" class="toggle-input"/>
-        <span class="toggle-slider"></span>
+        <span class="toggle-slider3"></span>
          </label>
         </div>
         <div className="setting-item">
@@ -79,31 +79,31 @@ const ListLayout = () => {
           {/* <input type="checkbox" checked /> */}
           <label class="toggle-label">
         <input type="checkbox" class="toggle-input"/>
-        <span class="toggle-slider"></span>
+        <span class="toggle-slider3"></span>
          </label>
         </div>
         <div className="setting-item">
         <i class="fa-solid fa-moon icon"></i>
           <div className="setting-info">
             <span>In-App Sound</span>
-            <small>Turn on/off sound</small>
+            <small>Switch to a darker color scheme</small>
           </div>
           {/* <input type="checkbox" checked /> */}
           <label class="toggle-label">
         <input type="checkbox" class="toggle-input"/>
-        <span class="toggle-slider"></span>
+        <span class="toggle-slider3"></span>
          </label>
         </div>
         <div className="setting-item">
         <i class="fa-solid fa-chart-simple icon"></i>
           <div className="setting-info">
             <span>In-App Sound</span>
-            <small>Turn on/off sound</small>
+            <small>Help us improve by sharing </small>
           </div>
           {/* <input type="checkbox" checked /> */}
           <label class="toggle-label">
         <input type="checkbox" class="toggle-input"/>
-        <span class="toggle-slider"></span>
+        <span class="toggle-slider3"></span>
          </label>
         </div>
       </div>
@@ -122,7 +122,7 @@ const ListLayout = () => {
           <img src="Images/feed2.jfif" alt="User 2" />
           <div className="user-info">
             <span className="user-name">Thomas Anderson</span><br/>
-            <small>A hacker against the rules.</small>
+            <small>The chosen one, a hacker against the rules.</small>
           </div>
           <span className="notification-badge">2</span>
         </div>
@@ -130,27 +130,25 @@ const ListLayout = () => {
           <img src="Images/feed3.jfif" alt="User 3" />
           <div className="user-info">
             <span className="user-name">Luke Skywalker</span><br/>
-            <small>Fights against the dark side.</small>
+            <small>A Jedi warrior who fights against the dark side.</small>
           </div>
-          <span className="notification-badge">3</span>
         </div>
 
 
         <div className="user-item">
           <img src="Images/feed2.jfif" alt="User 2" />
           <div className="user-info">
-            <span className="user-name">Thomas Anderson</span><br/>
-            <small>A hacker against the rules.</small>
+            <span className="user-name">Sarah Connor</span><br/>
+            <small>A fierce leader who fights against machines.</small>
           </div>
-          <span className="notification-badge">2</span>
+          <span className="notification-badge">1</span>
         </div>
         <div className="user-item">
           <img src="Images/feed1.jfif" alt="User 2" />
           <div className="user-info">
-            <span className="user-name">Thomas Anderson</span><br/>
-            <small>A hacker against the rules.</small>
+            <span className="user-name">Captain James T. Kirk</span><br/>
+            <small>A charismatic and adventurous captain.</small>
           </div>
-          <span className="notification-badge">2</span>
         </div>
       </div>
     </div>

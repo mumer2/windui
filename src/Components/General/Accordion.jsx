@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 
-
 const AccordionItem = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
 

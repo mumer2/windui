@@ -27,19 +27,19 @@ const CodePreview = () => {
           onClick={handlePreviewClick}
         >
             <i class="fa-regular fa-eye"></i>
-          Preview
+            <span className='hide'>Preview</span> {/* Text inside span for conditional hiding */}
         </button>
         <button 
           className={`code-btn ${showCode ? 'active' : ''}`} 
           onClick={handleCodeClick}
         >
           <i class="fa-solid fa-code"></i>
-          Code
+          <span className='hide'>Code</span> {/* Text inside span for conditional hiding */}
         </button>
 
          {/* Toggle switch (right-aligned) */}
          <div className="code-type-toggle">
-            <span>Copy as: HTML</span>
+            <span className='hide'>Copy as: HTML</span>
             <label className="switch">
               <input 
                 type="checkbox" 

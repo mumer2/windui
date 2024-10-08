@@ -9,7 +9,7 @@ export const Layout = () => {
             <p>A layout system allows you to visually organize your content and adapt to screen size, ensuring consistency and hierarchy.</p>
         </div>
 
-        <div className="container">
+        <div className="container-layout">
       <div className="column column-left">
         <p>Column 1/3</p>
       </div>

@@ -223,7 +223,7 @@ P{
 /* Sidebar container */
 .sidebar {
   position: fixed;
-  top: 16%;
+  top: 12%;
   left: 0;
   width: 250px;
   height: calc(100% - 15%);
@@ -300,6 +300,7 @@ P{
 /* Responsive behavior for smaller screens */
 @media (max-width: 768px) {
   .sidebar {
+    margin-top: 10%;
     width: 250px;
     height: 100%;
     transform: translateX(-100%); /* Hide sidebar on small screens */
@@ -500,6 +501,20 @@ html, body {
   color: rgb(71, 85, 105);
   font-size: 16px;
 }
+.accordion-header {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.accordion-icon {
+  margin-right: 10px;
+}
+
+
+
+
+
 
 
 .accordions-container {
@@ -529,7 +544,7 @@ html, body {
 }
 
 .accordion-item {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid rgb(229, 225, 225);
 }
 .accordion-item h3{
   color: rgb(63, 62, 62);
@@ -538,11 +553,19 @@ html, body {
 
 .accordion-header {
   padding: 15px;
-  background-color: #f4f4f4;
+  background-color: white;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.acc-cont{
+  background-color: rgb(255, 255, 255);
+  margin: 20px;
+  box-shadow: whitesmoke;
+  border: 1px solid  rgb(231, 223, 223);
+  border-radius: 10px;
+  padding: 50px;
 }
 
 /* .accordion-header:hover {
@@ -568,11 +591,10 @@ html, body {
 /* Code Preview */
 
 
-
 /* Container for the entire section */
 .code-preview-container {
   padding: 20px;
-  border: 1px solid #ddd;
+  /* border: 1px solid #ddd; */
   border-radius: 8px;
   background-color: #f9f9f9;
 }
@@ -581,7 +603,9 @@ html, body {
 .code-preview-header {
   display: flex;
   align-items: center;
+  justify-content: space-between; /* Keep buttons aligned across */
   margin-bottom: 10px;
+  flex-wrap: nowrap; /* Ensure items stay on one line */
 }
 
 /* Buttons for preview and code */
@@ -595,6 +619,7 @@ html, body {
   border-radius: 5px;
   margin-right: 10px;
   transition: background-color 0.3s ease;
+  white-space: nowrap; /* Prevent text wrapping */
 }
 
 .preview-btn.active,
@@ -614,38 +639,36 @@ html, body {
   background-color: #3d3636;
   color: white;
   border-radius: 5px;
-  overflow-x: auto; /* Handle text overflow with horizontal scroll */
+  flex-wrap: nowrap; /* Ensure content stays on one line */
+  overflow-x: auto; /* Handle overflow with horizontal scroll */
 }
 
 /* Code section styling (left-aligned) */
 .code-section {
   flex-grow: 1;
   white-space: pre-wrap; /* Make the code wrap nicely */
-  word-wrap: break-word; /* Break long words */
-  overflow-wrap: break-word; /* Ensure text doesn't overflow container */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
   margin-right: 20px;
+  white-space: nowrap; /* Keep code on one line unless it overflows */
 }
 
 /* Toggle switch (right-aligned) */
 .code-type-toggle {
   display: flex;
   align-items: center;
-  margin-left: auto; /* Push to the right */
-}
-
-.code-type-toggle span {
-  margin-left: 10px;
-  font-size: 1rem;
-  color: #333;
+  margin-left: auto;
+  white-space: nowrap; /* Ensure toggle stays on one line */
 }
 
 /* Toggle switch styles */
 .switch {
   position: relative;
   display: inline-block;
-  width: 46px;
-  height: 18px;
+  width: 28px;
+  height: 14px;
   margin-left: 10px;
+  margin-right: 10px;
 }
 
 .switch input {
@@ -667,8 +690,8 @@ html, body {
 .slider:before {
   position: absolute;
   content: "";
-  height: 18px;
-  width: 18px;
+  height: 14px;
+  width: 14px;
   background-color: white;
   transition: 0.4s;
   border-radius: 50%;
@@ -686,71 +709,56 @@ input:checked + .slider:before {
 
 /* For screens smaller than 768px (tablets and phones) */
 @media screen and (max-width: 768px) {
-  /* Stack the code section and toggle vertically */
+  .code-preview-header,
   .code-section-row {
-    flex-direction: column;
+    flex-direction: row; /* Always keep the row layout */
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap; /* Prevent wrapping */
   }
-
-  /* Ensure the buttons stack on smaller screens */
-  .code-preview-header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
+.hide{
+  display: none;
+}
+  /* Ensure the buttons take minimal width */
   .preview-btn,
   .code-btn {
-    width: 100%;
-    margin-bottom: 10px; /* Add space between stacked buttons */
+    width: 38px;
+    margin-bottom: 0;
   }
 
-  /* Make sure code section takes up full width */
   .code-section {
-    margin-right: 0;
-    width: 100%;
+    margin-right: 10px; /* Reduce margin for compact layout */
   }
 
-  /* Center the toggle switch on smaller screens */
   .code-type-toggle {
     margin-left: 0;
-    margin-top: 10px;
-    justify-content: center;
   }
 }
 
 /* For screens smaller than 480px (small phones) */
 @media screen and (max-width: 480px) {
-  /* Make buttons and code block even more compact */
+  /* Further compact buttons */
   .preview-btn,
   .code-btn {
-    padding: 8px 16px;
-    font-size: 0.9rem;
-  }
-
-  .code-section {
-    font-size: 0.85rem;
-  }
-
-  /* Display visible and code icons with toggle menu changer */
-  .code-preview-header {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-  }
-
-  .toggle-menu {
-    display: flex;
-    align-items: center;
-  }
-
-  /* Show icons in toggle menu */
-  .preview-btn,
-  .code-btn {
-    width: auto;
     padding: 8px 12px;
-    margin-bottom: 0;
+    font-size: 0.85rem;
+    width: 38px;
+  }
+.hide{
+  display: none;
+}
+  .code-section {
+    font-size: 0.85rem; /* Slightly reduce code text size */
+    margin-right: 5px;
+  }
+
+  /* Ensure toggle stays on the same line */
+  .code-type-toggle {
+    margin-left: 0;
+    justify-content: flex-end;
   }
 }
+
 
 /* ************************** */
        /* Avatars */
@@ -914,6 +922,110 @@ gap: 30px;
            /* Cards */
 /* *************************** */
 
+/* Container for the entire profile section */
+
+.card-main{
+  padding: 5% 10%;
+  border: 1px solid rgb(235, 226, 226);
+  border-radius: 10px;
+  margin: 10px;
+}
+.newclass-profile-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  /* padding: 20px; */
+  background-color: #f7f9fc;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+  margin: 20px auto;
+}
+
+/* Left side image */
+.newclass-profile-image img {
+  width: 100%;
+  max-width: 400px;
+  height: 350px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+
+}
+
+/* Right side profile card */
+.newclass-profile-card {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 0px;
+}
+
+.newclass-profile-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.newclass-profile-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.newclass-profile-info {
+  flex-grow: 1;
+}
+
+.newclass-profile-name {
+  font-size: 1.3rem;
+  margin-bottom: 4px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.newclass-profile-designation {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.newclass-profile-caption {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .newclass-profile-section {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .newclass-profile-card {
+    padding: 15px;
+  }
+
+  .newclass-profile-image img {
+    max-width: 100%;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0px;
+  }
+
+  .newclass-profile-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .newclass-profile-icon {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
 
 .cards{
   margin-top: 16%;
@@ -1219,6 +1331,9 @@ gap: 30px;
   line-height: 2.25rem;
   font-weight: 600;
 }
+.features p{
+  font-size: 18px;
+}
 .features-content{
   margin-top: 15%;
   margin-left: 2%;
@@ -1244,23 +1359,17 @@ gap: 30px;
 .card-section {
   display: flex;
   justify-content: space-around;
-  margin: 50px 0;
-  padding: 20px;
+  margin: 20px;
+  padding: 36px;
+  border: 1px solid rgb(230, 227, 227);
+  border-radius: 10px;
+  background-color: white;
 }
 
 .card {
-  background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  padding: 10px;
   text-align: center;
   max-width: 260px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 /* Icon styling */
@@ -1271,9 +1380,12 @@ gap: 30px;
 
 /* Card title */
 .card .card-title {
-  font-size: 16px;
-  font-weight: bold;
-  color: rgb(91, 87, 87);
+  font-size: 18px;
+  color: rgb(100 ,116, 139);
+}
+.card .card-title b{
+  font-weight: 600;
+  color: rgb(71, 85, 105);
 }
 
 /* Card text */
@@ -1296,29 +1408,34 @@ gap: 30px;
 /* ******************* */
        /* Feed */
 /* ******************* */
-
-.feeds{
-  margin-top: 15%;
+.feeds {
+  margin-top: 5%;
   margin-left: 2%;
   color: gray;
 }
-.feeds h1{
-  font-size: 18px;
-  color: rgb(71 ,85, 105);
+
+.feeds h1 {
   font-size: 1.875rem;
+  color: rgb(71, 85, 105);
   line-height: 2.25rem;
   font-weight: 600;
 }
+
+/* Container to center the feed */
 .feed-container {
   padding: 20px;
-  max-width: 600px;
+  max-width: 800px;
   margin: auto;
+  background-color: #f9fafb;
+  border-radius: 8px;
 }
+
+/* Individual feed items */
 .feed-item {
   display: flex;
   align-items: flex-start;
-  margin-bottom: 20px;
-  border-bottom: 1px solid #ddd;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #e2e8f0;
   padding-bottom: 15px;
 }
 
@@ -1328,30 +1445,51 @@ gap: 30px;
 
 .feed-avatar img {
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
+  margin-top: 10px;
 }
-
+.feed-cont{
+  border: 1px solid rgb(234, 233, 233);
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  background-color: white;
+}
+/* Styling for feed content */
 .feed-content {
-  max-width: 700px;
-}
-
-.feed-user {
-  font-size: 16px;
+  max-width: 900px;
   color: gray;
+}
+.green-heart {
+  color: #28a745; /* Green color */
+  font-size: 18px; /* Adjust size as needed */
+  margin-left: 10px;
+  margin-right: 5px;
+}
+.feed-user {
+  font-size: 15px;
+  color: rgb(100 ,116, 139);
+  font-weight: 500;
   margin-bottom: 5px;
 }
-
-.feed-description {
-  margin: 10px 0;
-  font-size: 14px;
-  color: gray;
+.feed-user strong{
+  color: #5b5959;
+  font-weight: 600;
+  font-size: 18px;
 }
 
 .feed-time {
-  margin-left: 40%;
-  font-size: 12px;
-  color: gray;
+  font-size: 13px;
+  color: rgb(107, 114, 128);
+  margin-left: 10px;
+}
+
+.feed-description {
+  margin: 8px 0;
+  font-size: 16px;
+  color: rgb(100 ,116, 139);
+  line-height: 1.5rem;
 }
 
 /* Responsive design for smaller screens */
@@ -1359,7 +1497,13 @@ gap: 30px;
   .feed-content {
     max-width: 100%;
   }
+
+  .feed-avatar img {
+    width: 40px;
+    height: 40px;
+  }
 }
+
 /* ******************* */
     /* Layouts */
 /* ******************* */
@@ -1403,12 +1547,21 @@ gap: 30px;
   padding: 50px;
   max-width: 1000px;
 }
+.container-layout {
+  display: flex;
+  justify-content: space-between;
+  margin: 25px 15px;
+  padding: 60px;
+  max-width: 1000px;
+  border: 1px solid rgb(235, 232, 232);
+  border-radius: 10px;
+  gap: 20px;
+}
 
 .column {
-  background-color: #fff;
-  border: 1px solid #ddd;
+  background-color: #ecf5f5;
   border-radius: 8px;
-  padding: 20px;
+  padding: 25px;
   width: 30%; /* Each column takes 30% of the container's width */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -1432,7 +1585,7 @@ gap: 30px;
 
 /* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
-  .container {
+  .container-layout {
     flex-direction: column;
     align-items: center;
   }
@@ -1450,38 +1603,53 @@ gap: 30px;
     /* List */
 /* ******************* */
 
-.lists{
+.lists {
   margin-top: 15%;
   margin-left: 2%;
-  color: gray;
+  font-family: 'Inter', sans-serif;
 }
-.lists h1{
-  font-size: 18px;
-  color: rgb(71 ,85, 105);
-  font-size: 1.875rem;
-  line-height: 2.25rem;
+
+.lists h1 {
+  font-size: 1.875rem; /* 30px */
+  line-height: 2.25rem; /* 36px */
   font-weight: 600;
+  color: rgb(71,85, 105);
 }
+
+.lists p {
+  font-size: 1.1rem; /* 16px */
+  line-height: 1.5rem; /* 24px */
+  color: rgb(100 ,116, 139);
+}
+
 .container1 {
   display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  max-width: 1200px;
-  margin: 20px auto;
+  justify-content: center;
+  gap: 30px;
+  padding: 30px;
+  max-width: 100%;
+  margin: 20px;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  border: 1px  solid rgb(225, 223, 223);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(229, 245, 248, 0.863);
+
 }
 
 .section {
   background-color: white;
   border-radius: 12px;
   padding: 20px;
-  width: 30%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 26%;
+  height: fit-content;
+  box-shadow: 0 4px 8px rgba(202, 194, 194, 0.863);
 }
 
 /* Product Section */
 .products .product-item {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   margin-bottom: 15px;
 }
 
@@ -1492,17 +1660,22 @@ gap: 30px;
 }
 
 .product-info {
-  margin-left: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; /* Take up available space */
 }
 
 .product-name {
-  display: block;
-  font-weight: bold;
-  color: #333;
+  font-weight: 500;
+  color: rgb(100 ,116, 139);
+  font-size: 1rem;
+  margin-left: 20px;
 }
 
 .product-price {
   color: #888;
+  font-size: 0.875rem;
 }
 
 /* Settings Section */
@@ -1515,22 +1688,25 @@ gap: 30px;
 
 .icon {
   font-size: 24px;
-  margin-right: 10px;
-  color: #3ca547;
+  margin-right: 15px;
+  color: #70b276;
 }
 
 .setting-info {
   flex-grow: 1;
+  font-size: 10px;
 }
 
 .setting-info span {
   display: block;
-  font-weight: bold;
-  color: #333;
+  font-weight: 600;
+  color: rgb(100 ,116, 139);
+  font-size: 1rem;
 }
 
 .setting-info small {
   color: #888;
+  font-size: 0.875rem;
 }
 
 /* User List Section */
@@ -1550,37 +1726,75 @@ gap: 30px;
 .user-info {
   flex-grow: 1;
   margin-left: 10px;
+  color: rgb(100 ,116, 139);
 }
 
 .user-name {
-  font-weight: bold;
-  color: #333;
+  font-weight: 600;
+  color: rgb(100 ,116, 139);
+  font-size: 1.1rem;
 }
 
 .user-info small {
-  color: #888;
+  color: rgb(100 ,116, 139);
+  font-size: 0.9rem;
 }
 
 .notification-badge {
-  background-color: #f43bbd;
+  background-color: rgb(236, 72 ,153);
   color: white;
-  padding: 4px 8px;
+  padding: 1px 6px;
   border-radius: 50%;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 /* Media Query for Responsive Design */
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    align-items: center;
+@media (max-width: 1200px) {
+  .container1 {
+    justify-content: center;
   }
 
   .section {
-    width: 100%;
+    width: 45%;
     margin-bottom: 20px;
   }
 }
+
+@media (max-width: 768px) {
+  .container1 {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    overflow: hidden;
+  }
+
+  .section {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .product-item img, .user-item img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-name, .user-name, .setting-info span {
+    font-size: 0.875rem;
+  }
+
+  .product-price, .user-info small, .setting-info small {
+    font-size: 0.75rem;
+  }
+
+  .product-item img, .user-item img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
 
 /* ******************* */
     /* Pricing Tables */
@@ -2310,6 +2524,7 @@ gap: 30px;
 .applebtn p {
   font-size: 12px;
   margin: 0;
+  color: white;
 }
 
 /* Media Queries for Responsiveness */
@@ -4999,6 +5214,15 @@ color: #02b583;
   transition: background-color 0.2s ease;
   margin-right: 10px;
 }
+.toggle-slider3 {
+  width: 35px;
+  height: 16px;
+  background-color: #d1d5db; /* Light gray */
+  border-radius: 10px;
+  position: relative;
+  transition: background-color 0.2s ease;
+  margin-right: 10px;
+}
 
 .toggle-slider:before {
   content: "";
@@ -5024,6 +5248,18 @@ color: #02b583;
   left: 0px;
   transition: transform 0.2s ease;
 }
+.toggle-slider3:before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #018156;
+  border: 1px solid #018156;
+  position: absolute;
+  top: -1px;
+  left: 0px;
+  transition: transform 0.2s ease;
+}
 
 .toggle-input:checked + .toggle-slider {
   background-color: #14d396; /* Blue when checked */
@@ -5038,6 +5274,14 @@ color: #02b583;
 }
 
 .toggle-input:checked + .toggle-slider2:before {
+  transform: translateX(100%); /* Move to the right */
+}
+
+.toggle-input:checked + .toggle-slider3 {
+  background-color: #14d396; /* Blue when checked */
+}
+
+.toggle-input:checked + .toggle-slider3:before {
   transform: translateX(100%); /* Move to the right */
 }
 
