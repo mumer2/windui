@@ -13,13 +13,13 @@ export const Paginations = () => {
         <div className="pagenumber">
             <div className="pg1"><i class="fa-solid fa-angles-left"></i></div>
             <div className="pg1"><i class="fa-solid fa-angle-left"></i></div>
-            <div className="pg1">1</div>
-            <div className="pg1 Active">2</div>
-            <div className="pg1">3</div>
-            <div className="pg1">...</div>
-            <div className="pg1">97</div>
-            <div className="pg1">98</div>
-            <div className="pg1">99</div>
+            <div className="pg1"> <span className='hide'>1</span></div>
+            <div className="pg1"><span className='hide Active'>2</span></div>
+            <div className="pg1"><span className='hide'>3</span></div>
+            <div className="pg1"><span className='hide'>...</span></div>
+            <div className="pg1"><span className='hide'>97</span></div>
+            <div className="pg1"><span className='hide'>98</span></div>
+            <div className="pg1"><span className='hide'>99</span></div>
             <div className="pg1"><i class="fa-solid fa-angle-right"></i></div>
             <div className="pg1"><i class="fa-solid fa-angles-right"></i></div>
 
@@ -36,11 +36,13 @@ export const Paginations = () => {
 
         <div className="pagenumber">
             <div className="pg1"><i class="fa-solid fa-angle-left"></i></div>
-            <div className="pg1">1</div>
-            <div className="pg1">2</div>
-            <div className="pg1 Active">3</div>
-            <div className="pg1">4</div>
-            <div className="pg1">5</div>
+            
+            <div className="pg1"><span className='hide'>1</span></div>
+            <div className="pg1"><span className='hide'>2</span></div>
+            <div className="pg1"><span className='hide Active'>3</span></div>
+            <div className="pg1"><span className='hide'>4</span></div>
+            <div className="pg1"><span className='hide'>5</span></div>
+            
             <div className="pg1"><i class="fa-solid fa-angle-right"></i></div>
 
         </div>
@@ -49,13 +51,13 @@ export const Paginations = () => {
         <div className="pagenumber">
             <div className="pg1"><i class="fa-solid fa-angles-left"></i></div>
             <div className="pg1"><i class="fa-solid fa-angle-left"></i></div>
-            <div className="pg1">1</div>
-            <div className="pg1 Active">2</div>
-            <div className="pg1">3</div>
-            <div className="pg1">...</div>
-            <div className="pg1">97</div>
-            <div className="pg1">98</div>
-            <div className="pg1">99</div>
+            <div className="pg1"> <span className='hide'>1</span></div>
+            <div className="pg1"><span className='hide Active'>2</span></div>
+            <div className="pg1"><span className='hide'>3</span></div>
+            <div className="pg1"><span className='hide'>...</span></div>
+            <div className="pg1"><span className='hide'>97</span></div>
+            <div className="pg1"><span className='hide'>98</span></div>
+            <div className="pg1"><span className='hide'>99</span></div>
             <div className="pg1"><i class="fa-solid fa-angle-right"></i></div>
             <div className="pg1"><i class="fa-solid fa-angles-right"></i></div>
 

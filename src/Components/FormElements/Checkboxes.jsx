@@ -10,10 +10,14 @@ export const Checkboxes = () => {
         </div>
 
         <div className="check-cont">
-        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"/>
-        <label for="vehicle1"> Primary Checkbox</label>
-        <input type="checkbox" id="vehicle1" name="vehicle1" value="Secondary Checkbox"/>
-        <label for="vehicle1"> Secondary Checkbox</label>
+        <div className="check1">
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" checked/>
+            <label for="vehicle1"> Primary Checkbox</label>
+            </div>
+            <div className="check1">
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"/>
+            <label for="vehicle1"> Secondary Checkbox</label>
+            </div>
         </div>
 
         <div className="checkboxes">

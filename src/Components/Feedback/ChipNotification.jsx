@@ -12,7 +12,7 @@ export const ChipNotification = () => {
         <div className="chip-cont">
             <div className="chip-not">
                 <button>veersion 3.40</button>
-                <h4> With 20 new Components! </h4>
+                <h4> <span className='hide'>With 20 new Components!</span> </h4>
                 <h3>Check what's new</h3>
 
             </div>
@@ -26,34 +26,28 @@ export const ChipNotification = () => {
         <CodePreview/>
 
 
-        <div className="chip-cont">
+        <div className="chip-cont1">
             <div className="chip-not">
                 <button>See whats new</button>
                 <h4> Version 3.40 </h4>
-                <h4>With 20 new Components! </h4>
+                <h4><span className='hide'>With 20 new Components!</span> </h4>
 
             </div>
-        </div>
-        <div className="chip-cont">
             <div className="chip-not">
                 <button>See whats new</button>
                 <h4> Version 3.40 </h4>
-                <h4>With 20 new Components! </h4>
+                <h4><span className='hide'>With 20 new Components! </span></h4>
 
             </div>
-        </div>
-        <div className="chip-cont">
             <div className="chip-not">
                 <button>veersion 3.40</button>
-                <h4> With 20 new Components! </h4>
+                <h4> <span className='hide'>With 20 new Components!</span> </h4>
                 <h3>Check what's new</h3>
 
             </div>
-        </div>
-        <div className="chip-cont">
             <div className="chip-not">
                 <button>veersion 3.40</button>
-                <h4> With 20 new Components! </h4>
+                <h4> <span className='hide'>With 20 new Components!</span> </h4>
                 <h3>Check what's new</h3>
 
             </div>

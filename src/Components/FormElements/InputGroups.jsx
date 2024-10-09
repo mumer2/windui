@@ -11,7 +11,7 @@ export const InputGroups = () => {
 
         <div className="input-cont">
             <div className="inputgrop">
-                <label>Your Name</label>
+                <label>Your Name <span className='steric'>*</span></label>
                 <input type='text'></input>
                 <p>Text field with helper text</p><p> 1/10</p>
             </div>

@@ -29,16 +29,16 @@ export const Alerts = () => {
             <div className="alert-content">
             <b> Success! You have installed Tailwind CSS</b>
             </div>
-            <div className="alert-content">
-            <b className='warn'>Warning! Tailwind CSS requires latest version of PostCSS</b>
+            <div className="alert-content warn">
+            <b>Warning! Tailwind CSS requires latest version of PostCSS</b>
             </div>
-            <div className="alert-content">
-            <b className='tps'>Tip! Install Tailwind CSS IntelliSense</b>
+            <div className="alert-content tps">
+            <b>Tip! Install Tailwind CSS IntelliSense</b>
             </div>
-            <div className="alert-content">
-            <b className='danger'>Danger! Look behind you</b>
-            </div><div className="alert-content">
-            <b className='welcm'>Welcome! Wind UI greets you</b>
+            <div className="alert-content danger">
+            <b>Danger! Look behind you</b>
+            </div><div className="alert-content welcm">
+            <b>Welcome! Wind UI greets you</b>
             </div>
         </div>
     </div>
