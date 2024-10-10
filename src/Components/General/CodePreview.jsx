@@ -22,6 +22,7 @@ const CodePreview = () => {
     <div className="code-preview-container">
       {/* Buttons for Preview and Code */}
       <div className="code-preview-header">
+        <div className="code-view">
         <button 
           className={`preview-btn ${!showCode ? 'active' : ''}`} 
           onClick={handlePreviewClick}
@@ -36,6 +37,8 @@ const CodePreview = () => {
           <i class="fa-solid fa-code"></i>
           <span className='hide'>Code</span> {/* Text inside span for conditional hiding */}
         </button>
+        </div>
+       
 
          {/* Toggle switch (right-aligned) */}
          <div className="code-type-toggle">

@@ -13,7 +13,14 @@ P{
   color: #049867; /* Active color */
   font-weight: 600;
 }
-
+.logo-main{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+.logo{
+  margin-left: 6px;
+}
 .navbar {
   border-bottom: 1px solid #e5e7eb;
   padding: 10px 20px;
@@ -88,7 +95,7 @@ P{
   font-size: 17px;
   font-weight: 450;
   align-items: center;
-  margin-left:-28%;
+  /* margin-left:-28%; */
 }
 .nav-links a{
   color: rgb(100, 116, 139);
@@ -223,7 +230,7 @@ P{
 /* Sidebar container */
 .sidebar {
   position: fixed;
-  top: 12%;
+  top: 35px;
   left: 0;
   width: 250px;
   height: calc(100% - 15%);
@@ -300,7 +307,7 @@ P{
 /* Responsive behavior for smaller screens */
 @media (max-width: 768px) {
   .sidebar {
-    margin-top: 10%;
+    margin-top: 35px;
     width: 250px;
     height: 100%;
     transform: translateX(-100%); /* Hide sidebar on small screens */
@@ -422,6 +429,9 @@ P{
     top: 0;
     left: 0;
     width: 100%;
+  }
+  .sidebar-nav{
+    margin-bottom: 80px;
   }
 
   /* Hide the Left Navbar initially */
