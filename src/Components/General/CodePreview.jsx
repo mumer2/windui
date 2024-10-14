@@ -28,14 +28,14 @@ const CodePreview = () => {
           onClick={handlePreviewClick}
         >
             <i class="fa-regular fa-eye"></i>
-            <span className='hide'>Preview</span> {/* Text inside span for conditional hiding */}
+            <span className='hide' style={{marginLeft:'5px'}}>Preview</span> {/* Text inside span for conditional hiding */}
         </button>
         <button 
           className={`code-btn ${showCode ? 'active' : ''}`} 
           onClick={handleCodeClick}
         >
           <i class="fa-solid fa-code"></i>
-          <span className='hide'>Code</span> {/* Text inside span for conditional hiding */}
+          <span className='hide' style={{marginLeft:'5px'}}>Code</span> {/* Text inside span for conditional hiding */}
         </button>
         </div>
        

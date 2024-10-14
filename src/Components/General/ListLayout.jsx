@@ -54,7 +54,7 @@ const ListLayout = () => {
           </div>
           {/* <input type="checkbox" checked /> */}
           <label class="toggle-label">
-        <input type="checkbox" class="toggle-input"/>
+        <input type="checkbox" class="toggle-input" checked/>
         <span class="toggle-slider3"></span>
          </label>
         </div>
@@ -65,9 +65,9 @@ const ListLayout = () => {
             <small>Find you and others</small>
           </div>
           {/* <input type="checkbox" /> */}
-          <label class="toggle-label">
+          <label class="toggle-label-m">
         <input type="checkbox" class="toggle-input"/>
-        <span class="toggle-slider3"></span>
+        <span class="toggle-slider-m"></span>
          </label>
         </div>
         <div className="setting-item">
@@ -78,7 +78,7 @@ const ListLayout = () => {
           </div>
           {/* <input type="checkbox" checked /> */}
           <label class="toggle-label">
-        <input type="checkbox" class="toggle-input"/>
+        <input type="checkbox" class="toggle-input" checked/>
         <span class="toggle-slider3"></span>
          </label>
         </div>
@@ -90,7 +90,7 @@ const ListLayout = () => {
           </div>
           {/* <input type="checkbox" checked /> */}
           <label class="toggle-label">
-        <input type="checkbox" class="toggle-input"/>
+        <input type="checkbox" class="toggle-input" checked/>
         <span class="toggle-slider3"></span>
          </label>
         </div>
@@ -101,9 +101,9 @@ const ListLayout = () => {
             <small>Help us improve by sharing </small>
           </div>
           {/* <input type="checkbox" checked /> */}
-          <label class="toggle-label">
+          <label class="toggle-label-m">
         <input type="checkbox" class="toggle-input"/>
-        <span class="toggle-slider3"></span>
+        <span class="toggle-slider-m"></span>
          </label>
         </div>
       </div>

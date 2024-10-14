@@ -1,7 +1,7 @@
 import React from 'react'
 import Accordion2 from './Accordion2'
 import CodePreview from './CodePreview'
-import TailwindDrops from './TailwindDrops'
+
 
 export const Accordians = () => {
   return (
@@ -12,7 +12,7 @@ export const Accordians = () => {
         <p>The accordion component is a collection of vertically collapsing header and body elements that can be used to show and hide information.</p>
       </div>
       <div className='acc-cont'>
-      <Accordion2 />
+        <Accordion2 />
       </div>
       <div className="accordions-container">
         <h1>Variations</h1>
@@ -20,7 +20,9 @@ export const Accordians = () => {
         <h4>Basic Accordion</h4>
         <CodePreview />
 
-        <TailwindDrops />
+        <div className='acc-cont'>
+          <Accordion2 />
+        </div>
       </div>
     </div>
   )
