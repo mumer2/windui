@@ -13,8 +13,8 @@ const Price = () => {
 
         <div className="pricing-card featured">
           <h3 className="card-title">Team</h3>
-          <p>Ideal for a small team.</p>
-          <p className="card-price">$<b className='lrg'>25</b>/month</p>
+          <p style={{color:'white'}}>Ideal for a small team.</p>
+          <p style={{color:'white'}} className="card-price">$<b className='lrg'>25</b>/month</p>
           <button className="card-button white">Try For Free</button>
 
         </div>

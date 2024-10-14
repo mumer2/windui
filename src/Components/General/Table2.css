@@ -1,0 +1,83 @@
+.table-container1 {
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: left;
+  }
+  .profile-data{
+    color: rgb(71, 85, 105);
+  }
+  
+  .styled-table th, .styled-table td {
+    padding: 12px 15px;
+    border: 1px solid #e2e8f0;
+    text-align: left;
+  }
+  
+  .styled-table thead {
+    background-color: #f0fdf4;
+  }
+  
+  .styled-table tbody tr:nth-child(even) {
+    background-color: #f9fafb;
+  }
+  
+  .styled-table tbody tr:hover {
+    background-color: #ecf1f7;
+  }
+  
+  .styled-table th {
+    font-weight: bold;
+    color: #334155;
+  }
+  
+  /* Hide the card layout on large screens */
+  .profile-cards {
+    display: none;
+  }
+  
+  /* Responsive Styling for Small Screens */
+  @media (max-width: 768px) {
+    /* Hide the table and show the cards on small screens */
+    .styled-table {
+      display: none;
+    }
+  
+    .profile-cards {
+      display: block;
+    }
+  
+    .profile-card {
+      border: 1px solid #e2e8f0;
+      /* border-radius: 10px; */
+      padding: 15px;
+      background-color: #fff;
+    }
+  
+    .profile-row {
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 0;
+      border-bottom: 1px solid #f1f5f9;
+    }
+  
+    .profile-label {
+      font-weight: bold;
+      color: #334155;
+    }
+  
+    .profile-data {
+      color: #64748b;
+    }
+  
+    .profile-row:last-child {
+      border-bottom: none;
+    }
+  }
+  
