@@ -2470,8 +2470,8 @@ gap: 30px;
 }
 
 .testimonial-image {
-  width: 80px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -2657,174 +2657,171 @@ gap: 30px;
 /* ******************* */
     /* Buttons*/
 /* ******************* */
-
-.butns{
+/* General Button Section */
+.butns {
   margin-top: 15%;
   margin-left: 2%;
   color: rgb(116, 107, 107);
 }
-.butns h1{
-  font-size: 18px;
-  color: rgb(71 ,85, 105);
+
+.butns h1 {
   font-size: 1.875rem;
   line-height: 2.25rem;
+  color: rgb(71, 85, 105);
   font-weight: 600;
 }
-.butns h2{
-  font-size: 18px;
-  color: rgb(71 ,85, 105);
+
+.butns h2 {
   font-size: 1.8rem;
   line-height: 2.25rem;
+  color: rgb(71, 85, 105);
   font-weight: 400;
 }
-.butns h3{
+
+.butns h3 {
   font-size: 18px;
-  color: rgb(71 ,85, 105);
+  color: rgb(71, 85, 105);
   line-height: 2.25rem;
   font-weight: 600;
 }
 
+/* Button Container */
 .button-container {
   display: flex;
-  flex-wrap: wrap; /* Allow buttons to wrap if necessary */
-  gap: 20px; /* Space between buttons */
+  flex-wrap: wrap;
+  gap: 20px;
   justify-content: center;
-  margin-top: 10%;
+  margin: 20px;
+  border: 1px solid rgb(227, 227, 227);
+  padding: 70px;
 }
 
+/* Button Styles */
 .app-button {
   padding: 15px 24px;
   border-radius: 8px;
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
-  /* transition: all 0.3s ease; */
-  color: white; /* Default text color */
-  border: none; /* Remove default border */
-  outline: none; /* Remove default outline */
-  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  */
-  /* Light shadow effect */
+  color: white;
+  border: none;
+  outline: none;
+  transition: all 0.3s ease;
 }
 
 .app-button.primary {
   background-color: #1f9874;
-
-  /* Primary color */
 }
+
 .app-button.secondary {
   color: #1f9874;
-  /* Secondary color */
 }
+
 .app-button.secondary:hover {
   background-color: #b2eedc;
   color: #1f9874;
-  /* Secondary color */
 }
 
 .app-button.outline {
-  background-color: transparent; /* Outline button background */
-  border: 1px solid #1f9874; /* Outline button border */
-  color: #1f9874; /* Outline button text color */
+  background-color: transparent;
+  border: 1px solid #1f9874;
+  color: #1f9874;
 }
 
 .app-button:hover {
-  opacity: 0.9; /* Slightly fade on hover */
+  opacity: 0.9;
 }
 
-
-
-.medium{
-  width: 13%;
+/* Size Variations */
+.medium {
+  width: 13%; /* Keep width same across all screens */
   height: 50px;
   font-size: 16px;
   padding: 10px;
 }
-.small{
-  width: 12%;
+
+.small {
+  width: 12%; /* Keep width same across all screens */
   height: 40px;
   font-size: 12px;
   padding: 10px;
 }
 
+/* Additional Button Container */
 .button-container2 {
   display: flex;
-  flex-wrap: wrap; /* Allow buttons to wrap if necessary */
-  gap: 80px; /* Space between buttons */
+  flex-wrap: wrap;
+  gap: 80px;
   justify-content: center;
-  margin-top: 10%;
+  margin: 20px;
+  border: 1px solid rgb(227, 227, 227);
+  padding: 70px;
 }
 
+/* Media Queries */
 
-/* Media Queries for Specific Screen Sizes */
-
-/* Large devices (desktops, 1200px and up) */
+/* Large Devices (Desktops) */
 @media (min-width: 1200px) {
   .app-button,
   .medium,
   .small {
-    padding: 15px 10px;
     font-size: 14px;
   }
-
   .medium {
-    width: 13%;
-    height: 50px;
-    font-size: 16px;
-  }
-
-  .small {
-    width: 12%;
-    height: 40px;
     font-size: 12px;
   }
-
-  .button-container,
-  .button-container2 {
-    gap: 20px;
+  .small {
+    font-size: 10px;
   }
 }
 
-/* Medium devices (tablets, 768px and up) */
+/* Medium Devices (Tablets) */
 @media (min-width: 768px) and (max-width: 1199px) {
   .app-button {
-    padding: 12px 20px;
-    font-size: 12px;
-    width: 25%;
+    font-size: 14px;
+    width: auto;
     height: 50px;
   }
 
   .medium {
-    width: 20%;
+    width: auto;
     height: 45px;
     font-size: 14px;
   }
 
   .small {
-    width: 18%;
+    width: auto;
     height: 35px;
-    font-size: 12px;
+    font-size: 10px;
   }
 }
 
-/* Small devices (phones, less than 768px) */
+/* Small Devices (Phones) */
 @media (max-width: 767px) {
+  .button-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Space between buttons */
+  }
+
   .app-button {
-    padding: 8px 16px;
-    font-size: 10px;
+    width: 200px; /* Keep the same width on small screens */
+    padding: 15px 24px;
+    font-size: 14px;
   }
 
   .medium {
-    width: 40%;
-    height: 40px;
-    font-size: 12px;
+    width: 200px; /* Consistent width for medium size */
+    height: 50px;
   }
 
   .small {
-    width: 35%;
-    height: 30px;
-    font-size: 10px;
+    width: 200px; /* Consistent width for small size */
+    height: 40px;
   }
 }
+
+
 /* ******************* */
     /* Buttons Group*/
 /* ******************* */
@@ -3084,9 +3081,11 @@ margin-top: 5%;
 .dropdown-menu {
   list-style: none;
   border-top: 1px solid #e5e7eb;
-  color: gray;
+  color: rgb(100 ,116, 139);
 }
-
+.dropdown-menu i{
+  margin-right: 10px;
+}
 .actv {
   color: #02b583;
 }
@@ -5045,6 +5044,12 @@ input[type="date"] {
   line-height: 2.25rem;
   font-weight: 600;
 }
+.inptgrop{
+  border: 1px solid rgb(227, 227, 227);
+  border-radius: 10px;
+  padding: 50px;
+  margin: 20px;
+}
 .input-cont{
   display: flex;
   flex-wrap: wrap;
@@ -5596,7 +5601,7 @@ input[type="date"] {
   margin-top: 2%;
   border: 1px solid rgb(227, 227, 227);
   border-radius: 10px;
-  padding: 50px;
+  padding: 60px;
   margin: 20px;
 }
 
@@ -5630,7 +5635,7 @@ margin: 20px;
 .toggle-slider {
   width: 48px;
   height: 24px;
-  background-color: #34D399; /* Light gray */
+  background-color: #A7F3D0; /* Light gray */
   border-radius: 20px;
   border: 0px solid #E5E7Eb;
   position: relative;
@@ -5671,8 +5676,8 @@ margin: 20px;
 }
 .toggle-slider2:before {
   content: "";
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
   background-color: white;
   border: 2px solid #02b583;

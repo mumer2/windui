@@ -1,6 +1,8 @@
 import React from 'react'
 import StarRating from './StarRating'
 import Stars from './Stars'
+import CodePreview from './CodePreview'
+
 
 export const Rating = () => {
   return (
@@ -18,6 +20,7 @@ export const Rating = () => {
             <h2> Validations
             </h2>
             <h4>Basic</h4>
+            <CodePreview/>
         <div className="container-rate">
         <Stars/>
         <Stars/>

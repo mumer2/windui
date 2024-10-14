@@ -13,7 +13,7 @@ export const Toggles = () => {
             <div className="togglessection">
                 <div class="toggle-container">
                     <label class="toggle-label">
-                        <input type="checkbox" class="toggle-input" />
+                        <input type="checkbox" class="toggle-input" checked />
                         <span class="toggle-slider"></span>
                         Primary
                     </label>
