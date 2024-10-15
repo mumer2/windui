@@ -9,46 +9,59 @@ export const Breadcrumb = () => {
             <p>Breadcrumbs consist of a list of links that help a user visualize a page's location within the hierarchical structure of a website, and allow navigation up to any of its "ancestors".</p>
         </div>
 
+<div className="bread-cont">
 
         <nav className="breadcrumb">
       <ul>
         <li>
-          <a href="/">🏠</a>
+          <a href="/">🏠  <i class="fa-solid fa-greater-than"></i>
+          </a>
         </li>
         <li>
-          <span><b>Projects</b></span>
+          <span className='hide'><b>Projects <i class="fa-solid fa-greater-than"></i>
+            
+            </b></span>
         </li>
         <li>
-          <span><b>UI components</b></span>
+          <span><b>UI components <i class="fa-solid fa-greater-than"></i>
+            
+            </b></span>
         </li>
         <li>
           <span>Project</span>
         </li>
       </ul>
     </nav>
-
+    </div>
     <div className="breadcrumbs">
             <h2>Variations</h2>
             <h4>Elevated Breadcrumbs</h4>
         </div>
 <CodePreview/>
 
+<div className="bread-cont">
+
 <nav className="breadcrumb">
       <ul>
         <li>
-          <a href="/">Home</a>
+          <a href="/" className='hide'>Home <i class="fa-solid fa-greater-than"></i>
+          
+          </a>
         </li>
         <li>
-          <span><b>Projects</b></span>
+          <span className='hide'><b>Projects <i class="fa-solid fa-greater-than"></i>
+            </b></span>
         </li>
         <li>
-          <span><b>UI components</b></span>
+          <span><b>UI components <i class="fa-solid fa-greater-than"></i>
+            </b></span>
         </li>
         <li>
           <span>Project</span>
         </li>
       </ul>
     </nav>
+    </div>
     </div>
   )
 }

@@ -9,6 +9,7 @@ export const Toltips = () => {
             <p>A tooltip is a popup that displays information related to an element when the mouse hovers over it. It after a small delay and disappears on the mouse out.</p>
         </div>
 
+<div className="tooltip-cont">
 
 <div className="tooltip-container">
       <div className="tooltip-item tooltip-top">
@@ -28,6 +29,7 @@ export const Toltips = () => {
         <span className="tooltip-text tooltip-text-left">Thanks for Hovering! I'm a left toltip</span>
       </div>
     </div>
+    </div>
 
     <div className="toltips">
             <h2>Variations</h2>
@@ -35,6 +37,8 @@ export const Toltips = () => {
             <p>The base size tooltip uses bigger text and internal padding.</p>
         </div>
 <CodePreview/>
+<div className="tooltip-cont">
+
         <div className="tooltip-container">
       <div className="tooltip-item tooltip-top">
         Top
@@ -53,6 +57,8 @@ export const Toltips = () => {
         <span className="tooltip-text tooltip-text-left">Thanks for Hovering! I'm a left toltip</span>
       </div>
     </div>
+</div>
+
     </div>
   )
 }

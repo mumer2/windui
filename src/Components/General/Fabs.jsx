@@ -9,6 +9,8 @@ export const Fabs = () => {
             <h1>Fabs</h1>
             <p>A Floating Action Button (FAB) is a high-emphasis button that lets the user perform a primary action.</p>
         </div>
+<div className="cont-fab">
+
 
         <div class="container">
   <div class="fab-container">
@@ -20,6 +22,7 @@ export const Fabs = () => {
     <button class="fab-item"><i class="fa-regular fa-pen-to-square"></i></button>
     </div>
   </div>
+</div>
 </div>
 
         <div className="fabs">
@@ -28,6 +31,7 @@ export const Fabs = () => {
         </div>
 
         <CodePreview/>
+<div className="cont-fab">
 
         <div class="container">
   <div class="fab-container">
@@ -40,6 +44,8 @@ export const Fabs = () => {
     </div>
   </div>
 </div>
+</div>
+
     </div>
   )
 }

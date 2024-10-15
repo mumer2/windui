@@ -9,6 +9,8 @@ export const Paginations = () => {
             <p>Pagination communicates the number of elements (pages, posts etc) that can be loaded within a given context. It shows the current position and enables direct access to previous and subsequent content items.</p>
         </div>
 
+<div className="page-cont">
+
 
         <div className="pagenumber">
             <div className="pg1"><i class="fa-solid fa-angles-left"></i></div>
@@ -24,7 +26,7 @@ export const Paginations = () => {
             <div className="pg1"><i class="fa-solid fa-angles-right"></i></div>
 
         </div>
-
+        </div>
         <div className="paginations">
             <h2>Variations</h2>
             <h4>Primary Pagination</h4>
@@ -33,6 +35,7 @@ export const Paginations = () => {
 
         <CodePreview/>
 
+<div className="page-cont">
 
         <div className="pagenumber">
             <div className="pg1"><i class="fa-solid fa-angle-left"></i></div>
@@ -46,7 +49,7 @@ export const Paginations = () => {
             <div className="pg1"><i class="fa-solid fa-angle-right"></i></div>
 
         </div>
-
+<br/><br/>
 
         <div className="pagenumber">
             <div className="pg1"><i class="fa-solid fa-angles-left"></i></div>
@@ -61,6 +64,7 @@ export const Paginations = () => {
             <div className="pg1"><i class="fa-solid fa-angle-right"></i></div>
             <div className="pg1"><i class="fa-solid fa-angles-right"></i></div>
 
+        </div>
         </div>
     </div>
   )

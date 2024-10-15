@@ -8,6 +8,8 @@ function ProgressBars() {
         <h1>Progress Bars</h1>
         <p>Progress indicators inform users about the status of ongoing processes.</p>
       </div>
+      <div className="progress-cont">
+
       <div className="App">
 
         <div className="progress-container">
@@ -35,6 +37,7 @@ function ProgressBars() {
             </div>
           </div>
         </div>
+      </div>
       </div>
 
 
@@ -45,6 +48,7 @@ function ProgressBars() {
       <CodePreview />
 
 
+<div className="progress-cont">
 
       <div className="App">
 
@@ -73,6 +77,8 @@ function ProgressBars() {
           </div>
         </div>
       </div>
+</div>
+
     </div>
   );
 }

@@ -10,10 +10,12 @@ export const Dropdowns = () => {
             <p>Menus allow users to make a selection from multiple options. They are less prominent and take up less space than selection controls, such as a set of radio buttons.</p>
         </div>
 
+<div className="drop-cont">
+
 
         <div className="dropdown-container open">
         <div className="dropdown-menu">
-            <div className="dropbtn">
+            <div className="dropbtn" style={{marginTop:'10px'}}>
                  Choose one <i class="fa-solid fa-caret-down"></i>
             </div>
         </div>
@@ -33,7 +35,7 @@ export const Dropdowns = () => {
                 </li>
             </ul>
         </div>
-
+        </div>
         <div className="dropdowns">
             <h2>Variations</h2>
             <h4>Basic Dropdown</h4>

@@ -8,7 +8,7 @@ export const Footer = () => {
             <p>The website footer is the section of content at the very bottom of a web page. It typically contains a copyright notice, link to a privacy policy, sitemap, logo, contact information, social media icons, and an email sign-up form. In short, a footer contains information that improves a website's overall usability.</p>
         </div>
 
-
+<div className="footer-cont">
 
         <footer className="footer">
       <div className="footer-content">
@@ -60,6 +60,7 @@ export const Footer = () => {
           <span><i class="fa-brands fa-twitter"></i></span>
           <span><i className="fa-brands fa-discord dis"></i></span>
         </div>
+      </div>
       </div>
 
       <div className="footers">
