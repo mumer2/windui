@@ -1,7 +1,67 @@
 import React from 'react'
-import CodePreview from '../General/CodePreview'
+import CodePre from '../General/CodePre'
 
 export const ChipNotification = () => {
+    const htmlCode = `  <div className="chip-cont1">
+            <div className="chip-not">
+                <button>See whats new</button>
+                <h4> Version 3.40 </h4>
+                <h4><span className='hide'>With 20 new Components!</span> </h4>
+
+            </div>
+            <div className="chip-not">
+                <button>See whats new</button>
+                <h4> Version 3.40 </h4>
+                <h4><span className='hide'>With 20 new Components! </span></h4>
+
+            </div>
+            <div className="chip-not">
+                <button>veersion 3.40</button>
+                <h4> <span className='hide'>With 20 new Components!</span> </h4>
+                <h3>Check what's new</h3>
+
+            </div>
+            <div className="chip-not">
+                <button>veersion 3.40</button>
+                <h4> <span className='hide'>With 20 new Components!</span> </h4>
+                <h3>Check what's new</h3>
+
+            </div>
+        </div>
+    `;
+  
+  const reactCode = ` import React from 'react'
+import CodePre from '../General/CodePre'
+
+export const ChipNotification = () => {
+    return(
+  <div className="chip-cont1">
+            <div className="chip-not">
+                <button>See whats new</button>
+                <h4> Version 3.40 </h4>
+                <h4><span className='hide'>With 20 new Components!</span> </h4>
+
+            </div>
+            <div className="chip-not">
+                <button>See whats new</button>
+                <h4> Version 3.40 </h4>
+                <h4><span className='hide'>With 20 new Components! </span></h4>
+
+            </div>
+            <div className="chip-not">
+                <button>veersion 3.40</button>
+                <h4> <span className='hide'>With 20 new Components!</span> </h4>
+                <h3>Check what's new</h3>
+
+            </div>
+            <div className="chip-not">
+                <button>veersion 3.40</button>
+                <h4> <span className='hide'>With 20 new Components!</span> </h4>
+                <h3>Check what's new</h3>
+
+            </div>
+        </div>
+`;
   return (
     <div>
         <div className="chipnotifications">
@@ -23,7 +83,9 @@ export const ChipNotification = () => {
             <h4>Chip notifications with leading button</h4>
         </div>
 
-        <CodePreview/>
+        <div className="code-cont">
+    <CodePre htmlCode={htmlCode} reactCode={reactCode}/>
+    </div>
 
 
         <div className="chip-cont1">

@@ -1,8 +1,35 @@
 import React from 'react'
 import Date from './Date'
-import CodePreview from '../General/CodePreview'
+import CodePre from '../General/CodePre'
 
 export const Datepickers = () => {
+  const htmlCode = `   <div className="datepicker-container">
+      <label>Date</label>
+      <input type="date" />
+      <span className="datepicker-hint">Please select a date</span>
+    </div>
+  `;
+
+const reactCode = `import React from 'react';
+// import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
+
+const DatePickerComponent = () => {
+  // const [selectedDate, setSelectedDate] = useState(null);
+
+  return (
+    <div className="datepicker-container">
+      <label>Date</label>
+      <input type="date" />
+      <span className="datepicker-hint">Please select a date</span>
+    </div>
+  );
+};
+
+export default DatePickerComponent;
+
+`;
+
   return (
     <div>
       <div className="datepickers">
@@ -18,7 +45,9 @@ export const Datepickers = () => {
         <h2>Variations</h2>
         <h4>Basic Datepicker Input</h4>
       </div>
-      <CodePreview />
+      <div className="code-cont">
+    <CodePre htmlCode={htmlCode} reactCode={reactCode}/>
+    </div>
 
       <div className="date-sec">
         <div className="d1-s">

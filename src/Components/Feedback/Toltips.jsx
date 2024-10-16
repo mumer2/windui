@@ -1,7 +1,60 @@
 import React from 'react'
-import CodePreview from '../General/CodePreview'
+import CodePre from '../General/CodePre'
 
 export const Toltips = () => {
+  const htmlCode = ` <div className="tooltip-cont">
+
+<div className="tooltip-container">
+      <div className="tooltip-item tooltip-top">
+        Top
+        <span className="tooltip-text tooltip-text-top">Thanks for Hovering! I'm a top toltip</span>
+      </div>
+      <div className="tooltip-item tooltip-right">
+        Right
+        <span className="tooltip-text tooltip-text-right">Thanks for Hovering! I'm a right toltip</span>
+      </div>
+      <div className="tooltip-item tooltip-bottom">
+        Bottom
+        <span className="tooltip-text tooltip-text-bottom">Thanks for Hovering! I'm a bottom toltip</span>
+      </div>
+      <div className="tooltip-item tooltip-left">
+        Left
+        <span className="tooltip-text tooltip-text-left">Thanks for Hovering! I'm a left toltip</span>
+      </div>
+    </div>
+    </div>
+  `;
+
+const reactCode = `import React from 'react'
+import CodePre from '../General/CodePre'
+
+export const Toltips = () => {
+  return(
+<div className="tooltip-cont">
+
+<div className="tooltip-container">
+      <div className="tooltip-item tooltip-top">
+        Top
+        <span className="tooltip-text tooltip-text-top">Thanks for Hovering! I'm a top toltip</span>
+      </div>
+      <div className="tooltip-item tooltip-right">
+        Right
+        <span className="tooltip-text tooltip-text-right">Thanks for Hovering! I'm a right toltip</span>
+      </div>
+      <div className="tooltip-item tooltip-bottom">
+        Bottom
+        <span className="tooltip-text tooltip-text-bottom">Thanks for Hovering! I'm a bottom toltip</span>
+      </div>
+      <div className="tooltip-item tooltip-left">
+        Left
+        <span className="tooltip-text tooltip-text-left">Thanks for Hovering! I'm a left toltip</span>
+      </div>
+    </div>
+    </div>
+      )
+}
+
+`;
   return (
     <div>
         <div className="toltips">
@@ -36,7 +89,9 @@ export const Toltips = () => {
             <h4>Base Sized Tooltip</h4>
             <p>The base size tooltip uses bigger text and internal padding.</p>
         </div>
-<CodePreview/>
+        <div className="code-cont">
+    <CodePre htmlCode={htmlCode} reactCode={reactCode}/>
+    </div>
 <div className="tooltip-cont">
 
         <div className="tooltip-container">

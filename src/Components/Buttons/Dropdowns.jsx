@@ -1,8 +1,71 @@
 import React from 'react'
-import CodePreview from '../General/CodePreview'
+import CodePre from '../General/CodePre'
 import Dropbutton from './Dropbutton'
 
 export const Dropdowns = () => {
+    const htmlCode = `  <div className="unique-dropdown-container">
+      <button className="unique-dropbtn" onClick={toggleDropdown}>
+        Choose one <i class="fa-solid fa-caret-down"></i>
+      </button>
+      {isOpen && (
+        <div className="unique-dropdown-content">
+          <a href="#">Dashboard</a>
+          <a href="#">Matrics and analytics</a>
+          <a href="#">Multi-Channel Funnel overview</a>
+          <a href="#">User settings</a>
+          <a href="#">User Profile</a>
+
+        </div>
+      )}
+    </div>
+    `;
+  
+  const reactCode = `import React, { useState } from 'react';
+
+const Dropbutton = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
+
+  // Close dropdown if clicked outside
+  React.useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (event.target.closest('.unique-dropdown-container')) {
+        return;
+      }
+      setIsOpen(false);
+    };
+
+    window.addEventListener('click', handleClickOutside);
+    return () => {
+      window.removeEventListener('click', handleClickOutside);
+    };
+  }, []);
+
+  return (
+    <div className="unique-dropdown-container">
+      <button className="unique-dropbtn" onClick={toggleDropdown}>
+        Choose one <i class="fa-solid fa-caret-down"></i>
+      </button>
+      {isOpen && (
+        <div className="unique-dropdown-content">
+          <a href="#">Dashboard</a>
+          <a href="#">Matrics and analytics</a>
+          <a href="#">Multi-Channel Funnel overview</a>
+          <a href="#">User settings</a>
+          <a href="#">User Profile</a>
+
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default Dropbutton;
+
+`;
   return (
     <div>
         <div className="dropdowns">
@@ -40,7 +103,9 @@ export const Dropdowns = () => {
             <h2>Variations</h2>
             <h4>Basic Dropdown</h4>
         </div>
-            <CodePreview/>     
+        <div className="code-cont">
+    <CodePre htmlCode={htmlCode} reactCode={reactCode}/>
+    </div>    
         <div className="dropbtnuniq">
             <Dropbutton/>
 

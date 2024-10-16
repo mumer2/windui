@@ -1,8 +1,64 @@
 import React from 'react'
-import CodePreview from '../General/CodePreview'
+import CodePre from '../General/CodePre'
 import OpenModal from './OpenModal'
 
 export const Modals = () => {
+    const htmlCode = `  <div className="App">
+      <button onClick={openModal} className="openModalBtn">
+        Open Modal
+      </button>
+
+      {isModalOpen && (
+        <div className="modal">
+          <div className="modalContent">
+            <span className="closeBtn" onClick={closeModal}>
+              &times;
+            </span>
+            <h3>Terms and Conditions</h3>
+                <p>A Terms and Conditions agreement is where you let the public know the terms, rules and guidelines for using your website or mobile app. They include topics such as acceptable use, restricted behavior and limitations of liability</p>
+          </div>
+        </div>
+      )}
+    </div>
+    `;
+  
+  const reactCode = `import React, { useState } from "react";
+
+function OpenModal() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
+  return (
+    <div className="App">
+      <button onClick={openModal} className="openModalBtn">
+        Open Modal
+      </button>
+
+      {isModalOpen && (
+        <div className="modal">
+          <div className="modalContent">
+            <span className="closeBtn" onClick={closeModal}>
+              &times;
+            </span>
+            <h3>Terms and Conditions</h3>
+                <p>A Terms and Conditions agreement is where you let the public know the terms, rules and guidelines for using your website or mobile app. They include topics such as acceptable use, restricted behavior and limitations of liability</p>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+export default OpenModal;
+
+`;
     return (
         <div>
             <div className="modals">
@@ -26,8 +82,9 @@ export const Modals = () => {
                 <h4>Basic Modal </h4>
             </div>
 
-            <CodePreview />
-
+            <div className="code-cont">
+    <CodePre htmlCode={htmlCode} reactCode={reactCode}/>
+    </div>
             <div className="open-cont">
                 <OpenModal />
             </div>

@@ -500,6 +500,9 @@ html, body {
   Change color on hover
 } */
 
+/* ****************** */
+    /* Accordions */
+/* ****************** */
 
 
 /* Ensure accordion component doesn't overflow */
@@ -520,11 +523,6 @@ html, body {
 .accordion-icon {
   margin-right: 10px;
 }
-
-
-
-
-
 
 
 .accordions-container {
@@ -600,174 +598,374 @@ html, body {
 
 /* Code Preview */
 
-
-/* Container for the entire section */
+/* Container styles */
 .code-preview-container {
-  padding: 20px;
-  /* border: 1px solid #ddd; */
-  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
   background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 10px;
+  width: full;
+  margin-top: 10%;
 }
 
-/* Header for Preview and Code buttons */
+/* Header for buttons and toggle */
 .code-preview-header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: space-between; /* Keep buttons aligned across */
   margin-bottom: 10px;
-  flex-wrap: nowrap; /* Ensure items stay on one line */
+  flex-wrap: wrap; /* Ensure elements wrap on smaller screens */
 }
 
-/* Buttons for preview and code */
+/* Preview and Code button styles */
+.code-view {
+  display: flex;
+  gap: 10px;
+  border: 1px solid #EfE7Eb;
+  border-radius: 10px;
+  background-color: #F1F5F9;
+}
+
 .preview-btn,
 .code-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
   padding: 10px 20px;
-  border: none;
-  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  background-color: white;
+  color: #6c757d;
   cursor: pointer;
-  font-size: 1rem;
-  border-radius: 5px;
-  margin-right: 10px;
-  transition: background-color 0.3s ease;
-  white-space: nowrap; /* Prevent text wrapping */
+  transition: background-color 0.3s;
 }
 
 .preview-btn.active,
 .code-btn.active {
-  background-color: #eaeaea;
-  color: rgb(32, 136, 74);
+  background-color: white;
+  color: #00b894;
 }
 
-/* Flex container for code section and toggle switch */
-.code-section-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 20px;
-  border: 1px solid #ddd;
-  padding: 10px;
-  background-color: #3d3636;
-  color: white;
-  border-radius: 5px;
-  flex-wrap: nowrap; /* Ensure content stays on one line */
-  overflow-x: auto; /* Handle overflow with horizontal scroll */
-}
-
-/* Code section styling (left-aligned) */
-.code-section {
-  flex-grow: 1;
-  white-space: pre-wrap; /* Make the code wrap nicely */
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  margin-right: 20px;
-  white-space: nowrap; /* Keep code on one line unless it overflows */
-}
-
-/* Toggle switch (right-aligned) */
-.code-type-toggle {
+/* Code Options section */
+.code-options {
   display: flex;
   align-items: center;
-  margin-left: auto;
-  white-space: nowrap; /* Ensure toggle stays on one line */
+  gap: 10px;
+  white-space: nowrap; /* Prevents wrapping of text */
+}
+
+/* Toggle button container */
+.toggle-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 0px;
+  flex-wrap: nowrap;
 }
 
 /* Toggle switch styles */
-.switch {
+.toggle-button {
   position: relative;
-  display: inline-block;
-  width: 28px;
-  height: 14px;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-.switch input {
-  display: none;
-}
-
-.slider {
-  position: absolute;
+  width: 30px;
+  height: 16px;
+  background-color: #FCD34D;
+  border: 1px solid rgb(227, 227, 227);
+  border-radius: 25px;
   cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #f78400;
-  transition: 0.4s;
-  border-radius: 24px;
+  display: inline-block;
 }
 
-.slider:before {
+.toggle-button .slider {
   position: absolute;
-  content: "";
-  height: 14px;
-  width: 14px;
-  background-color: white;
-  transition: 0.4s;
+  height: 16px;
+  width: 16px;
+  background-color: #ffbe00;
   border-radius: 50%;
+  top: -10px;
+  left: 0px;
+  transition: 0.3s ease;
 }
 
-input:checked + .slider {
-  background-color: #ffaa00;
+.toggle-button.toggled .slider {
+  left: 16px;
 }
 
-input:checked + .slider:before {
-  transform: translateX(100%);
+.toggle-container span {
+  color: #6c757d;
+  font-size: 14px;
 }
+
+.toggle-container span.active {
+  color: #ffbe00;
+  font-weight: bold;
+}
+
+/* Code section */
+.code-section {
+  position: relative;
+  background-color: #0b0b0b;
+  padding: 15px;
+  border-radius: 10px;
+  color: white;
+}
+
+/* Copy button on top right */
+.copy-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #f4f0f0;
+  font-size: 16px;
+}
+
+.copy-btn:hover {
+  color: #ffbe00;
+}
+
+pre {
+  margin: 0;
+  font-family: monospace;
+  font-size: 14px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* Slider styles */
+.slider {
+margin-top: 10px;
+width: 100%;
+}
+
+/* Additional styles for syntax highlighting */
+.code-section {
+position: relative;
+/* background-color: #0b0b0b; */
+padding: 15px;
+border-radius: 10px;
+color: white;
+}
+
+/* Main Container */
+.code-view-cont {
+  width: 100%;
+  margin: 20px 0;
+}
+
+/* Code Section Styling */
+.code-section {
+  position: relative;
+  background-color: #1e1e1e; /* Dark background for code */
+  border: 1px solid #333;
+  border-radius: 5px;
+  padding: 0px;
+  max-height: 400px; /* Limit height and allow scrolling */
+  overflow: auto; /* Enable scrollbars */
+}
+
+/* Horizontal and Vertical Scrollbars */
+.code-section::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+.code-section::-webkit-scrollbar-thumb {
+  background-color: #555; /* Dark scrollbar color */
+  /* border-radius: 10px; */
+}
+
+.code-section::-webkit-scrollbar-track {
+  background-color: #ffffff; /* Scroll track color */
+}
+
+/* Code Content */
+.code-content {
+  font-family: 'Fira Code', monospace;
+  font-size: 14px;
+  color: #c5c8c6;
+  white-space: pre; /* Preserve whitespace for code */
+  word-wrap: normal; /* Prevent word wrapping in code */
+}
+
+/* Prism Syntax Highlighting */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #7c7c7c;
+}
+
+.token.punctuation {
+  color: #c5c8c6;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #ff6c6b; /* Red */
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.url,
+.token.inserted {
+  color: #98c379; /* Green */
+}
+
+.token.entity,
+.token.operator,
+.token.atrule {
+  color: #d19a66; /* Orange */
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+  color: #e06c75;
+}
+
+.token.function,
+.token.class-name {
+  color: #61afef; /* Blue */
+}
+
+/* Copy Button */
+.copy-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+/* Code Options section - Ensure it stays in a row on all screens */
+.code-options {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap; /* Prevents wrapping of text */
+  flex-wrap: nowrap; /* Ensure items stay in a row on all screens */
+}
+
+/* Toggle button container */
+.toggle-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 0px;
+  flex-wrap: nowrap;
+  flex-direction: row; /* Always keep row direction */
+}
+
+/* For smaller screens - Maintain the row layout */
+@media screen and (max-width: 768px) {
+  .code-options {
+    display: flex;
+    justify-content: space-between; /* Keep spacing balanced on small screens */
+    gap: 5px; /* Adjust gap for smaller devices */
+  }
+
+  .toggle-container {
+    display: flex;
+    justify-content: flex-end; /* Ensure toggle stays inline and to the right */
+    flex-direction: row; /* Keep elements in a row */
+  }
+}
+
+/* For very small screens (480px or less) */
+@media screen and (max-width: 480px) {
+  .code-options {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px; /* Keep a smaller gap */
+  }
+
+  .toggle-container {
+    display: flex;
+    justify-content: space-between; /* Adjust as needed to balance the layout */
+    flex-direction: row; /* Stay in row layout */
+  }
+}
+
+
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .code-section {
+    max-width: 100%;
+    max-height: 300px;
+  }
+}
+
+
 
 /* Media Queries for Responsiveness */
 
 /* For screens smaller than 768px (tablets and phones) */
 @media screen and (max-width: 768px) {
-  .code-preview-header,
-  .code-section-row {
-    flex-direction: row; /* Always keep the row layout */
+  .hide {
+    display: none;
+  }
+
+  /* Ensure that buttons and toggle stay inline */
+  .code-preview-header {
+    flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: nowrap; /* Prevent wrapping */
   }
-.hide{
-  display: none;
-}
-  /* Ensure the buttons take minimal width */
+
+  /* Inline elements for small screens */
+  .code-options {
+    display: flex;
+    gap: 5px;
+  }
+
+  .toggle-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  /* Reduce padding for small screens */
   .preview-btn,
   .code-btn {
-    width: 38px;
-    margin-bottom: 0;
-  }
-
-  .code-section {
-    margin-right: 10px; /* Reduce margin for compact layout */
-  }
-
-  .code-type-toggle {
-    margin-left: 0;
+    padding: 8px 15px;
+    font-size: 14px;
   }
 }
 
 /* For screens smaller than 480px (small phones) */
 @media screen and (max-width: 480px) {
-  /* Further compact buttons */
-  .preview-btn,
-  .code-btn {
-    padding: 8px 12px;
-    font-size: 0.85rem;
-    width: 38px;
-  }
-.hide{
-  display: none;
-}
-  .code-section {
-    font-size: 0.85rem; /* Slightly reduce code text size */
-    margin-right: 5px;
+  .hide {
+    display: none;
   }
 
-  /* Ensure toggle stays on the same line */
-  .code-type-toggle {
-    margin-left: 0;
-    justify-content: flex-end;
+  /* Ensure that all elements stay inline */
+  .code-preview-header {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
   }
+
+  .toggle-container {
+    flex-direction: row;
+  }
+ 
 }
+
 
 
 /* ************************** */
@@ -1050,6 +1248,7 @@ gap: 30px;
   .newclass-profile-section {
     flex-direction: column;
     max-width: 400px;
+    overflow: hidden;
   }
   .newclass-profile-icon {
     width: 50px;
@@ -1178,6 +1377,14 @@ gap: 30px;
   color: #66707d;
   line-height: 1.6;
 }
+.card-cont{
+  display: flex;
+  border: 1px solid rgb(227, 227, 227);
+  border-radius: 10px;
+  margin: 20px;
+  padding: 30px;
+  justify-content: center;
+}
 
 /* Responsive design for small screens */
 @media (max-width: 768px) {
@@ -1233,13 +1440,14 @@ gap: 30px;
 .captin{
   text-align: center;
   justify-content: center;
+  width: 300px;
 }
 
 .captin .text-captn{
-  width: 300px;
+  width: auto;
   justify-content: center;
   text-align: left;
-  margin-left: 30%;
+  /* margin-left: 30%; */
 }
 
 
@@ -1462,6 +1670,7 @@ gap: 30px;
     margin-bottom: 20px;
   }
 }
+
 /* ******************* */
        /* Feed */
 /* ******************* */
@@ -1656,6 +1865,8 @@ gap: 30px;
     width: 70%;
   }
 }
+
+
 /* ******************* */
     /* List */
 /* ******************* */
@@ -1975,6 +2186,7 @@ gap: 30px;
   font-size: 50px;
 }
 
+
 /* ******************* */
     /* Ratings */
 /* ******************* */
@@ -2225,6 +2437,7 @@ gap: 30px;
   background-color: #cfccc6; /* Highlight active slide */
 }
 
+
 /* ******************* */
     /* Tables */
 /* ******************* */
@@ -2332,6 +2545,8 @@ gap: 30px;
     overflow-x: auto;
   }
 }
+
+
 /* ******************* */
     /* Tabs*/
 /* ******************* */
@@ -2415,6 +2630,8 @@ gap: 30px;
   font-size: 18px;
   color: #595e64;
 }
+
+
 /* ******************* */
     /* Testimonials*/
 /* ******************* */

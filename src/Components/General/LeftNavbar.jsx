@@ -22,6 +22,8 @@ const LeftNavbar = () => {
         <nav className="sidebar-nav">
           <p className="t">General</p>
           <NavLink to="/" className="sidebar-item" activeClassName="active">Accordions</NavLink>
+          {/* <NavLink to="Accord" className="sidebar-item" activeClassName="active">Accord</NavLink> */}
+
           <NavLink to="/avatars" className="sidebar-item" activeClassName="active">Avatars</NavLink>
           <NavLink to="/badges" className="sidebar-item" activeClassName="active">Badges</NavLink>
           <NavLink to="/cards" className="sidebar-item" activeClassName="active">Cards</NavLink>

@@ -1,7 +1,52 @@
 import React from 'react'
-import CodePreview from '../General/CodePreview'
+import CodePre from '../General/CodePre'
 
 export const ButtonsGroup = () => {
+    const htmlCode = `  <div className="btngroups">
+        <div className="btnsgroup1">
+            <div className="btna">Years</div>
+            <div className="btna">Months</div>
+            <div className="btna">Days</div>
+        </div>
+
+        <div className="btnsgroup2">
+            <div className="btna">Years</div>
+            <div className="btna">Months</div>
+            <div className="btna">Days</div>
+        </div>
+
+        <div className="btnsgroup3">
+            <div className="btna">Years</div>
+            <div className="btna">Months</div>
+            <div className="btna">Days</div>
+        </div>
+        </div>
+    `;
+  
+  const reactCode = ` import React from 'react'
+import CodePre from '../General/CodePre'
+
+export const ButtonsGroup = () => {
+  <div className="btngroups">
+        <div className="btnsgroup1">
+            <div className="btna">Years</div>
+            <div className="btna">Months</div>
+            <div className="btna">Days</div>
+        </div>
+
+        <div className="btnsgroup2">
+            <div className="btna">Years</div>
+            <div className="btna">Months</div>
+            <div className="btna">Days</div>
+        </div>
+
+        <div className="btnsgroup3">
+            <div className="btna">Years</div>
+            <div className="btna">Months</div>
+            <div className="btna">Days</div>
+        </div>
+        </div>
+`;
   return (
     <div>
         <div className="btnsgroup-content">
@@ -33,8 +78,11 @@ export const ButtonsGroup = () => {
         <div className="btnsgroup-content">
             <h2>Variations</h2>
             <h4>Primary button groups</h4>
-            <CodePreview/>
         </div>
+
+        <div className="code-cont">
+    <CodePre htmlCode={htmlCode} reactCode={reactCode}/>
+    </div>
 
         <div className="btnsgroup1">
             <div className="btna">Large</div>

@@ -46,6 +46,7 @@ import { SearchInputs } from './Components/FormElements/SearchInputs';
 import { SelectMenus } from './Components/FormElements/SelectMenus';
 import { Textareas } from './Components/FormElements/Textareas';
 import { Toggles } from './Components/FormElements/Toggles';
+// import Accord from './Components/General/Accord';
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -72,6 +73,8 @@ function App() {
                 {/* Default route redirects to /accordions */}
                 <Route path="/" element={<Navigate to="/accordions" replace />} />
                 <Route path="/accordions" element={<Accordians />} />
+                {/* <Route path="/Accord" element={<Accord />} /> */}
+
                 <Route path="/avatars" element={<Avatars />} />
                 <Route path="/badges" element={<Badges />} />
                 <Route path="/cards" element={<Cards />} />

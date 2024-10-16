@@ -1,6 +1,127 @@
 import React from 'react'
+import CodePre from '../General/CodePre'
+
 
 export const Footer = () => {
+  const htmlCode = ` <div className="footer-cont">
+
+        <footer className="footer">
+      <div className="footer-content">
+        <div className="footer-section">
+          <h3>Product</h3>
+          <ul>
+            <li>Features</li>
+            <li>Customers</li>
+            <li>Why us?</li>
+            <li>Pricing</li>
+          </ul>
+        </div>
+        <div className="footer-section">
+          <h3>Docs & help</h3>
+          <ul>
+            <li>Documentation</li>
+            <li>Training</li>
+            <li>System status</li>
+            <li>FAQ's</li>
+            <li>Help Center</li>
+          </ul>
+        </div>
+        <div className="footer-section">
+          <h3>About us</h3>
+          <ul>
+            <li>About us</li>
+            <li>Careers</li>
+            <li>Leadership</li>
+            <li>Blog</li>
+            <li>Events</li>
+          </ul>
+        </div>
+        <div className="footer-section">
+          <h3>Get in touch</h3>
+          <ul>
+            <li>Contact</li>
+            <li>Support</li>
+            <li>Partners</li>
+            <li>Join research</li>
+          </ul>
+        </div>
+      </div>
+     
+    </footer>
+    <div className="footer-bottom">
+        <p>Copyright 2022 Brand</p>
+        <div className="social-icons">
+          <span><i class="fa-brands fa-facebook"></i></span> {/* Example social icon, replace with actual icons */}
+          <span><i class="fa-brands fa-twitter"></i></span>
+          <span><i className="fa-brands fa-discord dis"></i></span>
+        </div>
+      </div>
+      </div>
+
+  `;
+
+const reactCode = `import React from 'react'
+import CodePre from '../General/CodePre'
+
+
+export const Footer = () => {
+  return(
+<div className="footer-cont">
+
+        <footer className="footer">
+      <div className="footer-content">
+        <div className="footer-section">
+          <h3>Product</h3>
+          <ul>
+            <li>Features</li>
+            <li>Customers</li>
+            <li>Why us?</li>
+            <li>Pricing</li>
+          </ul>
+        </div>
+        <div className="footer-section">
+          <h3>Docs & help</h3>
+          <ul>
+            <li>Documentation</li>
+            <li>Training</li>
+            <li>System status</li>
+            <li>FAQ's</li>
+            <li>Help Center</li>
+          </ul>
+        </div>
+        <div className="footer-section">
+          <h3>About us</h3>
+          <ul>
+            <li>About us</li>
+            <li>Careers</li>
+            <li>Leadership</li>
+            <li>Blog</li>
+            <li>Events</li>
+          </ul>
+        </div>
+        <div className="footer-section">
+          <h3>Get in touch</h3>
+          <ul>
+            <li>Contact</li>
+            <li>Support</li>
+            <li>Partners</li>
+            <li>Join research</li>
+          </ul>
+        </div>
+      </div>
+     
+    </footer>
+    <div className="footer-bottom">
+        <p>Copyright 2022 Brand</p>
+        <div className="social-icons">
+          <span><i class="fa-brands fa-facebook"></i></span> {/* Example social icon, replace with actual icons */}
+          <span><i class="fa-brands fa-twitter"></i></span>
+          <span><i className="fa-brands fa-discord dis"></i></span>
+        </div>
+      </div>
+      </div>
+
+`;
   return (
     <div>
         <div className="footers">
@@ -67,6 +188,10 @@ export const Footer = () => {
             <h2>Variations</h2>
             <p>Three Columns</p>
       </div>
+
+      <div className="code-cont">
+    <CodePre htmlCode={htmlCode} reactCode={reactCode}/>
+    </div>
 
     </div>
   )

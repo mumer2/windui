@@ -1,7 +1,47 @@
 import React from 'react'
-import CodePreview from '../General/CodePreview'
+import CodePre from '../General/CodePre'
 
 export const Alerts = () => {
+    const htmlCode = `  <div className="alert-box2">
+            <div className="alert-content">
+            <b> Success! You have installed Tailwind CSS</b>
+            </div>
+            <div className="alert-content warn">
+            <b>Warning! Tailwind CSS requires latest version of PostCSS</b>
+            </div>
+            <div className="alert-content tps">
+            <b>Tip! Install Tailwind CSS IntelliSense</b>
+            </div>
+            <div className="alert-content danger">
+            <b>Danger! Look behind you</b>
+            </div><div className="alert-content welcm">
+            <b>Welcome! Wind UI greets you</b>
+            </div>
+        </div>
+    `;
+  
+  const reactCode = `  import React from 'react'
+import CodePre from '../General/CodePre'
+
+export const Alerts = () => {
+    return(
+  <div className="alert-box2">
+            <div className="alert-content">
+            <b> Success! You have installed Tailwind CSS</b>
+            </div>
+            <div className="alert-content warn">
+            <b>Warning! Tailwind CSS requires latest version of PostCSS</b>
+            </div>
+            <div className="alert-content tps">
+            <b>Tip! Install Tailwind CSS IntelliSense</b>
+            </div>
+            <div className="alert-content danger">
+            <b>Danger! Look behind you</b>
+            </div><div className="alert-content welcm">
+            <b>Welcome! Wind UI greets you</b>
+            </div>
+        </div>
+`;
   return (
     <div>
         <div className="alerts">
@@ -23,7 +63,9 @@ export const Alerts = () => {
             <h4>Simple alerts</h4>
         </div>
 
-        <CodePreview/>
+        <div className="code-cont">
+    <CodePre htmlCode={htmlCode} reactCode={reactCode}/>
+    </div>
 
         <div className="alert-box2">
             <div className="alert-content">

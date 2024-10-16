@@ -1,7 +1,29 @@
 import React from 'react'
-import CodePreview from '../General/CodePreview'
+import CodePre from '../General/CodePre'
 
 export const Buttons = () => {
+  const htmlCode = `    <div className="btns2">
+    <div className="button-container">
+            <button className="app-button primary">Primary Button</button>
+            <button className="app-button secondary">Secondary Button</button>
+            <button className="app-button outline">Outline Button</button>
+        </div>
+    </div>
+  `;
+
+const reactCode = `import React from 'react'
+import CodePre from '../General/CodePre'
+
+export const Buttons = () => {
+  return (
+    <div className="btns2">
+    <div className="button-container">
+            <button className="app-button primary">Primary Button</button>
+            <button className="app-button secondary">Secondary Button</button>
+            <button className="app-button outline">Outline Button</button>
+        </div>
+    </div>
+`;
   return (
     <div>
         <div className="butns">
@@ -20,7 +42,9 @@ export const Buttons = () => {
     <div className="butns">
             <h2>Variations</h2>
             <h3>Primary buttons</h3>
-            <CodePreview/>
+            <div className="code-cont">
+    <CodePre htmlCode={htmlCode} reactCode={reactCode}/>
+    </div>
 
             <div className="button-container2">
             <button className="app-button primary large">Large Button</button>

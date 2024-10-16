@@ -1,7 +1,52 @@
 import React from 'react'
-import CodePreview from '../General/CodePreview'
+import CodePre from '../General/CodePre'
 
 export const RadioGroups = () => {
+    const htmlCode = `  <div className="radiosgrop">
+            <div className="radio1">
+                <p>Primary Radio Group:</p>
+                <input type="radio" />Huey<br/>
+                <input type="radio" />Dewey<br/>
+                <input type="radio" />Louie<br/>
+
+            </div>
+            <div className="radio1">
+                <p>Secondary Radio Group:</p>
+                <input type="radio" />Huey<br/>
+                <input type="radio" />Dewey<br/>
+                <input type="radio" />Louie<br/>
+
+            </div>
+        </div>
+    `;
+  
+  const reactCode = ` import React from 'react'
+import CodePre from '../General/CodePre'
+
+export const RadioGroups = () => {
+
+    return(
+  <div className="radiosgrop">
+            <div className="radio1">
+                <p>Primary Radio Group:</p>
+                <input type="radio" />Huey<br/>
+                <input type="radio" />Dewey<br/>
+                <input type="radio" />Louie<br/>
+
+            </div>
+            <div className="radio1">
+                <p>Secondary Radio Group:</p>
+                <input type="radio" />Huey<br/>
+                <input type="radio" />Dewey<br/>
+                <input type="radio" />Louie<br/>
+
+            </div>
+        </div>
+          )
+}
+
+`;
+
   return (
     <div>
         <div className="radiogroups">
@@ -32,7 +77,9 @@ export const RadioGroups = () => {
             <h4>Primary Radio Buttons</h4>
         </div>
 
-        <CodePreview/>
+        <div className="code-cont">
+    <CodePre htmlCode={htmlCode} reactCode={reactCode}/>
+    </div>
         <div className="radiosgrop2">
             <div className="radio1">
                 <p>Primary Radio Group:</p>

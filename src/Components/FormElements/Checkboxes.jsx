@@ -1,7 +1,43 @@
 import React from 'react'
-import CodePreview from '../General/CodePreview'
+import CodePre from '../General/CodePre'
 
 export const Checkboxes = () => {
+    const htmlCode = ` <div className="checkbox-cont">
+
+        <div className="check-cont">
+        <div className="check1">
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" checked/>
+            <label for="vehicle1"> Primary Checkbox</label>
+            </div>
+            <div className="check1">
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"/>
+            <label for="vehicle1"> Secondary Checkbox</label>
+            </div>
+        </div>
+        </div>
+    `;
+  
+  const reactCode = `import React from 'react'
+import CodePre from '../General/CodePre'
+
+export const Checkboxes = () => {
+    return(
+  <div className="checkbox-cont">
+
+        <div className="check-cont">
+        <div className="check1">
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" checked/>
+            <label for="vehicle1"> Primary Checkbox</label>
+            </div>
+            <div className="check1">
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"/>
+            <label for="vehicle1"> Secondary Checkbox</label>
+            </div>
+        </div>
+        </div>
+          )
+}
+`;
   return (
     <div>
         <div className="checkboxes">
@@ -27,7 +63,9 @@ export const Checkboxes = () => {
             <h4>Primary Checkboxes</h4>
         </div>
 
-        <CodePreview/>
+        <div className="code-cont">
+    <CodePre htmlCode={htmlCode} reactCode={reactCode}/>
+    </div>
 
 <div className="checkbox-cont">
 

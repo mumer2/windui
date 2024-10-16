@@ -1,7 +1,47 @@
 import React from 'react'
-import CodePreview from '../General/CodePreview'
+import CodePre from '../General/CodePre'
 
 export const Toggles = () => {
+    const htmlCode = `  <div className="togglessection">
+                <div class="toggle-container">
+                    <label class="toggle-label">
+                        <input type="checkbox" class="toggle-input" checked />
+                        <span class="toggle-slider"></span>
+                        Primary
+                    </label>
+                    <label class="toggle-label">
+                        <input type="checkbox" class="toggle-input" />
+                        <span class="toggle-slider2"></span>
+                        Secondary
+                    </label>
+                </div>
+
+            </div>
+    `;
+  
+  const reactCode = ` import React from 'react'
+import CodePre from '../General/CodePre'
+
+export const Toggles = () => {
+    return(
+  <div className="togglessection">
+                <div class="toggle-container">
+                    <label class="toggle-label">
+                        <input type="checkbox" class="toggle-input" checked />
+                        <span class="toggle-slider"></span>
+                        Primary
+                    </label>
+                    <label class="toggle-label">
+                        <input type="checkbox" class="toggle-input" />
+                        <span class="toggle-slider2"></span>
+                        Secondary
+                    </label>
+                </div>
+
+            </div>
+                )
+}
+`;
     return (
         <div>
             <div className="toggles">
@@ -31,7 +71,10 @@ export const Toggles = () => {
                 <h4>Primary Toggles</h4>
             </div>
 
-            <CodePreview />
+            <div className="code-cont">
+    <CodePre htmlCode={htmlCode} reactCode={reactCode}/>
+    </div>
+  
 
             <div className="togglemenus">
                 <div className="menu1">
