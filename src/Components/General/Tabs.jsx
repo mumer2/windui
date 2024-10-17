@@ -40,93 +40,6 @@ export const Tabs = () => {
         )}
       </div>
     </div>
-
-    ----------------CSS----------------
-
-    
-/* ******************* */
-    /* Tabs*/
-/* ******************* */
-
-.tabs{
-  margin-top: 15%;
-  margin-left: 2%;
-  color: #7e7676;
-}
-.tabs h1{
-  font-size: 18px;
-  color: rgb(71 ,85, 105);
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-  font-weight: 600;
-}
-.tabs h2{
-  font-size: 18px;
-  color: rgb(71 ,85, 105);
-  font-size: 1.8rem;
-  line-height: 2.25rem;
-  font-weight: 400;
-}
-.tabs h4{
-  font-size: 18px;
-  color: rgb(71 ,85, 105);
-  line-height: 2.25rem;
-  font-weight: 600;
-}
-.tab-cont{
-  border: 1px solid rgb(227, 227, 227);
-  border-radius: 10px;
-  margin: 20px;
-  padding: 60px;
-}
-/* Tabs Content */
-
-
-.tabs-container {
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-}
-
-.tabs-header {
-  display: flex;
-  border-bottom: 2px solid #e2e8f0;
-  margin-bottom: 10px;
-}
-
-.tab-item {
-  cursor: pointer;
-  padding: 12px 20px;
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  border-bottom: 2px solid transparent;
-  transition: all 0.3s ease;
-  color: #64748b;
-}
-
-.tab-item:hover {
-  color: #10b981;
-}
-
-.tab-item.active {
-  color: #10b981; /* Text color for the active tab */
-  border-bottom: 2px solid #10b981; /* Green border for active tab */
-}
-
-.tabs-content {
-  margin-top: 20px;
-}
-
-.tab-content {
-  font-size: 18px;
-  color: #595e64;
-}
   `;
 
 const reactCode = `import React, { useState } from 'react';
@@ -180,15 +93,9 @@ const TabsContent = () => {
 };
 
 export default TabsContent;
+`;
 
-------------------CSS-------------------
-
-
-/* ******************* */
-    /* Tabs*/
-/* ******************* */
-
-.tabs{
+const cssCode = `.tabs{
   margin-top: 15%;
   margin-left: 2%;
   color: #7e7676;
@@ -266,9 +173,7 @@ export default TabsContent;
 .tab-content {
   font-size: 18px;
   color: #595e64;
-}
-
-`;
+}`;
   return (
     <div>
       <div className="tabs">
@@ -284,7 +189,7 @@ export default TabsContent;
         <h4>Basic Tabs</h4>
       </div>
       <div className="code-cont">
-    <CodePre htmlCode={htmlCode} reactCode={reactCode}/>
+    <CodePre htmlCode={htmlCode} reactCode={reactCode} cssCode={cssCode}/>
     </div>
 
       <div className="tab-cont">

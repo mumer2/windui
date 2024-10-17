@@ -51,6 +51,108 @@ export const Notifi = () => {
 }
 
 `;
+
+const cssCode = `.notifications{
+  margin-top: 15%;
+  margin-left: 2%;
+  color: rgb(110, 101, 101);
+}
+.notifications h1{
+  font-size: 18px;
+  color: rgb(71 ,85, 105);
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 600;
+}
+.notifications  h2{
+  font-size: 18px;
+  color: rgb(71 ,85, 105);
+  font-size: 1.8rem;
+  line-height: 2.25rem;
+  font-weight: 400;
+}
+.notifications h4{
+  font-size: 18px;
+  color: rgb(71 ,85, 105);
+  line-height: 2.25rem;
+  font-weight: 600;
+}
+.note-cont{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: 1px  solid rgb(220, 219, 219);
+  border-radius: 10px;
+  padding: 40px;
+  margin: 20px;
+}
+
+.note-data{
+  justify-content: center;
+  background-color: #2d3748;
+  color: white;
+  width: 360px;
+  border-radius: 10px;
+  border: 1px solid black;
+  margin-top: 6%;
+  padding: 10px;
+}
+.note-main{
+  padding-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: white;
+  gap: 20px;
+}
+.note-main p{
+  margin-top: 0px;
+  color: rgb(236, 233, 233);
+}
+.note-btn{
+  justify-content: left;
+  margin-right: 40%;
+  gap: 20;
+}
+.nbtn{
+  background-color: gray;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  border-radius: 6px;
+}
+.nbtn2{
+  background-color: transparent;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  margin-left: 20px;
+
+}
+.nbtn:hover{
+  background-color: rgb(119, 114, 114);
+}
+ .nbtn2:hover{
+  background-color: rgb(138, 132, 132);
+}
+
+.notify {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50%;
+}
+.notify p{
+  color: white;
+}
+.notify i{
+  margin-top: 20px;
+}`;
     return (
         <div>
             <div className="notifications">
@@ -70,7 +172,7 @@ export const Notifi = () => {
             </div>
 
             <div className="code-cont">
-    <CodePre htmlCode={htmlCode} reactCode={reactCode}/>
+    <CodePre htmlCode={htmlCode} reactCode={reactCode} cssCode={cssCode}/>
     </div>
 
             <div className="note-cont">

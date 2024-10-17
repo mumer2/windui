@@ -122,6 +122,153 @@ export const Footer = () => {
       </div>
 
 `;
+
+const cssCode = `.footers {
+  margin-top: 15%;
+  margin-left: 2%;
+  color: rgb(94, 80, 80);
+}
+
+.footers h1, .footers h2, .footers h4 {
+  color: rgb(71, 85, 105);
+  line-height: 2.25rem;
+  font-weight: 600;
+}
+
+.footers h1 {
+  font-size: 1.875rem;
+}
+
+.footers h2 {
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+.footers p{
+  font-size: 18px;
+}
+.footer-cont{
+  border: 1px solid rgb(227, 227, 227);
+  margin: 20px;
+}
+
+.footer {
+  background-color: #10B981;
+  color: white;
+  /* padding: 8px; */
+  /* margin-left: 2%; */
+  margin-top: 10%;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Ensures wrapping on small screens */
+  margin-left: 20px;
+}
+
+.footer-section {
+  flex: 1;
+  margin-right: 20px;
+  min-width: 200px; /* Prevents collapsing to very small sizes */
+  margin-bottom: 20px; /* Adds space on small screens */
+}
+
+.footer-section h3 {
+  margin-bottom: 15px;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section li {
+  margin: 5px 0;
+  color: rgb(137, 252, 202);
+}
+
+.footer-bottom {
+  margin-top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #048762;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: white;
+  padding: 10px 20px;
+  /* margin-left: 2%; */
+}
+
+.footer-bottom p {
+  margin-left: 3%;
+  color: rgb(131, 246, 190);
+}
+
+.social-icons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.social-icons span {
+  margin-right: 15px;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+  .footer-content {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on small screens */
+    gap: 20px; /* Space between columns */
+  }
+
+  .footer-section {
+    margin-right: 0;
+    margin-bottom: 20px; /* Add space between sections */
+  }
+
+  .footer-bottom {
+    flex-direction:row;
+    text-align: center;
+  }
+
+  .footer-bottom p {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr); /* Keep two columns for mobile */
+    gap: 10px; /* Reduce gap for mobile screens */
+  }
+
+  .footer {
+    padding: 20px 10px;
+  }
+
+  .footer-section {
+    min-width: 100%; /* Full width for small screens */
+  }
+
+  .footer-section h3 {
+    font-size: 1.5rem; /* Reduce font size on smaller screens */
+  }
+
+  .footer-bottom {
+    padding: 10px;
+  }
+
+  .social-icons span {
+    margin-right: 10px;
+  }
+}`;
   return (
     <div>
         <div className="footers">
@@ -190,7 +337,7 @@ export const Footer = () => {
       </div>
 
       <div className="code-cont">
-    <CodePre htmlCode={htmlCode} reactCode={reactCode}/>
+    <CodePre htmlCode={htmlCode} reactCode={reactCode} cssCode={cssCode}/>
     </div>
 
     </div>

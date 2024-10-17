@@ -4,36 +4,43 @@ import Prism from 'prismjs'; // Import Prism.js
 import 'prismjs/components/prism-jsx'; // Ensure Prism.js supports JSX
 import 'prismjs/themes/prism-okaidia.css'; // Import a dark theme (Okaidia)
 
-const CodePre = ({ htmlCode, reactCode }) => {
+const CodePre = ({ htmlCode, reactCode, cssCode }) => {
   const [showCode, setShowCode] = useState(false);
   const [codeType, setCodeType] = useState('HTML');
+  const [isCopied, setIsCopied] = useState(false);
 
-  // Run Prism.js after rendering to apply syntax highlighting
   useEffect(() => {
     Prism.highlightAll(); // This highlights all the code blocks
   }, [showCode, codeType]);
 
-  // Toggle between Preview and Code view
+  useEffect(() => {
+    if (isCopied) {
+      const timer = setTimeout(() => {
+        setIsCopied(false);
+      }, 2000); // Reset after 2 seconds
+      return () => clearTimeout(timer);
+    }
+  }, [isCopied]);
+
   const handleCodeClick = () => setShowCode(true);
   const handlePreviewClick = () => setShowCode(false);
 
-  // Toggle between HTML and React code
   const handleCodeTypeToggle = () => {
     setCodeType((prevType) => (prevType === 'HTML' ? 'React' : 'HTML'));
   };
 
-  // Copy the current code to the clipboard
+  const handleCssClick = () => setCodeType('CSS');
+
   const handleCopyCode = () => {
-    const codeToCopy = codeType === 'HTML' ? htmlCode : reactCode;
+    const codeToCopy = codeType === 'HTML' ? htmlCode : codeType === 'React' ? reactCode : cssCode;
     navigator.clipboard.writeText(codeToCopy);
-    // alert('Code copied to clipboard!');
+    setIsCopied(true);
   };
 
   return (
     <div className="code-view-cont">
       <div className="code-preview-container">
         <div className="code-preview-header">
-          {/* Left: Preview and Code buttons */}
           <div className="code-view">
             <button
               className={`preview-btn ${!showCode ? 'active' : ''}`}
@@ -51,29 +58,37 @@ const CodePre = ({ htmlCode, reactCode }) => {
             </button>
           </div>
 
-          {/* Right: Toggle button and Copy functionality */}
           <div className="code-options">
             <span className="hide">Copy as:</span>
             <div className="toggle-container" onClick={handleCodeTypeToggle}>
-              <span className={`${codeType === 'HTML' ? 'active' : ''}`}>HTML</span>
+              <span className={`${codeType === 'HTML' ? 'active' : ''}`} style={{cursor:'pointer'}}>HTML</span>
               <div className={`toggle-button ${codeType === 'React' ? 'toggled' : ''}`}>
                 <span className="slider"></span>
               </div>
-              <span className={`${codeType === 'React' ? 'active' : ''}`}>React</span>
+              <span className={`${codeType === 'React' ? 'active' : ''}`} style={{cursor:'pointer'}}>React</span>
             </div>
           </div>
         </div>
 
-        {/* Conditionally show the code or preview */}
         {showCode ? (
-          <div className="code-section">
+          <div className="code-section" style={{backgroundColor:'#272822'}}>
+            <div className="css-code-button" style={{marginTop:'8px',marginLeft:'8px'}}>
+              <button className="css-btn" onClick={handleCssClick} style={{backgroundColor:'transparent',color:'white',borderRadius:'5px'}}>
+                CSS
+              </button>
+            </div>
+
             <button className="copy-btn" onClick={handleCopyCode} title="Copy Code">
-              <i className="fa-solid fa-copy"></i> Copy Code
+              {isCopied ? (
+                <i className="fa-solid fa-check" style={{color:' #ffbe00'}}> Copied </i>
+              ) : (
+                <i className="fa-solid fa-copy"></i>
+              )}
             </button>
+
             <pre className="code-content">
-              {/* Prism.js language class */}
-              <code className={`language-${codeType === 'HTML' ? 'html' : 'jsx'}`}>
-                {codeType === 'HTML' ? htmlCode : reactCode}
+              <code className={`language-${codeType === 'React' ? 'jsx' : codeType.toLowerCase()}`}>
+                {codeType === 'HTML' ? htmlCode : codeType === 'React' ? reactCode : cssCode}
               </code>
             </pre>
           </div>

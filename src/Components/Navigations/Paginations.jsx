@@ -39,6 +39,117 @@ export const Paginations = () => {
 
         </div>
 `;
+
+const cssCode = `.paginations {
+  margin-top: 15%;
+  margin-left: 2%;
+  color: rgb(101, 86, 86);
+}
+.paginations h1 {
+  font-size: 1.875rem; /* 30px */
+  line-height: 2.25rem; /* 36px */
+  font-weight: 600;
+  color: rgb(71, 85, 105);
+}
+.paginations h2 {
+  font-size: 1.8rem; /* 28px */
+  line-height: 2.25rem; /* 36px */
+  font-weight: 400;
+  color: rgb(71, 85, 105);
+}
+.paginations h4 {
+  font-size: 18px;
+  line-height: 2.25rem; /* 36px */
+  font-weight: 600;
+  color: rgb(71, 85, 105);
+}
+.page-cont {
+  border: 1px solid rgb(227, 227, 227);
+  border-radius: 10px;
+  margin: 20px;
+  padding: 50px;
+  box-sizing: border-box;
+}
+
+.pagenumber {
+  margin-top: 2%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  cursor: pointer;
+  color: rgb(100, 116, 139);
+}
+
+.pagenumber .pg1:hover {
+  color: #02b583;
+}
+
+.pagenumber .Active:hover {
+  color: #ffffff;
+  background-color: #018156;
+}
+
+.pagenumber .Active {
+  background-color: #02b583;
+  color: white;
+  padding: 6px 20px;
+  border-radius: 5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .paginations {
+    margin-top: 10%;
+    margin-left: 5%;
+  }
+
+  .paginations h1, .paginations h2, .paginations h4 {
+    font-size: 1.5rem;
+  }
+
+  .page-cont {
+    margin: 15px;
+    padding: 20px;
+  }
+
+  .pagenumber {
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .pagenumber .Active {
+    padding: 4px 15px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .paginations {
+    margin-top: 5%;
+    margin-left: 3%;
+  }
+
+  .paginations h1, .paginations h2, .paginations h4 {
+    font-size: 1.2rem;
+  }
+
+  .page-cont {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  .pagenumber {
+    gap: 10px;
+    flex-direction: column;
+    padding: 5px;
+  }
+
+  .pagenumber .Active {
+    padding: 3px 10px;
+    font-size: 12px;
+  }
+}`;
   return (
     <div>
         <div className="paginations">
@@ -71,7 +182,7 @@ export const Paginations = () => {
         </div>
 
         <div className="code-cont">
-    <CodePre htmlCode={htmlCode} reactCode={reactCode}/>
+    <CodePre htmlCode={htmlCode} reactCode={reactCode} cssCode={cssCode}/>
     </div>
 
 <div className="page-cont">

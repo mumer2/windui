@@ -28,100 +28,6 @@ export const Accordians = () => {
     />
   </div>
   </div>
-  
- ---------------- CSS -------------
-
- 
-/* ****************** */
-    /* Accordions */
-/* ****************** */
-
-
-/* Ensure accordion component doesn't overflow */
-.accordions-container {
-  max-height: 100%;
-  margin-top: 10%;
-  overflow-y: auto;
-  padding: 20px;
-  color: rgb(71, 85, 105);
-  font-size: 16px;
-}
-.accordion-header {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
-
-.accordion-icon {
-  margin-right: 10px;
-}
-
-
-.accordions-container {
-  height: 100%;
-  overflow-y: auto; /* Allow vertical scrolling if needed */
-}
-
-.accordions-container p{
-  font-size: 18px;
-  color: rgb(100, 116, 139);
-}
-.accordions-container h1{
-  font-size: 18px;
-  color: rgb(71 ,85, 105);
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-  font-weight: 600;
-}
-
-
-.accordion {
-  max-width: 750px;
-  margin: 20px auto;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  color: gray;
-}
-
-.accordion-item {
-  border-bottom: 1px solid rgb(229, 225, 225);
-}
-.accordion-item h3{
-  color: rgb(63, 62, 62);
-  font-weight: 400;
-}
-
-.accordion-header {
-  padding: 15px;
-  background-color: white;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.acc-cont{
-  background-color: rgb(255, 255, 255);
-  margin: 20px;
-  box-shadow: whitesmoke;
-  border: 1px solid  rgb(231, 223, 223);
-  border-radius: 10px;
-  padding: 50px;
-}
-
-/* .accordion-header:hover {
-  background-color: #e0e0e0;
-} */
-
-.icon {
-  font-size: 18px;
-}
-
-.accordion-content {
-  padding: 15px;
-  background-color: #fff;
-  border-top: 1px solid #ddd;
-  font-size: 16px;
-}
   `;
 
 const reactCode = `import React, { useState } from 'react';
@@ -175,16 +81,9 @@ return (
 };
 
 export default Accordion;
+`;
 
-
-
----------------CSS--------------
-
-
-/* ****************** */
-    /* Accordions */
-/* ****************** */
-
+const cssCode = `
 
 /* Ensure accordion component doesn't overflow */
 .accordions-container {
@@ -271,7 +170,9 @@ export default Accordion;
   border-top: 1px solid #ddd;
   font-size: 16px;
 }
+
 `;
+
   return (
     <div>
       <div className="accordions-container">
@@ -287,7 +188,7 @@ export default Accordion;
 
         <h4>Basic Accordion</h4>
         <div className="code-cont">
-    <CodePre htmlCode={htmlCode} reactCode={reactCode}>
+    <CodePre htmlCode={htmlCode} reactCode={reactCode} cssCode={cssCode} >
       
       </CodePre>
     </div>

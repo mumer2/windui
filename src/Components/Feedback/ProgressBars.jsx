@@ -80,7 +80,95 @@ return (
       </div>
       </div>
 `;
-  return (
+
+const cssCode = `.progressbars{
+  margin-top: 15%;
+  margin-left: 2%;
+  color: rgb(112, 102, 102);
+}
+.progressbars h1{
+  font-size: 18px;
+  color: rgb(71 ,85, 105);
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 600;
+}
+.progressbars h2{
+  font-size: 18px;
+  color: rgb(71 ,85, 105);
+  font-size: 1.8rem;
+  line-height: 2.25rem;
+  font-weight: 400;
+}
+.progressbars h4{
+  font-size: 18px;
+  color: rgb(71 ,85, 105);
+  line-height: 2.25rem;
+  font-weight: 600;
+}
+.progress-cont{
+  border: 1px solid rgb(227, 227, 227);
+  border-radius: 10px;
+  margin: 20px;
+  padding: 30px;
+}
+.App {
+  max-width: 600px;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.progress-container label{
+  margin-bottom: -32px;
+  color: rgb(100 ,116, 139);
+  font-size: 12px;
+}
+.title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.progress-container {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.progress-bar {
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 18px;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px 0 0 10px;
+  transition: width 0.3s ease-in-out;
+}
+
+.bg-green {
+  background-color: #28a745; /* Green */
+}
+
+.bg-red {
+  background-color: #dc3545; /* Red */
+}
+
+/* Default Progress Fill */
+.progress-bar-fill {
+  background-color:#02b583; /* Blue */
+}`;
+
+return (
     <div>
       <div className="progressbars">
         <h1>Progress Bars</h1>
@@ -124,7 +212,7 @@ return (
         <h4>Basic</h4>
       </div>
       <div className="code-cont">
-    <CodePre htmlCode={htmlCode} reactCode={reactCode}/>
+    <CodePre htmlCode={htmlCode} reactCode={reactCode} cssCode={cssCode}/>
     </div>
 
 

@@ -42,6 +42,103 @@ export const Alerts = () => {
             </div>
         </div>
 `;
+
+const cssCode = `.alerts{
+  margin-top: 15%;
+  margin-left: 2%;
+  color: rgb(123, 112, 112);
+  font-size: 18px;
+}
+.alerts h1{
+  font-size: 18px;
+  color: rgb(71 ,85, 105);
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 600;
+}
+.alerts h2{
+  font-size: 18px;
+  color: rgb(71 ,85, 105);
+  font-size: 1.8rem;
+  line-height: 2.25rem;
+  font-weight: 400;
+}
+.alerts h4{
+  font-size: 18px;
+  color: rgb(71 ,85, 105);
+  line-height: 2.25rem;
+  font-weight: 600;
+}
+.alert-box{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10%;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 30px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: white;
+  border: 1px solid rgb(218, 215, 215);
+  border-radius: 10px;
+}
+.alert-box  .alert-content{
+  color: #02b583;
+  background-color: #e5f2ee;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 30px;
+}
+.alert-content p{
+  color: #02b583;
+  font-size: 16px;
+  margin-left: 20px;
+}
+.alert-content b{
+  font-size: 14px;
+}
+.alert-box2{
+  text-align: center;
+  justify-content: center;
+  margin-top: 10%;
+  border: 1px solid rgb(227, 225, 225);
+  margin: 30px;
+  border-radius: 10px;
+}
+.alert-box2  .alert-content{
+  line-height: 50px;
+  color: #02b583;
+  margin-top: 5%;
+  background-color: #ebf8f4;
+  border: 1px solid #daf8ef;
+  margin-left: 12%;
+  margin-right: 12%;
+  text-align: left;
+  justify-content: left;
+  padding-left: 20px;
+  border-radius: 5px;
+}
+.alert-box2 .warn{
+  color: rgb(230, 109, 10);
+  border: 1px solid rgb(245, 229, 216);
+  background-color: rgb(239, 236, 232);
+  border-radius: 5px;
+}
+.alert-box2 .tps{
+  color: rgb(66, 153, 219);
+  border-radius: 5px;
+}
+.alert-box2.danger{
+  color: palevioletred;
+  border-radius: 5px;
+}
+.alert-box2 .welcm{
+  color: white;
+  background-color: rgba(0, 0, 0, 0.628);
+  border-radius: 5px;
+  margin-bottom: 20px;
+}`;
   return (
     <div>
         <div className="alerts">
@@ -64,7 +161,7 @@ export const Alerts = () => {
         </div>
 
         <div className="code-cont">
-    <CodePre htmlCode={htmlCode} reactCode={reactCode}/>
+    <CodePre htmlCode={htmlCode} reactCode={reactCode} cssCode={cssCode}/>
     </div>
 
         <div className="alert-box2">

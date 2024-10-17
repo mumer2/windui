@@ -67,6 +67,91 @@ const VerticalNavbar = () => {
 export default VerticalNavbar;
 
 `;
+
+const cssCode = `.sidenavigations{
+  margin-top: 15%;
+  margin-left: 2%;
+  color: rgb(91, 79, 79);
+}
+
+.sidenavigations h1{
+  font-size: 18px;
+  color: rgb(71 ,85, 105);
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 600;
+}
+.sidenavigations P{
+  color:  rgb(100, 116, 139);
+}
+/* Vertical Navbar */
+
+
+
+.vertical-navbar {
+  width: 250px; /* Width of the navbar */
+  background-color: #f8fafc; /* Light background */
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column; /* Vertical layout */
+  position: relative; /* For responsive positioning */
+}
+
+.profile-section {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  margin-bottom: 30px; /* Space between profile and nav links */
+}
+
+.profile-icon {
+  width: 50px; /* Profile icon size */
+  height: 50px;
+  border-radius: 50%; /* Circular profile icon */
+  margin-left: 10%;
+}
+
+.profile-name {
+  font-size: 18px; /* Font size for the name */
+  color: #2d3748; /* Dark text color */
+}
+
+.nav-links2 {
+  display: flex;
+  flex-direction: column; /* Stack links vertically */
+}
+
+.nav-link2 {
+  padding: 10px;
+  background-color: #ffffff; /* White background for links */
+  border-radius: 5px; /* Rounded corners */
+  margin: 5px 0; /* Space between links */
+  color: #4a5568; /* Text color */
+  text-decoration: none; /* Remove underline */
+  transition: background-color 0.2s; /* Smooth transition */
+}
+
+.nav-link2:hover {
+  background-color: #e2e8f0; /* Darker background on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .vertical-navbar {
+    width: 100%; /* Full width on smaller screens */
+    /* position: fixed;  */
+    /* Fixed position for easy access */
+    height: 100%; /* Full height */
+    left: 0; /* Align to the left */
+    /* z-index: 1000;  */
+    /* Keep above other content */
+  }
+}
+
+.blue-cont{
+  margin-top: 10%;
+  color: #02b583;
+}`;
   return (
     <div>
       <div className="sidenavigations">
@@ -81,7 +166,7 @@ export default VerticalNavbar;
       </div>
 
       <div className="code-cont">
-    <CodePre htmlCode={htmlCode} reactCode={reactCode}/>
+    <CodePre htmlCode={htmlCode} reactCode={reactCode} cssCode={cssCode}/>
     </div>
     </div>
   )

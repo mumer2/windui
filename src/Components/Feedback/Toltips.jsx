@@ -55,6 +55,139 @@ export const Toltips = () => {
 }
 
 `;
+
+const cssCode = `.toltips {
+  margin-top: 15%;
+  margin-left: 2%;
+  color: rgb(113, 103, 103);
+}
+.toltips p{
+  font-size: 18px;
+  color: rgb(100 ,116, 139);
+}
+.toltips h1 {
+  font-size: 18px;
+  color: rgb(71, 85, 105);
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 600;
+}
+
+.toltips h2 {
+  font-size: 18px;
+  color: rgb(71, 85, 105);
+  font-size: 1.8rem;
+  line-height: 2.25rem;
+  font-weight: 400;
+}
+
+.toltips h4 {
+  font-size: 18px;
+  color: rgb(71, 85, 105);
+  line-height: 2.25rem;
+  font-weight: 600;
+}
+.tooltip-cont{
+  border: 1px solid rgb(227, 227, 227);
+  border-radius: 10px;
+  margin: 20px;
+  padding: 30px;
+}
+/* Tooltip container */
+.tooltip-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+  gap: 10px;
+
+}
+
+/* Tooltip item */
+.tooltip-item {
+  position: relative;
+  cursor: pointer;
+  padding: 10px;
+  background-color: none;
+  color: rgb(100 ,116, 139);
+  border-radius: 4px;
+  text-align: center;
+}
+
+/* Tooltip text */
+.tooltip-text {
+  visibility: hidden;
+  position: absolute;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  width: 150px;
+  border-radius: 4px;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Show tooltip on hover */
+.tooltip-item:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Tooltip positioning */
+.tooltip-text-top {
+  bottom: 150%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tooltip-text-right {
+  top: 50%;
+  left: 150%;
+  transform: translateY(-50%);
+}
+
+.tooltip-text-bottom {
+  top: 150%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tooltip-text-left {
+  top: 50%;
+  right: 150%;
+  transform: translateY(-50%);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .tooltip-container {
+    flex-direction: column; /* Change to column layout */
+    align-items: center; /* Center items in column */
+    gap: 20px; /* Increase gap for clarity in column layout */
+  }
+
+  .tooltip-text {
+    width: 120px; /* Adjust width */
+    font-size: 0.875rem;
+    padding: 8px;
+  }
+}
+
+/* For small screens (phones) */
+@media screen and (max-width: 480px) {
+  .tooltip-container {
+    flex-direction: column; /* Ensure column layout on smaller screens */
+    align-items: center; /* Center items */
+  }
+
+  .tooltip-text {
+    width: 100px; /* Reduce width */
+    font-size: 0.75rem;
+    padding: 6px;
+  }
+}`;
+
   return (
     <div>
         <div className="toltips">
@@ -90,7 +223,7 @@ export const Toltips = () => {
             <p>The base size tooltip uses bigger text and internal padding.</p>
         </div>
         <div className="code-cont">
-    <CodePre htmlCode={htmlCode} reactCode={reactCode}/>
+    <CodePre htmlCode={htmlCode} reactCode={reactCode} cssCode={cssCode}/>
     </div>
 <div className="tooltip-cont">
 

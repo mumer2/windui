@@ -96,108 +96,6 @@ export const Feed = () => {
 
       </ul>
     </div>
-
-    -----------------------CSS-------------------------
-
-    
-/* ******************* */
-       /* Feed */
-/* ******************* */
-.feeds {
-  margin-top: 5%;
-  margin-left: 2%;
-  color: gray;
-}
-
-.feeds h1 {
-  font-size: 1.875rem;
-  color: rgb(71, 85, 105);
-  line-height: 2.25rem;
-  font-weight: 600;
-}
-
-/* Container to center the feed */
-.feed-container {
-  padding: 20px;
-  max-width: 800px;
-  margin: auto;
-  background-color: #f9fafb;
-  border-radius: 8px;
-}
-
-/* Individual feed items */
-.feed-item {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 25px;
-  border-bottom: 1px solid #e2e8f0;
-  padding-bottom: 15px;
-}
-
-.feed-avatar {
-  margin-right: 15px;
-}
-
-.feed-avatar img {
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  margin-top: 10px;
-}
-.feed-cont{
-  border: 1px solid rgb(234, 233, 233);
-  padding: 20px;
-  margin: 20px;
-  border-radius: 10px;
-  background-color: white;
-}
-/* Styling for feed content */
-.feed-content {
-  max-width: 900px;
-  color: gray;
-}
-.green-heart {
-  color: #28a745; /* Green color */
-  font-size: 18px; /* Adjust size as needed */
-  margin-left: 10px;
-  margin-right: 5px;
-}
-.feed-user {
-  font-size: 15px;
-  color: rgb(100 ,116, 139);
-  font-weight: 500;
-  margin-bottom: 5px;
-}
-.feed-user strong{
-  color: #5b5959;
-  font-weight: 600;
-  font-size: 18px;
-}
-
-.feed-time {
-  font-size: 13px;
-  color: rgb(107, 114, 128);
-  margin-left: 10px;
-}
-
-.feed-description {
-  margin: 8px 0;
-  font-size: 16px;
-  color: rgb(100 ,116, 139);
-  line-height: 1.5rem;
-}
-
-/* Responsive design for smaller screens */
-@media (max-width: 768px) {
-  .feed-content {
-    max-width: 100%;
-  }
-
-  .feed-avatar img {
-    width: 40px;
-    height: 40px;
-  }
-}
   `;
 
 const reactCode = `import React from 'react'
@@ -299,14 +197,9 @@ export const ActivityFeed = () => {
     </div>
   )
 }
+`;
 
------------------CSS-------------------
-
-
-/* ******************* */
-       /* Feed */
-/* ******************* */
-.feeds {
+const cssCode = `.feeds {
   margin-top: 5%;
   margin-left: 2%;
   color: gray;
@@ -400,8 +293,7 @@ export const ActivityFeed = () => {
     width: 40px;
     height: 40px;
   }
-}
-`;
+}`;
   return (
     <div>
       <div className="feeds" style={{marginTop:'15%'}}>
@@ -416,7 +308,7 @@ export const ActivityFeed = () => {
        <h2>Variations</h2>
              </div>
       <div className="code-cont">
-    <CodePre htmlCode={htmlCode} reactCode={reactCode}/>
+    <CodePre htmlCode={htmlCode} reactCode={reactCode} cssCode={cssCode}/>
     </div>
     </div>
   )

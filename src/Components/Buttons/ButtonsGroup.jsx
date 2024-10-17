@@ -47,6 +47,123 @@ export const ButtonsGroup = () => {
         </div>
         </div>
 `;
+
+const cssCode = `.btnsgroup-content{
+  margin-top: 15%;
+  margin-left: 2%;
+  color: rgb(113, 101, 101);
+}
+.btnsgroup-content h1{
+  font-size: 18px;
+  color: rgb(71 ,85, 105);
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 600;
+}
+.btnsgroup-content h2{
+  font-size: 18px;
+  color: rgb(71 ,85, 105);
+  font-size: 1.8rem;
+  line-height: 2.25rem;
+  font-weight: 400;
+}
+.btnsgroup-content h4{
+  font-size: 18px;
+  color: rgb(71 ,85, 105);
+  line-height: 2.25rem;
+  font-weight: 600;
+}
+.btngroups{
+  margin-top: 10%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+}
+.btnsgroup1{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btnsgroup1 .btna{
+  background-color: #02b583;
+  cursor: pointer;
+  color: white;
+  padding: 20px;
+}
+
+.btnsgroup1 .btna:hover{
+  background-color: #03a670;
+}
+
+
+.btnsgroup2{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btnsgroup2 .btna{
+  color: #02b583;
+  cursor: pointer;
+  padding: 20px;
+}
+.btnsgroup2 .btna:hover{
+background-color: #bbf8e3;
+}
+
+.btnsgroup3{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btnsgroup3 .btna{
+  color: #02b583;
+  cursor: pointer;
+  padding: 20px;
+  border: 1px solid #02b583;
+}
+
+.btnsgroup4{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btnsgroup4 .btna{
+  background-color: #02b583;
+  cursor: pointer;
+  color: white;
+  padding: 15px;
+}
+
+.btnsgroup4 .btna:hover{
+  background-color: #03a670;
+}
+
+.-s{
+margin-top: 5%;
+}
+
+.btnsgroup5{
+  margin-top: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btnsgroup5 .btna{
+  background-color: #02b583;
+  cursor: pointer;
+  color: white;
+  padding: 10px;
+}
+
+.btnsgroup5 .btna:hover{
+  background-color: #03a670;
+}`;
   return (
     <div>
         <div className="btnsgroup-content">
@@ -81,7 +198,7 @@ export const ButtonsGroup = () => {
         </div>
 
         <div className="code-cont">
-    <CodePre htmlCode={htmlCode} reactCode={reactCode}/>
+    <CodePre htmlCode={htmlCode} reactCode={reactCode} cssCode={cssCode}/>
     </div>
 
         <div className="btnsgroup1">
