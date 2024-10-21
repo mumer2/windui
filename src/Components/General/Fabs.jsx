@@ -180,21 +180,38 @@ const cssCode = `.fabs{
             <h1>Fabs</h1>
             <p>A Floating Action Button (FAB) is a high-emphasis button that lets the user perform a primary action.</p>
         </div>
-<div className="cont-fab">
+        
+        <div class="fab-container">
+  <div class="fab-buttons">
+    <button class="fab-main">
+      <span class="fab-icon">
+        <i class="fa-light fa-plus"></i> 
+      </span>
+    </button>
 
+    <button class="fab-action">
+      <span class="fab-icon"><i class="fa-regular fa-pen-to-square"></i></span>
+      <span class="fab-tooltip">Edit</span>
+    </button>
 
-        <div class="container">
-  <div class="fab-container">
-    <button class="fab">+</button>
-    <div class="fab-menu">
-    <button class="fab-item"><i class="fa-solid fa-square-share-nodes"></i></button>
-    <button class="fab-item"><i class="fa-solid fa-camera"></i></button>
-    <button class="fab-item"><i class="fa-regular fa-copy"></i></button>
-    <button class="fab-item"><i class="fa-regular fa-pen-to-square"></i></button>
-    </div>
+    <button class="fab-action">
+      <span class="fab-icon"><i class="fa-regular fa-copy"></i></span>
+      <span class="fab-tooltip">Copy</span>
+    </button>
+
+    <button class="fab-action">
+      <span class="fab-icon"><i class="fa-solid fa-camera"></i></span>
+      <span class="fab-tooltip">Camera</span>
+    </button>
+
+    <button class="fab-action">
+      <span class="fab-icon"><i class="fa-solid fa-share-nodes"></i></span>
+      <span class="fab-tooltip">Share</span>
+    </button>
   </div>
 </div>
-</div>
+
+
 
         <div className="fabs">
             <h2>Variations</h2>
@@ -204,7 +221,38 @@ const cssCode = `.fabs{
         <div className="code-cont">
     <CodePre htmlCode={htmlCode} reactCode={reactCode} cssCode={cssCode}/>
     </div>
-<div className="cont-fab">
+
+
+    <div class="fab-container">
+  <div class="fab-buttons">
+    <button class="fab-main">
+      <span class="fab-icon">
+        <i class="fa-light fa-plus"></i> 
+      </span>
+    </button>
+
+    <button class="fab-action">
+      <span class="fab-icon"><i class="fa-regular fa-pen-to-square"></i></span>
+      <span class="fab-tooltip">Edit</span>
+    </button>
+
+    <button class="fab-action">
+      <span class="fab-icon"><i class="fa-regular fa-copy"></i></span>
+      <span class="fab-tooltip">Copy</span>
+    </button>
+
+    <button class="fab-action">
+      <span class="fab-icon"><i class="fa-solid fa-camera"></i></span>
+      <span class="fab-tooltip">Camera</span>
+    </button>
+
+    <button class="fab-action">
+      <span class="fab-icon"><i class="fa-solid fa-share-nodes"></i></span>
+      <span class="fab-tooltip">Share</span>
+    </button>
+  </div>
+</div>
+{/* <div className="cont-fab">
 
         <div class="container">
   <div class="fab-container">
@@ -217,7 +265,7 @@ const cssCode = `.fabs{
     </div>
   </div>
 </div>
-</div>
+</div> */}
 
     </div>
   )

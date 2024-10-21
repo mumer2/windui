@@ -1,75 +1,103 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import './CodeShow.css';
+import Prism from 'prismjs'; // Import Prism.js
+import 'prismjs/components/prism-jsx'; // Ensure Prism.js supports JSX
+import 'prismjs/themes/prism-okaidia.css'; // Import a dark theme (Okaidia)
 
-const CodePreview = () => {
-  const [showCode, setShowCode] = useState(false); // State for showing/hiding the code
-  const [codeType, setCodeType] = useState('HTML'); // State for HTML or React
+const CodePreview = ({ htmlCode, reactCode, cssCode }) => {
+  const [showCode, setShowCode] = useState(false);
+  const [codeType, setCodeType] = useState('HTML');
+  const [isCopied, setIsCopied] = useState(false);
 
-  // Handle the button click to toggle between preview and code
-  const handleCodeClick = () => {
-    setShowCode(true);
-  };
+  useEffect(() => {
+    Prism.highlightAll(); // This highlights all the code blocks
+  }, [showCode, codeType]);
 
-  const handlePreviewClick = () => {
-    setShowCode(false);
-  };
+  useEffect(() => {
+    if (isCopied) {
+      const timer = setTimeout(() => {
+        setIsCopied(false);
+      }, 2000); // Reset after 2 seconds
+      return () => clearTimeout(timer);
+    }
+  }, [isCopied]);
 
-  // Handle the toggle between HTML and React
+  const handleCodeClick = () => setShowCode(true);
+  const handlePreviewClick = () => setShowCode(false);
+
   const handleCodeTypeToggle = () => {
     setCodeType((prevType) => (prevType === 'HTML' ? 'React' : 'HTML'));
   };
 
+  const handleCssClick = () => setCodeType('CSS');
+
+  const handleCopyCode = () => {
+    const codeToCopy = codeType === 'HTML' ? htmlCode : codeType === 'React' ? reactCode : cssCode;
+    navigator.clipboard.writeText(codeToCopy);
+    setIsCopied(true);
+  };
+
   return (
-    <div className="code-preview-container">
-      {/* Buttons for Preview and Code */}
-      <div className="code-preview-header">
-        <div className="code-view">
-        <button 
-          className={`preview-btn ${!showCode ? 'active' : ''}`} 
-          onClick={handlePreviewClick}
-        >
-            <i class="fa-regular fa-eye"></i>
-            <span className='hide' style={{marginLeft:'5px'}}>Preview</span> {/* Text inside span for conditional hiding */}
-        </button>
-        <button 
-          className={`code-btn ${showCode ? 'active' : ''}`} 
-          onClick={handleCodeClick}
-        >
-          <i class="fa-solid fa-code"></i>
-          <span className='hide' style={{marginLeft:'5px'}}>Code</span> {/* Text inside span for conditional hiding */}
-        </button>
-        </div>
-       
-
-         {/* Toggle switch (right-aligned) */}
-         <div className="code-type-toggle">
-            <span className='hide'>Copy as: HTML</span>
-            <label className="switch">
-              <input 
-                type="checkbox" 
-                checked={codeType === 'React'} 
-                onChange={handleCodeTypeToggle}
-              />
-              <span className="slider"></span>
-            </label>
-            <span>{codeType}</span>
+    <div className="code-view-cont">
+      <div className="code-preview-container">
+        <div className="code-preview-header">
+          <div className="code-view">
+            <button
+              className={`preview-btn ${!showCode ? 'active' : ''}`}
+              onClick={handlePreviewClick}
+            >
+              <i className="fa-regular fa-eye"></i>
+              <span className="hide">Preview</span>
+            </button>
+            <button
+              className={`code-btn ${showCode ? 'active' : ''}`}
+              onClick={handleCodeClick}
+            >
+              <i className="fa-solid fa-code"></i>
+              <span className="hide">Code</span>
+            </button>
           </div>
-      </div>
 
-      {/* Code section and toggle switch in one line */}
-      {showCode && (
-        <div className="code-section-row">
-          {/* Code block (left-aligned) */}
-          <div className="code-section">
-            <pre>
-              {codeType === 'HTML'
-                ? '<div class="accordion">HTML code example here...</div>'
-                : '<AccordionComponent>React code example here...</AccordionComponent>'}
+          <div className="code-options">
+            <span className="hide">Copy as:</span>
+            <div className="toggle-container" onClick={handleCodeTypeToggle}>
+              <span className={`${codeType === 'HTML' ? 'active' : ''}`} style={{cursor:'pointer'}}>HTML</span>
+              <div className={`toggle-button ${codeType === 'React' ? 'toggled' : ''}`}>
+                <span className="slider"></span>
+              </div>
+              <span className={`${codeType === 'React' ? 'active' : ''}`} style={{cursor:'pointer'}}>React</span>
+            </div>
+          </div>
+        </div>
+
+        {showCode ? (
+          <div className="code-section" style={{backgroundColor:'#272822'}}>
+            <div className="css-code-button" style={{marginTop:'8px',marginLeft:'8px'}}>
+              <button className="css-btn" onClick={handleCssClick} style={{backgroundColor:'transparent',color:'white',borderRadius:'5px'}}>
+                CSS
+              </button>
+            </div>
+
+            <button className="copy-btn" onClick={handleCopyCode} title="Copy Code">
+              {isCopied ? (
+                <i className="fa-solid fa-check" style={{color:' #ffbe00'}}> Copied </i>
+              ) : (
+                <i className="fa-solid fa-copy"></i>
+              )}
+            </button>
+
+            <pre className="code-content">
+              <code className={`language-${codeType === 'React' ? 'jsx' : codeType.toLowerCase()}`}>
+                {codeType === 'HTML' ? htmlCode : codeType === 'React' ? reactCode : cssCode}
+              </code>
             </pre>
           </div>
-
-         
-        </div>
-      )}
+        ) : (
+          <div className="preview-content">
+            {/* Your preview content goes here */}
+          </div>
+        )}
+      </div>
     </div>
   );
 };

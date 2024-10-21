@@ -10,8 +10,9 @@ P{
 }
 
 .sidebar-item.active {
-  color: #049867; /* Active color */
+  color: #10B981; /* Active color */
   font-weight: 600;
+  background-color: #ECFDF5;
 }
 .version{
   display: flex;
@@ -127,7 +128,8 @@ P{
 
 .nav-item {
   text-decoration: none;
-  color: rgb(71, 85, 105);
+  /* color: rgb(71, 85, 105); */
+  color: #64748B;
   font-size: 16px;
   padding: 8px 12px;
   border-radius: 4px;
@@ -137,7 +139,8 @@ P{
 }
 
 .nav-item:hover {
-  color: rgb(34, 145, 78);
+  /* color: rgb(34, 145, 78); */
+  color: #10B981;
 }
 
 .logo {
@@ -152,7 +155,7 @@ P{
 
 .ui {
   margin-top: 10px;
-  color: rgb(34, 145, 78);
+  color: #10B981;
   font-size: 33px;
 }
 
@@ -162,18 +165,22 @@ P{
 
 /* Button styling */
 .btn1 {
-  background-color: rgb(52, 158, 95);
+  background-color: #10B981;
   color: white;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 15px;
   border: none;
-  padding: 10px;
+  /* padding: 10px; */
   display: flex;
   align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .btn1:hover {
-  background-color: rgb(32, 136, 74);
+  background-color: #059669;
   color: white;
 }
 
@@ -245,13 +252,17 @@ P{
 
 
 
+/* ************** */
+ /* Left Navbar */
+/* ************** */
 
-/* Left Navbar */
+
+
 
 /* Sidebar container */
 .sidebar {
   position: fixed;
-  top: 35px;
+  top: 15%;
   left: 0;
   width: 250px;
   height: calc(100% - 15%);
@@ -259,20 +270,19 @@ P{
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  overflow-y: auto;
+  overflow-y: auto; /* Only allow vertical scrolling */
+  overflow-x: hidden; /* Prevent horizontal scroll */
   background-color: white;
   z-index: 1000;
   transition: transform 0.3s ease;
 }
-/* .tgle {
-  position: absolute;
-  top: 10%;
-  left: 0;
-  width: 300px;
-  height: 50px;
-  padding: 20px;
-  background-color: rgb(255, 255, 255);
-} */
+
+/* Add left border for active state */
+.sidebar-item.active {
+  color: #10B981; /* Keep text color for active link */
+  background-color: #F0FFF4; /* Optional: Change background color for active */
+  border-left: 4px solid #10B981; /* Show left border on active link */
+}
 
 /* Hidden sidebar on small screens */
 .sidebar.open {
@@ -307,9 +317,14 @@ P{
 .sidebar-item {
   text-decoration: none;
   color: rgb(100, 116, 139);
-  font-size: 0.9rem;
-  padding: 2px 15px;
-  font-weight: 400;
+  font-size: 14px;
+  padding: 14px;
+  width: 100%;
+  /* padding-left: 30px; */
+  margin-left: 10px;
+  font-weight: 500;
+  line-height: 1;
+  
   /* transition: background-color 0.3s ease, color 0.3s ease; */
 }
 
@@ -318,17 +333,20 @@ P{
   text-transform: uppercase;
   font-size: 14px;
   color: black;
+  margin-left: 30px;
+  
 }
 
 .sidebar-item:hover {
-  color: rgb(34, 172, 89);
+  color: #10B981;
   font-weight: 500;
+  background-color: #ECFDF5;
 }
 
 /* Responsive behavior for smaller screens */
 @media (max-width: 768px) {
   .sidebar {
-    margin-top: 35px;
+    margin-top: 0px;
     width: 250px;
     height: 100%;
     transform: translateX(-100%); /* Hide sidebar on small screens */
@@ -342,7 +360,7 @@ P{
   /* Toggle button for small screens */
   .toggle-btn {
     position: fixed;
-    top: 16%;
+    top: 10%;
     left: 10px;
     background-color: #374151;
     color: rgb(0, 0, 0);
@@ -363,7 +381,9 @@ P{
     padding: 2px 20px;
     font-size: 0.9rem;
   }
-
+.t{
+  margin-top: 10px;
+}
   .btn1 {
     display: none; /* Hide "Support us" button on small screens */
   }
@@ -389,8 +409,93 @@ P{
   scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
 }
 
+/* Remove extra scroll on body */
+html, body {
+  /* margin: 0;
+  padding: 0; */
+  overflow: hidden;
+}
 
+/* Sidebar Navigation Styling */
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.sidebar-item {
+  text-decoration: none;
+  color:  rgb(100 ,116, 139);
+}
+
+/* Sidebar container */
+.sidebar {
+  position: fixed;
+  top: 12%;
+  left: 0;
+  width: 250px; /* Width remains the same */
+  height: calc(100% - 15%);
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto; /* Only allow vertical scrolling */
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  background-color: white;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+/* Hidden sidebar on small screens */
+.sidebar.open {
+  transform: translateX(0);
+}
+
+.sidebar.closed {
+  transform: translateX(-100%);
+}
+
+/* Sidebar navigation links */
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-item {
+  text-decoration: none;
+  color: rgb(100, 116, 139);
+  font-size: 14px;
+  padding: 14px;
+  width: 100%;
+  padding-left: 30px; /* Links aligned left with padding */
+  font-weight: 500;
+  line-height: 1;
+}
+
+/* Adjust sidebar item styles for smaller screens */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 250px; /* Width remains the same */
+    transform: translateX(-100%); /* Hide sidebar on small screens */
+  }
+
+  .sidebar-item {
+    padding-left: 30px; /* Padding to align the links left */
+    text-align: left; /* Ensures text is aligned left */
+    font-size: 0.9rem; /* Slightly smaller font for smaller screens */
+  }
+
+  .btn1 {
+    display: none; /* Hide button on small screens */
+  }
+}
+
+
+
+
+/* ************ */
 /* Grid Layout */
+/* ************ */
 .grid-container {
   display: grid;
   grid-template-areas: 
@@ -418,7 +523,7 @@ P{
   grid-area: leftnavbar;
   background-color: #f8f8f8;
   position: fixed;
-  top: 5%; /* Start below the TopNavbar */
+  top: 20%; /* Start below the TopNavbar */
   left: 0;
   width: 260px; /* Fixed width */
   height: calc(100vh - 50px); /* Full height minus the TopNavbar height */
@@ -469,7 +574,7 @@ P{
   .item3 {
     margin-left: 0;
     margin-top: 16%; /* Leave space for the toggle button */
-    padding: 10px;
+    /* padding: 10px; */
     height: calc(100vh - 50px); /* Take remaining height */
     overflow-y: auto; /* Enable scrolling */
   }
@@ -495,25 +600,6 @@ P{
   }
 }
 
-/* Remove extra scroll on body */
-html, body {
-  /* margin: 0;
-  padding: 0; */
-  overflow: hidden;
-}
-
-/* Sidebar Navigation Styling */
-.sidebar-nav {
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-}
-
-.sidebar-item {
-  margin: 10px 0;
-  text-decoration: none;
-  color:  rgb(100 ,116, 139);
-}
 
 /* Optional: styling for hover */
 /* .sidebar-item:hover {
@@ -526,7 +612,7 @@ html, body {
 /* ****************** */
 
 
-/* Ensure accordion component doesn't overflow */
+/* General accordion container styling */
 .accordions-container {
   max-height: 100%;
   margin-top: 10%;
@@ -534,48 +620,50 @@ html, body {
   padding: 20px;
   color: rgb(71, 85, 105);
   font-size: 16px;
+  width: 100%;
 }
+
+/* Accordion header */
 .accordion-header {
   display: flex;
   align-items: center;
   cursor: pointer;
+  justify-content: space-between;
 }
 
+/* Icon inside accordion header */
 .accordion-icon {
   margin-right: 10px;
 }
 
-
-.accordions-container {
-  height: 100%;
-  overflow-y: auto; /* Allow vertical scrolling if needed */
-}
-
-.accordions-container p{
+/* Accordion general styling */
+.accordions-container p {
   font-size: 18px;
   color: rgb(100, 116, 139);
 }
-.accordions-container h1{
-  font-size: 18px;
-  color: rgb(71 ,85, 105);
-  font-size: 1.875rem;
-  line-height: 2.25rem;
+
+.accordions-container h1 {
+  font-size: 1.875rem; /* 30px */
+  line-height: 2.25rem; /* 36px */
   font-weight: 600;
+  color: rgb(71, 85, 105);
 }
 
-
+/* Styling for each accordion */
 .accordion {
   max-width: 750px;
   margin: 20px auto;
   border: 1px solid #ddd;
   border-radius: 8px;
   color: gray;
+  width: 100%;
 }
 
 .accordion-item {
   border-bottom: 1px solid rgb(229, 225, 225);
 }
-.accordion-item h3{
+
+.accordion-item h3 {
   color: rgb(63, 62, 62);
   font-weight: 400;
 }
@@ -588,28 +676,72 @@ html, body {
   justify-content: space-between;
   align-items: center;
 }
-.acc-cont{
+
+.acc-cont {
   background-color: rgb(255, 255, 255);
   margin: 20px;
-  box-shadow: whitesmoke;
-  border: 1px solid  rgb(231, 223, 223);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adjusted shadow */
+  border: 1px solid rgb(231, 223, 223);
   border-radius: 10px;
-  padding: 50px;
+  padding: 70px;
 }
 
-/* .accordion-header:hover {
-  background-color: #e0e0e0;
-} */
+/* Responsive accordion styles */
+@media only screen and (max-width: 768px) {
+  .accordions-container {
+    margin-top: 5%;
+    padding: 15px;
+  }
 
-.icon {
-  font-size: 18px;
+  .accordion {
+    width: 100%;
+    margin: 10px auto;
+    padding: 10px;
+  }
+
+  .accordion-header {
+    padding: 10px;
+    font-size: 1rem;
+  }
+
+  .accordion-content {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .accordion-item h3 {
+    font-size: 1.2rem; /* Smaller font for titles on small screens */
+  }
+
+  .acc-cont {
+    padding: 40px;
+    margin: 10px;
+  }
 }
 
-.accordion-content {
-  padding: 15px;
-  background-color: #fff;
-  border-top: 1px solid #ddd;
-  font-size: 16px;
+@media only screen and (max-width: 480px) {
+  .accordions-container {
+    padding: 10px;
+  }
+
+  .accordion-header {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  .accordion-content {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .accordion-item h3 {
+    font-size: 1rem;
+  }
+
+  .acc-cont {
+    padding: 20px;
+    margin: 5px;
+  }
 }
 
 
@@ -643,6 +775,7 @@ html, body {
   border: 1px solid #EfE7Eb;
   border-radius: 10px;
   background-color: #F1F5F9;
+  height: 40px;
 }
 
 .preview-btn,
@@ -651,9 +784,9 @@ html, body {
   align-items: center;
   gap: 5px;
   padding: 10px 20px;
-  border: 1px solid #ddd;
+  border: 0px solid #ddd;
   border-radius: 25px;
-  background-color: white;
+  /* background-color: white; */
   color: #6c757d;
   cursor: pointer;
   transition: background-color 0.3s;
@@ -954,7 +1087,7 @@ color: white;
 
   .toggle-container {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
   }
 
   /* Reduce padding for small screens */
@@ -2635,7 +2768,7 @@ gap: 30px;
 }
 /* Tabs Content */
 
-
+/* Tabs Container */
 .tabs-container {
   width: 100%;
   max-width: 800px;
@@ -2646,6 +2779,7 @@ gap: 30px;
   padding: 20px;
 }
 
+/* Tabs Header */
 .tabs-header {
   display: flex;
   border-bottom: 2px solid #e2e8f0;
@@ -2673,6 +2807,7 @@ gap: 30px;
   border-bottom: 2px solid #10b981; /* Green border for active tab */
 }
 
+/* Tabs Content */
 .tabs-content {
   margin-top: 20px;
 }
@@ -2681,6 +2816,55 @@ gap: 30px;
   font-size: 18px;
   color: #595e64;
 }
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .tab-item {
+    font-size: 15px; /* Slightly reduce font size */
+    padding: 10px 16px;
+  }
+  
+  .tabs-header {
+    flex-wrap: nowrap; /* Allow tabs to wrap on smaller screens */
+  }
+
+  .tab-content {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tabs-container {
+    padding: 1px; /* Reduce padding for smaller screens */
+  }
+
+  .tab-item {
+    font-size: 14px;
+    padding: 8px 12px;
+    flex-grow: 1; /* Allow tabs to grow and take up available space */
+    justify-content: center;
+  }
+
+  .tab-content {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tabs-container {
+    padding: 1px; /* Further reduce padding for extra small screens */
+  }
+
+  .tab-item {
+    font-size: 13px;
+    padding: 6px 8px;
+  }
+
+  .tab-content {
+    font-size: 14px;
+  }
+}
+
 
 
 /* ******************* */
@@ -3553,124 +3737,163 @@ margin-top: 5%;
   line-height: 2.25rem;
   font-weight: 600;
 }
-.cont-fab{
-  border: 1px solid rgb(227, 227, 227);
-  border-radius: 10px;
-  margin: 20px;
-  padding: 30px;
-}
-.container {
-  position: relative;
-  width: 90%;
-  height: 260px; /* Adjust as needed */
-}
+
 
 .fab-container {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
+  position: relative;
 }
 
-.fab {
-  width: 50px;
-  height: 50px;
-  border-radius: 20%;
-  background-color:#02b583;
+.fab-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.fab-action {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.fab-tooltip {
+  visibility: hidden;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 8px 22px;
+  border-radius: 4px;
+  font-size: 12px;
+  position: absolute;
+  right: 100%; /* Position the tooltip to the left of the button */
+  top: 50%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  margin-right: 10px;
+}
+
+.fab-tooltip::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%; /* Align the arrow to the right side of the tooltip */
+  transform: translateY(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent #333; /* Right arrow */
+}
+
+.fab-action:hover .fab-tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+.fab-container {
+  position: relative; /* Positioning context for absolute positioning */
+  padding: 20px; /* Optional padding */
+  height: 300px; /* Set a specific height for your container */
+  border: 1px solid rgb(227, 227, 227); /* Optional for visualization */
+  margin: 20px;
+}
+
+.fab-buttons {
+  position: absolute; /* Position relative to fab-container */
+  bottom: 8px; /* Distance from the bottom of the container */
+  right: 8px; /* Distance from the right side of the container */
+  display: flex;
+  flex-direction: column-reverse; /* Arrange buttons vertically */
+  gap: 8px; /* Space between buttons */
+
+}
+
+.fab-main {
+  background-color: #10B981; /* Emerald 500 */
   color: white;
   border: none;
-  font-size: 24px;
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  overflow: hidden;
-}
-
-.fab-menu {
-  position: absolute;
-  bottom: 80px;
-  right: 0;
-  display: none;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.fab-container:hover .fab-menu {
+  border-radius: 20%;
+  width: 48px;
+  height: 48px;
+  font-size: 26px;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+  position: relative;
+  z-index: 50; /* Above other buttons */
 }
 
-.fab-item {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  color: rgb(37, 34, 34);
+.fab-main:hover {
+  background-color: #059669; /* Emerald 600 */
+}
+
+.fab-action {
+  /* background-color: #D1FAE5; */
+  color: #10B981; /* Emerald 500 */
   border: none;
+  border-radius: 25%;
+  width: 48px;
+  height: 48px;
+  opacity: 0; /* Hidden initially */
+  transition: opacity 0.3s, transform 0.3s;
+  transform: translateY(8px); /* Move it down */
+}
+
+.fab-action:hover {
+  background-color: #BBF7D0; /* Emerald 100 */
+}
+
+.fab-buttons:hover .fab-action {
+  opacity: 1; /* Show on hover */
+  transform: translateY(0); /* Move it up */
+}
+
+.icon {
+  width: 20px; /* Icon size */
+  height: 20px; /* Icon size */
+}
+.fab-container {
+  position: relative;
+}
+
+.fab-main {
+  position: relative;
+  border: none;
+  padding: 15px;
+  border-radius: 20%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+.fab-main .fab-icon i {
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+.fab-container:hover .fab-main .fa-plus {
+  opacity: 0; /* Hide the plus icon by setting opacity to 0 */
+}
+
+.fab-container:hover .fab-main::before {
+  content: "\f00d"; /* Font Awesome's 'cross' icon (fa-times) */
+  font-family: "Font Awesome 6 Free"; /* Ensure you are using the correct FontAwesome version */
+  font-weight: 900;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1; /* Show the cross icon */
+}
+
+.fab-container:hover .fab-main .fab-icon i {
+  transform: rotate(180deg); /* Optional: Rotate the icon smoothly on hover */
 }
 
 
+/* Add individual button styles if needed for responsiveness or effects */
 
-/* Media Queries for Specific Screen Sizes */
-
-/* Large devices (desktops, 1200px and up) */
-@media (min-width: 1200px) {
-  .fab, .fab-item {
-    width: 50px;
-    height: 50px;
-    font-size: 24px;
-  }
-
-  .fab-container {
-    bottom: 20px;
-    right: 20px;
-  }
-
-  .fab-menu {
-    bottom: 80px;
-    gap: 10px;
-  }
-}
-
-/* Medium devices (tablets, 768px to 1199px) */
-@media (min-width: 768px) and (max-width: 1199px) {
-  .fab, .fab-item {
-    width: 10vw;
-    height: 10vw;
-    max-width: 50px;
-    max-height: 50px;
-    font-size: 20px;
-  }
-
-  .fab-container {
-    bottom: 4vw;
-    right: 4vw;
-  }
-
-  .fab-menu {
-    bottom: 14vw;
-    gap: 3vw;
-  }
-}
-
-/* Small devices (phones, less than 768px) */
-@media (max-width: 767px) {
-  .fab, .fab-item {
-    width: 12vw;
-    height: 12vw;
-    max-width: 45px;
-    max-height: 45px;
-    font-size: 18px;
-  }
-
-  .fab-container {
-    bottom: 6vw;
-    right: 15vw;
-  }
-
-  .fab-menu {
-    bottom: 18vw;
-    gap: 4vw;
-  }
-}
     /* Navigations */
 /* ******************* */
     /*Breadcrumbs*/
@@ -4047,14 +4270,124 @@ color: #02b583;
   color:  rgb(100, 116, 139);
 }
 /* Vertical Navbar */
+/* New */
 
 
+.unique-vertical-navbar {
+  width: 250px;
+  background-color: #f8f9fa;
+  transition: transform 0.3s ease-in-out;
+}
+
+.unique-toggle-btn {
+  color: rgb(39, 39, 39);
+  font-size: 24px;
+  border: none;
+  width: 100%;
+  text-align: left;
+  padding: 10px;
+  cursor: pointer;
+  display: none; /* Hidden on larger screens */
+}
+
+.unique-navbar-content {
+  display: block;
+}
+
+.unique-profile-section {
+  padding: 15px;
+  text-align: center;
+}
+
+.unique-profile-icon {
+  width: 60px;
+  border-radius: 50%;
+}
+
+.unique-profile-name {
+  margin-top: 10px;
+  font-weight: 400;
+  color: rgb(51, 85, 105);
+}
+.unique-profile-name b{
+  font-weight: 500;
+}
+
+.unique-nav-links2 {
+  padding-left: 0;
+}
+
+.unique-nav-link2 {
+  display: block;
+  padding: 10px 15px;
+  color: rgb(100 ,116, 139);
+  text-decoration: none;
+}
+
+.unique-nav-link2 i {
+  margin-right: 10px;
+}
+
+.unique-nav-link2:hover {
+  background-color: #ECFDF5;
+  color: #10B981;
+}
+
+.unique-blue-cont {
+  padding: 10px;
+  background-color: #e7f3fe;
+  color: #06B6D4;
+  border: 1px solid #bce8f1;
+  margin: 15px;
+}
+.unique-blue-cont p{
+  color: #06B6D4;
+
+}
+
+hr {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .unique-vertical-navbar {
+    width: 100%;
+  }
+
+  .unique-toggle-btn {
+    display: block; /* Show toggle button on small screens */
+  }
+
+  .unique-navbar-content {
+    display: none;
+    transform: translateX(-100%);
+  }
+
+  .unique-navbar-content.open {
+    display: block;
+    transform: translateX(0);
+  }
+}
+
+/* New */
+
+.vert-nav-cont{
+  border: 1px solid rgb(227, 227, 227);
+  margin: 20px;
+  background-color: #F1F5F9;
+  border-radius: 10px;
+}
+.vert-nav-cont hr{
+  color: rgb(227, 227, 227);
+  width: 100%;
+  opacity: 0.2;
+}
 
 .vertical-navbar {
   width: 250px; /* Width of the navbar */
   background-color: #f8fafc; /* Light background */
   padding: 20px;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 0 5px rgba(123, 120, 120, 0.1);
   display: flex;
   flex-direction: column; /* Vertical layout */
   position: relative; /* For responsive positioning */
@@ -4075,7 +4408,7 @@ color: #02b583;
 
 .profile-name {
   font-size: 18px; /* Font size for the name */
-  color: #2d3748; /* Dark text color */
+  color: rgb(100 ,116, 139); /* Dark text color */
 }
 
 .nav-links2 {
@@ -4088,13 +4421,17 @@ color: #02b583;
   background-color: #ffffff; /* White background for links */
   border-radius: 5px; /* Rounded corners */
   margin: 5px 0; /* Space between links */
-  color: #4a5568; /* Text color */
+  color: rgb(100 ,116, 139); /* Text color */
   text-decoration: none; /* Remove underline */
   transition: background-color 0.2s; /* Smooth transition */
 }
+.nav-link2 i{
+  margin-right: 5px;
+}
 
 .nav-link2:hover {
-  background-color: #e2e8f0; /* Darker background on hover */
+  background-color: #ECFDF5; /* Darker background on hover */
+  color: #10B981;
 }
 
 /* Responsive Styles */
@@ -5024,7 +5361,7 @@ color: #02b583;
 .tooltip-text {
   visibility: hidden;
   position: absolute;
-  background-color: #333;
+  background-color:#334155;
   color: #fff;
   text-align: center;
   padding: 10px;
@@ -5035,19 +5372,37 @@ color: #02b583;
   transition: opacity 0.3s ease;
 }
 
+
 /* Show tooltip on hover */
 .tooltip-item:hover .tooltip-text {
   visibility: visible;
   opacity: 1;
 }
-
+.tooltip-text::after {
+  content: "";
+  position: absolute;
+  border-style: solid;
+}
 /* Tooltip positioning */
 .tooltip-text-top {
   bottom: 150%;
   left: 50%;
   transform: translateX(-50%);
 }
+/* Top tooltip */
+.tooltip-text-top {
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
+.tooltip-text-top::after {
+  top: 100%;
+  left: 50%;
+  border-width: 8px 8px 0 8px;
+  border-color: #334155 transparent transparent transparent;
+  transform: translateX(-50%);
+}
 .tooltip-text-right {
   top: 50%;
   left: 150%;
@@ -5063,6 +5418,51 @@ color: #02b583;
 .tooltip-text-left {
   top: 50%;
   right: 150%;
+  transform: translateY(-50%);
+}
+
+/* Right tooltip */
+.tooltip-text-right {
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+}
+
+.tooltip-text-right::after {
+  top: 50%;
+  left: -8px;
+  border-width: 8px 8px 8px 0;
+  border-color: transparent #334155 transparent transparent;
+  transform: translateY(-50%);
+}
+
+/* Bottom tooltip */
+.tooltip-text-bottom {
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tooltip-text-bottom::after {
+  bottom: 100%;
+  left: 50%;
+  border-width: 0 8px 8px 8px;
+  border-color: transparent transparent #334155 transparent;
+  transform: translateX(-50%);
+}
+
+/* Left tooltip */
+.tooltip-text-left {
+  top: 50%;
+  right: 100%;
+  transform: translateY(-50%);
+}
+
+.tooltip-text-left::after {
+  top: 50%;
+  right: -8px;
+  border-width: 8px 0 8px 8px;
+  border-color: transparent transparent transparent #334155;
   transform: translateY(-50%);
 }
 

@@ -7,7 +7,7 @@ const AccordionItem = ({ question, answer, icon }) => {
 
   return (
     <div className="accordion-item-unique">
-      <div className="accordion-header-unique" onClick={() => setIsOpen(!isOpen)}>
+      <div className="accordion-header-unique" onClick={() => setIsOpen(!isOpen)} style={{backgroundColor:'white'}}>
         <div className="accordion-header-content-unique">
           <FontAwesomeIcon icon={icon} className="accordion-icon-unique" />
           <h3 className="accordion-question-unique">{question}</h3>

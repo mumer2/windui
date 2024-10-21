@@ -4,8 +4,8 @@ import CodePre from './CodePre';
 
 
 export const Accordians = () => {
-  const htmlCode = ` <div className='acc-uniq'>
-  <div className="accordion-unique">
+  const htmlCode = ` <div class='acc-uniq'>
+  <div class="accordion-unique">
     <AccordionItem
       question="Do you have any social accounts?"
       answer="Yes! You can find Wind UI on many social platforms, such as Facebook, Discord, Reddit, and more, which you can find on our footer under Socials."

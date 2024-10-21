@@ -4,9 +4,9 @@ import Prism from 'prismjs'; // Import Prism.js
 import 'prismjs/components/prism-jsx'; // Ensure Prism.js supports JSX
 import 'prismjs/themes/prism-okaidia.css'; // Import a dark theme (Okaidia)
 
-const CodePre = ({ htmlCode, reactCode, cssCode }) => {
+const CodePre = ({ reactCode, cssCode }) => {
   const [showCode, setShowCode] = useState(false);
-  const [codeType, setCodeType] = useState('HTML');
+  const [codeType, setCodeType] = useState('React'); // Default to React
   const [isCopied, setIsCopied] = useState(false);
 
   useEffect(() => {
@@ -26,13 +26,11 @@ const CodePre = ({ htmlCode, reactCode, cssCode }) => {
   const handlePreviewClick = () => setShowCode(false);
 
   const handleCodeTypeToggle = () => {
-    setCodeType((prevType) => (prevType === 'HTML' ? 'React' : 'HTML'));
+    setCodeType((prevType) => (prevType === 'React' ? 'CSS' : 'React')); // Toggle between React and CSS
   };
 
-  const handleCssClick = () => setCodeType('CSS');
-
   const handleCopyCode = () => {
-    const codeToCopy = codeType === 'HTML' ? htmlCode : codeType === 'React' ? reactCode : cssCode;
+    const codeToCopy = codeType === 'React' ? reactCode : cssCode;
     navigator.clipboard.writeText(codeToCopy);
     setIsCopied(true);
   };
@@ -61,34 +59,28 @@ const CodePre = ({ htmlCode, reactCode, cssCode }) => {
           <div className="code-options">
             <span className="hide">Copy as:</span>
             <div className="toggle-container" onClick={handleCodeTypeToggle}>
-              <span className={`${codeType === 'HTML' ? 'active' : ''}`} style={{cursor:'pointer'}}>HTML</span>
-              <div className={`toggle-button ${codeType === 'React' ? 'toggled' : ''}`}>
+              <span className={`${codeType === 'React' ? 'active' : ''}`} style={{ cursor: 'pointer' }}>React</span>
+              <div className={`toggle-button ${codeType === 'CSS' ? 'toggled' : ''}`}>
                 <span className="slider"></span>
               </div>
-              <span className={`${codeType === 'React' ? 'active' : ''}`} style={{cursor:'pointer'}}>React</span>
+              <span className={`${codeType === 'CSS' ? 'active' : ''}`} style={{ cursor: 'pointer' }}>CSS</span>
             </div>
           </div>
         </div>
 
         {showCode ? (
-          <div className="code-section" style={{backgroundColor:'#272822'}}>
-            <div className="css-code-button" style={{marginTop:'8px',marginLeft:'8px'}}>
-              <button className="css-btn" onClick={handleCssClick} style={{backgroundColor:'transparent',color:'white',borderRadius:'5px'}}>
-                CSS
-              </button>
-            </div>
-
+          <div className="code-section" style={{ backgroundColor: '#334155' }}>
             <button className="copy-btn" onClick={handleCopyCode} title="Copy Code">
               {isCopied ? (
-                <i className="fa-solid fa-check" style={{color:' #ffbe00'}}> Copied </i>
+                <i className="fa-solid fa-check" style={{ color: ' #ffbe00' }}> Copied </i>
               ) : (
                 <i className="fa-solid fa-copy"></i>
               )}
             </button>
 
             <pre className="code-content">
-              <code className={`language-${codeType === 'React' ? 'jsx' : codeType.toLowerCase()}`}>
-                {codeType === 'HTML' ? htmlCode : codeType === 'React' ? reactCode : cssCode}
+              <code className={`language-${codeType === 'React' ? 'jsx' : 'css'}`}>
+                {codeType === 'React' ? reactCode : cssCode}
               </code>
             </pre>
           </div>

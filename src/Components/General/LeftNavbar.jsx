@@ -19,12 +19,15 @@ const LeftNavbar = () => {
 
       {/* Sidebar */}
       <aside className={`sidebar ${isOpen ? 'open' : ''}`}>
-        <nav className="sidebar-nav">
+        <nav className="sidebar-nav" style={{marginLeft:'-40px'}}>
           <p className="t">General</p>
-          <NavLink to="/" className="sidebar-item" activeClassName="active">Accordions</NavLink>
+          
+          <NavLink to="accordions" className="sidebar-item" activeClassName="active" >Accordions</NavLink>
+          
           {/* <NavLink to="Accord" className="sidebar-item" activeClassName="active">Accord</NavLink> */}
-
+          
           <NavLink to="/avatars" className="sidebar-item" activeClassName="active">Avatars</NavLink>
+        
           <NavLink to="/badges" className="sidebar-item" activeClassName="active">Badges</NavLink>
           <NavLink to="/cards" className="sidebar-item" activeClassName="active">Cards</NavLink>
           <NavLink to="/carousels" className="sidebar-item" activeClassName="active">Carousel</NavLink>

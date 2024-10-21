@@ -195,27 +195,27 @@ const cssCode = `.toltips {
             <p>A tooltip is a popup that displays information related to an element when the mouse hovers over it. It after a small delay and disappears on the mouse out.</p>
         </div>
 
-<div className="tooltip-cont">
+        <div className="tooltip-cont">
+  <div className="tooltip-container">
+    <div className="tooltip-item tooltip-top">
+      Top
+      <span className="tooltip-text tooltip-text-top">Thanks for Hovering! I'm a top tooltip</span>
+    </div>
+    <div className="tooltip-item tooltip-right">
+      Right
+      <span className="tooltip-text tooltip-text-right">Thanks for Hovering! I'm a right tooltip</span>
+    </div>
+    <div className="tooltip-item tooltip-bottom">
+      Bottom
+      <span className="tooltip-text tooltip-text-bottom">Thanks for Hovering! I'm a bottom tooltip</span>
+    </div>
+    <div className="tooltip-item tooltip-left">
+      Left
+      <span className="tooltip-text tooltip-text-left">Thanks for Hovering! I'm a left tooltip</span>
+    </div>
+  </div>
+</div>
 
-<div className="tooltip-container">
-      <div className="tooltip-item tooltip-top">
-        Top
-        <span className="tooltip-text tooltip-text-top">Thanks for Hovering! I'm a top toltip</span>
-      </div>
-      <div className="tooltip-item tooltip-right">
-        Right
-        <span className="tooltip-text tooltip-text-right">Thanks for Hovering! I'm a right toltip</span>
-      </div>
-      <div className="tooltip-item tooltip-bottom">
-        Bottom
-        <span className="tooltip-text tooltip-text-bottom">Thanks for Hovering! I'm a bottom toltip</span>
-      </div>
-      <div className="tooltip-item tooltip-left">
-        Left
-        <span className="tooltip-text tooltip-text-left">Thanks for Hovering! I'm a left toltip</span>
-      </div>
-    </div>
-    </div>
 
     <div className="toltips">
             <h2>Variations</h2>
