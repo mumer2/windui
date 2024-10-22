@@ -65,30 +65,6 @@ P{
   display: flex;
   align-items: center;
 }
-
-/* .rotating-icon {
-  width: 40px;
-  height: 40px;
-  transition: transform 0.9s ease-in-out;
-}
-
-.nav-logo:hover .rotating-icon {
-  animation: rotateLeftRight 0.9s infinite alternate ease-in-out;
-}
-
-@keyframes rotateLeftRight {
-  0% {
-    transform: rotate(90deg);
-  }
-  50% {
-    transform: rotate(260deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-} */
-
-
 .rotating-icon {
   width: 40px;
   height: 40px;
@@ -121,8 +97,18 @@ P{
 }
 .nav-links a{
   color: rgb(100, 116, 139);
+  font-size: 16px;
+  font-weight: 500;
+}
+.nav-links svg{
+  color: rgb(100, 116, 139);
+  font-size: 24px;
+  font-weight: 500;
 }
 .nav-links a i{
+  margin-right: 8px;
+}
+.nav-links a svg{
   margin-right: 8px;
 }
 
@@ -141,6 +127,9 @@ P{
 .nav-item:hover {
   /* color: rgb(34, 145, 78); */
   color: #10B981;
+}
+.nav-links a svg:hover{
+  color: #10b981;
 }
 
 .logo {
@@ -223,6 +212,9 @@ P{
   .support-btn {
     display: none;
   }
+  .hide{
+    display: none;
+  }
 }
 
 /* Responsive layout for large screens */
@@ -248,6 +240,16 @@ P{
     width: 40px;
     height: 40px;
   }
+  .hide{
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+.hide{
+  display: flex;
+}
+
 }
 
 
@@ -262,10 +264,10 @@ P{
 /* Sidebar container */
 .sidebar {
   position: fixed;
-  top: 15%;
+  /* top: 15%; */
   left: 0;
   width: 250px;
-  height: calc(100% - 15%);
+  height: calc(100% - 20%);
   padding: 20px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -319,7 +321,7 @@ P{
   color: rgb(100, 116, 139);
   font-size: 14px;
   padding: 14px;
-  width: 100%;
+  width: 90%;
   /* padding-left: 30px; */
   margin-left: 10px;
   font-weight: 500;
@@ -431,10 +433,10 @@ html, body {
 /* Sidebar container */
 .sidebar {
   position: fixed;
-  top: 12%;
+  /* top: 13%; */
   left: 0;
   width: 250px; /* Width remains the same */
-  height: calc(100% - 15%);
+  height: calc(100% - 20%);
   padding: 20px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -466,7 +468,7 @@ html, body {
   color: rgb(100, 116, 139);
   font-size: 14px;
   padding: 14px;
-  width: 100%;
+  width: 90%;
   padding-left: 30px; /* Links aligned left with padding */
   font-weight: 500;
   line-height: 1;
@@ -536,8 +538,9 @@ html, body {
   margin-left: 2%; /* Ensure content starts after the LeftNavbar */
   padding: 20px;
   background-color: #fff;
-  height: calc(100vh - 50px); /* Take remaining height */
+  height: calc(100vh - 150px); /* Take remaining height */
   overflow-y: auto; /* Allow scrolling within the content area */
+  overflow-x: hidden;
 }
 
 /* Responsive layout for smaller screens */
@@ -573,9 +576,8 @@ html, body {
   /* Main Content Area adjusts to full width */
   .item3 {
     margin-left: 0;
-    margin-top: 16%; /* Leave space for the toggle button */
     /* padding: 10px; */
-    height: calc(100vh - 50px); /* Take remaining height */
+    height: calc(100vh - 150px); /* Take remaining height */
     overflow-y: auto; /* Enable scrolling */
   }
 
@@ -615,7 +617,6 @@ html, body {
 /* General accordion container styling */
 .accordions-container {
   max-height: 100%;
-  margin-top: 10%;
   overflow-y: auto;
   padding: 20px;
   color: rgb(71, 85, 105);
@@ -635,6 +636,27 @@ html, body {
 .accordion-icon {
   margin-right: 10px;
 }
+
+/* .toggle-icon-unique .fa-plus{
+  font-size: 16px;
+  font-weight: 500;
+  width: 16px;
+  height: 16px;
+} */
+
+.toggle-icon-unique {
+  display: inline-block;
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.rotate {
+  transform: rotate(45deg); /* Rotate the plus icon to make it look like a cross */
+}
+
+.toggle-container {
+  cursor: pointer;
+}
+
 
 /* Accordion general styling */
 .accordions-container p {
@@ -679,7 +701,6 @@ html, body {
 
 .acc-cont {
   background-color: rgb(255, 255, 255);
-  margin: 20px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adjusted shadow */
   border: 1px solid rgb(231, 223, 223);
   border-radius: 10px;
@@ -1126,7 +1147,6 @@ color: white;
 
 /* Avatars Content */
 .avatars-content {
-  margin-top: 15%;
   margin-left: 2%;
   color: rgb(71, 85, 105);
 }
@@ -1245,7 +1265,6 @@ color: white;
 
 
 .badges{
-  margin-top: 16%;
   margin-left: 2%;
   color: rgb(71 ,85, 105);
 
@@ -1467,7 +1486,6 @@ gap: 30px;
   }
 }
 .cards{
-  margin-top: 16%;
   margin-left: 2%;
   color: gray;
 }
@@ -1640,7 +1658,6 @@ gap: 30px;
 
 
 .carousels{
-  margin-top: 12%;
   margin-left: 2%;
   color: gray;
 }
@@ -1767,7 +1784,6 @@ gap: 30px;
 
 
 .features{
-  margin-top: 15%;
   margin-left: 2%;
   color: gray;
 }
@@ -1783,7 +1799,6 @@ gap: 30px;
   font-size: 18px;
 }
 .features-content{
-  margin-top: 15%;
   margin-left: 2%;
   color: rgb(71 ,85, 105);
 }
@@ -1858,7 +1873,6 @@ gap: 30px;
        /* Feed */
 /* ******************* */
 .feeds {
-  margin-top: 5%;
   margin-left: 2%;
   color: gray;
 }
@@ -1958,7 +1972,6 @@ gap: 30px;
 /* ******************* */
 
 .layouts{
-  margin-top: 15%;
   margin-left: 2%;
   color: gray;
   font-size: 18px;
@@ -2055,7 +2068,6 @@ gap: 30px;
 /* ******************* */
 
 .lists {
-  margin-top: 15%;
   margin-left: 2%;
   font-family: 'Inter', sans-serif;
 }
@@ -2252,7 +2264,6 @@ gap: 30px;
 /* ******************* */
 
 .pricingtables{
-  margin-top: 15%;
   margin-left: 2%;
   color: gray;
 }
@@ -2376,7 +2387,6 @@ gap: 30px;
 
 /* General Ratings Section */
 .ratings {
-  margin-top: 10%;
   margin-left: 2%;
   color: rgb(97, 94, 94);
 }
@@ -2517,7 +2527,6 @@ gap: 30px;
 /* ******************* */
 
 .slider-n{
-  margin-top: 15%;
   margin-left: 2%;
   color:rgb(120, 114, 114);
 }
@@ -2627,7 +2636,6 @@ gap: 30px;
 /* ******************* */
 
 .tables{
-  margin-top: 15%;
   margin-left: 2%;
   color: #706a6a;
 }
@@ -2736,7 +2744,6 @@ gap: 30px;
 /* ******************* */
 
 .tabs{
-  margin-top: 15%;
   margin-left: 2%;
   color: #7e7676;
 }
@@ -2823,7 +2830,6 @@ gap: 30px;
     font-size: 15px; /* Slightly reduce font size */
     padding: 10px 16px;
   }
-  
   .tabs-header {
     flex-wrap: nowrap; /* Allow tabs to wrap on smaller screens */
   }
@@ -2872,7 +2878,6 @@ gap: 30px;
 /* ******************* */
 
 .testimonials{
-  margin-top: 15%;
   margin-left: 2%;
   color: rgb(104, 102, 102);
 }
@@ -2981,7 +2986,6 @@ gap: 30px;
 
 /* General App Button Section */
 .appbtn {
-  margin-top: 15%;
   margin-left: 2%;
   color: rgb(110, 103, 103);
 }
@@ -3123,7 +3127,6 @@ gap: 30px;
 
 /* General Button Section */
 .butns {
-  margin-top: 15%;
   margin-left: 2%;
   color: rgb(116, 107, 107);
 }
@@ -3291,7 +3294,6 @@ gap: 30px;
 /* ******************* */
 
 .btnsgroup-content{
-  margin-top: 15%;
   margin-left: 2%;
   color: rgb(113, 101, 101);
 }
@@ -3412,7 +3414,6 @@ margin-top: 5%;
 /* ******************* */
 
 .buttonswitch{
-  margin-top: 15%;
   margin-left: 2%;
   color: rgb(115, 105, 105);
 }
@@ -3472,7 +3473,6 @@ margin-top: 5%;
 /* ******************* */
 
 .dropdowns {
-  margin-top: 15%;
   margin-left: 2vw;
   color: rgb(138, 120, 120);
 }
@@ -3713,7 +3713,6 @@ margin-top: 5%;
 /* ******************* */
 
 .fabs{
-  margin-top: 15%;
   margin-left: 2%;
   color: rgb(102, 91, 91);
 }
@@ -3900,7 +3899,6 @@ margin-top: 5%;
 /* ******************* */
 
 .breadcrumbs{
-  margin-top: 15%;
   margin-left: 2%;
   color: rgb(82, 74, 74);
 }
@@ -3986,7 +3984,6 @@ color: #02b583;
     /*Footers*/
 /* ******************* */
 .footers {
-  margin-top: 15%;
   margin-left: 2%;
   color: rgb(94, 80, 80);
 }
@@ -4137,7 +4134,6 @@ color: #02b583;
 /* ******************* */
 
 .paginations {
-  margin-top: 15%;
   margin-left: 2%;
   color: rgb(101, 86, 86);
 }
@@ -4254,7 +4250,6 @@ color: #02b583;
 /* ******************* */
 
 .sidenavigations{
-  margin-top: 15%;
   margin-left: 2%;
   color: rgb(91, 79, 79);
 }
@@ -4458,7 +4453,6 @@ hr {
 /* ******************* */
 
 .navbarc{
-  margin-top: 15%;
   margin-left: 2%;
   color: rgb(104, 95, 95);
 }
@@ -4681,7 +4675,6 @@ hr {
 /* ******************* */
 
 .alerts{
-  margin-top: 15%;
   margin-left: 2%;
   color: rgb(123, 112, 112);
   font-size: 18px;
@@ -4785,7 +4778,6 @@ hr {
 
 
 .chipnotifications{
-  margin-top: 15%;
   margin-left: 2%;
   color: rgb(116, 104, 104);
 }
@@ -4873,7 +4865,6 @@ hr {
 /* ******************* */
 
 .modals{
-  margin-top: 15%;
   margin-left: 2%;
   color: rgb(120, 107, 107);
 }
@@ -5014,7 +5005,6 @@ hr {
 /* ******************* */
 
 .notifications{
-  margin-top: 15%;
   margin-left: 2%;
   color: rgb(110, 101, 101);
 }
@@ -5120,7 +5110,6 @@ hr {
 /* ******************* */
 
 .progressbars{
-  margin-top: 15%;
   margin-left: 2%;
   color: rgb(112, 102, 102);
 }
@@ -5211,7 +5200,6 @@ hr {
 /* ************** */
 
 .spinners{
-  margin-top: 15%;
   margin-left: 2%;
   color: rgb(121, 110, 110);
 }
@@ -5301,7 +5289,6 @@ hr {
 /* ************ */
 
 .toltips {
-  margin-top: 15%;
   margin-left: 2%;
   color: rgb(113, 103, 103);
 }
@@ -5502,7 +5489,6 @@ hr {
 
 /* General styling for checkboxes section */
 .checkboxes {
-  margin-top: 15%;
   margin-left: 2%;
   font-size: 18px;
   color: rgb(99, 90, 90);
@@ -5583,7 +5569,6 @@ input[type="checkbox"] {
 /* ******************* */
 
 .datepickers {
-  margin-top: 15%;
   margin-left: 2%;
   color: rgb(95, 87, 87);
 }
@@ -5710,7 +5695,6 @@ input[type="date"] {
 /* ******************* */
 
 .fileinputs{
-  margin-top: 15%;
   margin-left: 2%;
   color: rgb(100, 91, 91);
 }
@@ -5823,7 +5807,6 @@ input[type="date"] {
 /* ******************* */
 
 .inputgroups{
-  margin-top: 15%;
   margin-left: 2%;
   color: gray;
   font-size: 18px;
@@ -5902,7 +5885,6 @@ input[type="date"] {
 /* ******************* */
 
 .radiogroups {
-  margin-top: 15%;
   margin-left: 2%;
   color: rgb(105, 94, 94);
   font-size: 18px; /* Default font size */
@@ -5983,7 +5965,6 @@ input[type="date"] {
 /* ******************* */
 
 .searchinputs {
-  margin-top: 15%;
   margin-left: 2%;
   color: rgb(101, 93, 93);
   font-size: 18px; /* Default font size */
@@ -6083,7 +6064,6 @@ input[type="date"] {
 /* ******************* */
 
 .selectmenus{
-  margin-top: 15%;
   margin-left: 2%;
   color: rgb(104, 101, 101);
 }
@@ -6190,7 +6170,6 @@ input[type="date"] {
 /* ******************* */
 
 .textareas{
-  margin-top: 15%;
   margin-left: 2%;
   color: rgb(101, 96, 96);
   font-size: 18px;
@@ -6376,7 +6355,6 @@ input[type="date"] {
 /* ******************* */
 
 .toggles{
-  margin-top: 15%;
   margin-left: 2%;
   color: rgb(101, 96, 96);
   font-size: 18px;

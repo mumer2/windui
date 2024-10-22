@@ -296,20 +296,21 @@ const cssCode = `.feeds {
 }`;
   return (
     <div>
-      <div className="feeds" style={{marginTop:'15%'}}>
+      <div className="feeds">
         <h1>Feed</h1>
         <p>The feed component is a ui element that displays a stream of content (static or dynamic), such as comments, activity updates, posts, in a chronological order.</p>
       </div>
+      <div className="code-cont">
+    <CodePre htmlCode={htmlCode} reactCode={reactCode} cssCode={cssCode}/>
+    </div>
       <div className='feed-cont'>
         <ActivityFeed />
       </div>
 
-      <div className="feeds" style={{marginTop:'3%'}}>
+      {/* <div className="feeds" style={{marginTop:'3%'}}>
        <h2>Variations</h2>
-             </div>
-      <div className="code-cont">
-    <CodePre htmlCode={htmlCode} reactCode={reactCode} cssCode={cssCode}/>
-    </div>
+             </div> */}
+    
     </div>
   )
 }

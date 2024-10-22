@@ -514,15 +514,16 @@ const cssCode = `.lists {
         <p>Lists are a continuous group of items in a structured format. They can contain primary and supplemental actions, which are often represented by icons, text and images.
         </p>
       </div>
-
-      <ListLayout />
-
-      <div className="lists">
-        <h1 style={{ fontSize: '20px' }}>Variations</h1>
-      </div>
       <div className="code-cont">
         <CodePre htmlCode={htmlCode} reactCode={reactCode} cssCode={cssCode}/>
       </div>
+
+      <ListLayout />
+
+      {/* <div className="lists">
+        <h1 style={{ fontSize: '20px' }}>Variations</h1>
+      </div> */}
+      
     </div>
   )
 }

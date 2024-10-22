@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 
@@ -49,11 +49,11 @@ import { Toggles } from './Components/FormElements/Toggles';
 // import Accord from './Components/General/Accord';
 
 function App() {
-  const [isOpen, setIsOpen] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
 
-  const toggleSidebar = () => {
-    setIsOpen(!isOpen);
-  };
+  // const toggleSidebar = () => {
+  //   setIsOpen(!isOpen);
+  // };
 
   return (
     <div>
@@ -61,13 +61,15 @@ function App() {
         {/* <button className="toggle-btn" onClick={toggleSidebar}>
           ☰
         </button> */}
-        <div className="grid-container">
-          <div className="item1">
             <TopNavbar />
-          </div>
-          <div className={`item2 ${setIsOpen ? 'open' : ''}`}>
-            <LeftNavbar />
-          </div>
+
+        <div className="grid-container">
+          {/* <div className="item1">
+          </div> */}
+          {/* <div className={`item2 ${setIsOpen ? 'open' : ''}`}>
+          </div> */}
+          <LeftNavbar />
+
           <div className="item3">
             <Routes>
                 {/* Default route redirects to /accordions */}

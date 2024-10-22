@@ -416,6 +416,9 @@ const cssCode = `.card-main{
         <h1>Cards</h1>
         <p>A card can be used to display content related to a single subject. The content can consist of multiple elements of varying types and sizes.</p>
       </div>
+      <div className="code-cont">
+    <CodePre htmlCode={htmlCode} reactCode={reactCode} cssCode={cssCode}/>
+    </div>
       <div className="card-main">
       <div class="newclass-profile-section">
         {/* <!-- Left side image --> */}
@@ -442,15 +445,13 @@ const cssCode = `.card-main{
 
       </div>
 
-      <div className="card-content">
+      {/* <div className="card-content">
         <h2>Variations</h2>
-        <h4>Basic Card</h4>
+        <h4>Basic Card</h4> */}
 
-        <div className="code-cont">
-    <CodePre htmlCode={htmlCode} reactCode={reactCode} cssCode={cssCode}/>
-    </div>
+       
 
-<div className="card-cont">
+{/* <div className="card-cont">
 
         <div className='captin'>
           <div className="text-captn">
@@ -459,8 +460,8 @@ const cssCode = `.card-main{
               just hover and click on the one component you need and paste it on your project.</p>
           </div>
         </div>
-      </div>
-</div>
+      </div> */}
+{/* </div> */}
 
 
     </div>
