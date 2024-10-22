@@ -31,7 +31,7 @@ export const SideNavigation = () => {
     </div>
   `;
 
-const reactCode = `import React from 'react';
+  const reactCode = `import React from 'react';
 
 const VerticalNavbar = () => {
   return (
@@ -68,7 +68,7 @@ export default VerticalNavbar;
 
 `;
 
-const cssCode = `.sidenavigations{
+  const cssCode = `.sidenavigations{
   margin-top: 15%;
   margin-left: 2%;
   color: rgb(91, 79, 79);
@@ -158,18 +158,19 @@ const cssCode = `.sidenavigations{
         <h1>Side Navigation</h1>
         <p>The side navigation component (often referred to as a "sidebar" or "side menu") is a user interface element that is typically positioned on the side of a webpage or application screen, such as the left or right side. It is used to provide navigation and access to various sections, features, or pages of the application.</p>
       </div>
-<div className="vert-nav-cont">
-<VerticalNavbar />
+      <div className="code-cont">
+        <CodePre htmlCode={htmlCode} reactCode={reactCode} cssCode={cssCode} />
+      </div>
+      <div className="vert-nav-cont">
+        <VerticalNavbar />
 
-</div>
-
-      <div className="sidenavigations">
-        <h1>Variations</h1>
       </div>
 
-      <div className="code-cont">
-    <CodePre htmlCode={htmlCode} reactCode={reactCode} cssCode={cssCode}/>
-    </div>
+      {/* <div className="sidenavigations">
+        <h1>Variations</h1>
+      </div> */}
+
+
     </div>
   )
 }

@@ -501,7 +501,6 @@ html, body {
 .grid-container {
   display: grid;
   grid-template-areas: 
-    'topnavbar topnavbar'
     'leftnavbar content';  /* Default for larger screens */
   grid-template-columns: 260px 1fr; /* Left navbar fixed width, right side flexible */
   grid-template-rows: auto 1fr;
@@ -705,6 +704,8 @@ html, body {
   border: 1px solid rgb(231, 223, 223);
   border-radius: 10px;
   padding: 70px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 /* Responsive accordion styles */
@@ -777,7 +778,7 @@ html, body {
   border-radius: 10px;
   padding: 10px;
   width: full;
-  margin-top: 10%;
+  /* margin-top: 10%; */
 }
 
 /* Header for buttons and toggle */
@@ -925,6 +926,7 @@ color: white;
 .code-view-cont {
   width: 100%;
   margin: 20px 0;
+  background-color: white;
 }
 
 /* Code Section Styling */
@@ -1693,7 +1695,7 @@ gap: 30px;
   position: relative;
   max-width: 800px;
   padding: 50px;
-  margin-top: 10%;
+  margin: 20px;
   overflow: hidden;
   border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
