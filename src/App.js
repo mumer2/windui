@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 
+
 import { Accordians } from './Components/General/Accordians';
 import LeftNavbar from './Components/General/LeftNavbar';
 import TopNavbar from './Components/General/TopNavbar';
